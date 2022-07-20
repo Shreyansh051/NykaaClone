@@ -1,0 +1,82 @@
+.hemain {
+    box-shadow: 0 4px 10px 0 rgb(0 0 0 / 10%);
+    width: 100%;
+    z-index: 100;
+    position: fixed;
+    background-color: #fff;
+}
+
+.hcontainer {
+    width: 81%;
+    margin: auto;
+    margin-top: 0px;
+    padding: 0 30px;
+    height: 85px;
+    background-color: #fff;
+
+}
+
+.hParent {
+    display: grid;
+    grid-template-columns: 25% 65%;
+}
+
+.hsvg {
+    text-align: left;
+    padding: 25px 0px 30px 50px;
+}
+
+.hdetails {
+    display: grid;
+    grid-template-columns: 25% 25% 40%;
+    font-size: 16px;
+}
+
+.vertical {
+    height: 65px;
+    width: 0.8px;
+    background-color: #c1c1c1;
+    margin: 8px 10px;
+
+}
+
+.hcom {
+    padding: 22px 0px;
+
+}
+
+.hcom p {
+    color: #8c8d94;
+}
+
+h4,
+p {
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: -0.1px;
+    margin: 0px;
+}
+
+/*address page style */
+.hConadd {
+    width: 75%;
+    margin: auto;
+    height: 1200px;
+    margin-top: 100px;
+}
+
+.hparadd {
+    display: grid;
+    grid-template-columns: 25% 40% 35%;
+    gap: 20px;
+}
+
+
+.naddbut,
+.addDet,
+.cartDet {
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 2px;
+    padding: 15px 20px 0;
+}

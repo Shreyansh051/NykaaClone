@@ -1,9 +1,12 @@
-import './App.css';
+import "./App.css";
+import { Address } from "./components/Address/Address";
+import Main from "./Main";
 
 function App() {
   return (
-    <div className="App">
-      <Main/>
+    <div>
+      <Main />
+      <Address />
     </div>
   );
 }
