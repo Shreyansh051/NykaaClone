@@ -1,9 +1,12 @@
-import React from 'react'
+import React from "react";
+import styles from "./ProductsCard.module.css"
+const ProductsCard = ({image_url,tags,name,price,discount,rating,n_ratings,n_reviews,}) => {
 
-const ProductsCard = () => {
-  return (
-    <div>ProductsCard</div>
-  )
-}
 
-export default ProductsCard
+  return <div className={styles.container}>
+    <p>{tags}</p>
+    <img src={image_url} alt="" />
+  </div>;
+};
+
+export default ProductsCard;
