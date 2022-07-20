@@ -1,12 +1,27 @@
-import React from 'react'
-import ProductsHeader from './ProductsHeader'
+import React, { useEffect } from "react";
+import ProductsHeader from "./ProductsHeader";
+import { useDispatch, useSelector } from "react-redux";
+import { getAllProducts } from "../../actions/products";
+import ProductsCard from "./ProductsCard";
+import styles from "./Products.module.css";
 
 const Products = () => {
-  return (
-    <div>
-       <ProductsHeader/>
-    </div>
-  )
-}
+  const { products } = useSelector((state) => state);
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(getAllProducts());
+  }, [dispatch]);
 
-export default Products
+  return (
+    <div className={styles.container}>
+      <ProductsHeader />
+      <div className={styles.cardContainer}>
+        {products.map((e, i) => (
+          <ProductsCard key={e._id} {...e} />
+        ))}
+      </div>
+    </div>
+  );
+};
+
+export default Products;

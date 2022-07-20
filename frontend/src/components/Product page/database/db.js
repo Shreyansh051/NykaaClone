@@ -103,7 +103,7 @@ data = {
     },
     {
       image_url:
-        "https://www.nykaa.com/m-a-c-studio-fix-fluid-spf-15-mini/p/2649152?productId=2649152&pps=14",
+        "https://images-static.nykaa.com/media/catalog/product/tr:w-200,h-200,cm-pad_resize/5/0/5005c32773602590674_0.jpg",
       tags: "",
       name: "M.A.C Studio Fix Fluid SPF 15 Mini",
       price: 1750,

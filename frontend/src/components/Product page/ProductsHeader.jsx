@@ -1,6 +1,6 @@
 import React from "react";
 import SimpleImageSlider from "react-simple-image-slider";
-import styles from "./Products.module.css";
+import styles from "./ProductsHeader.module.css";
 import {Link} from "react-router-dom";
 import Pic from "./images/header.png"
 const images = [
@@ -10,6 +10,9 @@ const images = [
   {
     url: "https://images-static.nykaa.com/uploads/22088ac7-681e-48ef-b787-be18b5f3f3a3.jpg?tr=w-1200,cm-pad_resize",
   },
+  {
+    url: "https://images-static.nykaa.com/uploads/381bc88c-1637-49da-9004-eda6690cf3f1.jpg?tr=w-1200,cm-pad_resize"
+  }
 ];
 
 const ProductsHeader = () => {
