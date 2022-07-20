@@ -1,8 +1,10 @@
 import React from 'react'
-
+import {container} from './login.css'
 function Login() {
   return (
-    <div>Login</div>
+    <div style={container}>
+
+    </div>
   )
 }
 
