@@ -12,3 +12,11 @@ export const getAllProducts = () => async (dispatch) => {
     console.log(error);
   }
 };
+
+export const AddToCart = () => async (dispatch) => {
+    try {
+        
+    } catch (error) {
+        
+    }
+}

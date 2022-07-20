@@ -1,7 +1,8 @@
 .cardContainer{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    margin-left: 12rem;
+    grid-template-columns: repeat(3,300px);
+    margin-left: 17rem;
+    row-gap: 30px;
     
 }
 .container{

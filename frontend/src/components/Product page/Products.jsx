@@ -17,7 +17,7 @@ const Products = () => {
       <ProductsHeader />
       <div className={styles.cardContainer}>
         {products.map((e, i) => (
-          <ProductsCard {...e} />
+          <ProductsCard key={e._id} {...e} />
         ))}
       </div>
     </div>
