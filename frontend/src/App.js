@@ -4,7 +4,6 @@ import Home from "./components/Home/Home.jsx";
 function App() {
   return (
     <ChakraProvider>
-      <Main />
       <Home />
     </ChakraProvider>
   );
