@@ -1,11 +1,8 @@
-import './App.css';
-import Products from './components/Product page/Products';
-
+import "./App.css";
+import HomePages from "./components/Home/HomePage"
 function App() {
   return (
-    <div className="App">
-    <Products/>
-    </div>
+   <HomePages/>
   );
 }
 
