@@ -5,6 +5,7 @@ import { getAllProducts } from "../../actions/products";
 import ProductsCard from "./ProductsCard";
 import styles from "./Products.module.css";
 
+
 const Products = () => {
   const { products } = useSelector((state) => state);
   const dispatch = useDispatch();
