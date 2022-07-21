@@ -59,7 +59,6 @@ p {
 .hConadd {
     width: 80%;
     margin: auto;
-    height: auto;
     margin-top: 100px;
 }
 
@@ -67,16 +66,30 @@ p {
     display: grid;
     grid-template-columns: 25% 40% 30%;
     gap: 20px;
+    height: auto;
 }
-
 
 .naddbut {
     background-color: #fff;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     border-radius: 2px;
     padding: 10px 23px 0 23px;
+    color: #fc2779;
+    letter-spacing: 0.5px;
+    border-right: 3px solid #fc2779;
     height: 40px;
 }
+
+/* .addSaN div+div {
+    height: 40px;
+    margin-top: 18px;
+    margin-left: -22px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: #fff;
+    padding: 10px 23px 0 23px;
+    width: 255px;
+} */
+
 
 .addDet {
     background-color: #fff;
@@ -88,9 +101,22 @@ p {
 .addFrom input {
     height: 35px;
     width: 100%;
+    font-size: 16px;
+    letter-spacing: 0.5px;
     margin: 15px 0;
     border: none;
     border-bottom: 1px solid #8c8d94;
+}
+
+.addFrom input:focus {
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #fc2779;
+}
+
+.addFrom hr {
+    background-color: #8c8d94;
+    margin-bottom: 20px;
 }
 
 .addFrom textarea {
@@ -99,6 +125,18 @@ p {
     width: 100%;
     margin-bottom: 10px;
 }
+
+.addFrom textarea:focus {
+    outline: none;
+    border-color: #fc2779;
+}
+
+.addFrom fieldset {
+    font-size: 14px;
+    color: #797777
+}
+
+
 
 .bag {
     padding: 7px 0px;
@@ -140,7 +178,6 @@ p {
     font-weight: 360;
     letter-spacing: 0.5px;
 }
-
 
 .grandiv {
     display: flex;

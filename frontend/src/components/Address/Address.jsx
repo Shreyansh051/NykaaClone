@@ -1,8 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import { CheckOutHeader } from "./CheckOutHeader";
 import "./address.css";
+import { useNavigate } from "react-router-dom";
 
 export const Address = () => {
+  const [cartEdit, setCartEdit] = useState(false);
+  const [detail, setDetail] = useState(false);
+
+  const handleEdit = () => {
+    setCartEdit(true);
+  };
+  const handleDetail = () => {
+    setDetail(true);
+  };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // navigate("/delhivery");
+  };
   return (
     <>
       <CheckOutHeader />
@@ -26,18 +40,30 @@ export const Address = () => {
               </div> */}
               <div>
                 <form action="" className="addFrom">
-                  <h4>New Address</h4>
+                  <h4 style={{ marginBottom: "10px" }}>New Address</h4>
                   <hr />
                   <div>
                     <label htmlFor=""></label>
                     <input type="text" name="" id="" value={"India"} />
                   </div>
                   <div>
-                    <input type="text" name="" id="" placeholder="Name" />
+                    <input
+                      type="text"
+                      name=""
+                      id=""
+                      placeholder="Name"
+                      required
+                    />
                   </div>
                   <div>
                     <label htmlFor=""></label>
-                    <input type="text" name="" id="" />
+                    <input
+                      type="text"
+                      name=""
+                      id=""
+                      placeholder="Phone Number"
+                      required
+                    />
                   </div>
                   <div>
                     <input
@@ -45,13 +71,34 @@ export const Address = () => {
                       name=""
                       id=""
                       placeholder="Postal Code"
+                      required
                     />
                   </div>
                   <div>
                     <fieldset>
                       <legend>Addresss</legend>
-                      <textarea name="" id="" cols="30" rows="3"></textarea>
+                      <textarea
+                        name=""
+                        id=""
+                        cols="30"
+                        rows="3"
+                        required
+                      ></textarea>
                     </fieldset>
+                  </div>
+                  <div>
+                    <input
+                      style={{
+                        height: "50px",
+                        color: "#fff",
+                        backgroundColor: "#fc2779",
+                        fontWeight: "500",
+                      }}
+                      type="submit"
+                      name=""
+                      id=""
+                      value={"SHIP TO THIS ADDRESS >"}
+                    />
                   </div>
                 </form>
               </div>
@@ -59,8 +106,35 @@ export const Address = () => {
             <div className="cartDet">
               <div>
                 <div className="bag">
-                  <p>3 Items in your Bag</p>
-                  <button>EDIT ^</button>
+                  {detail ? (
+                    <div>
+                      <div>
+                        <img src="" alt="" />
+                      </div>
+                      <div>
+                        <div>
+                          <p>Swiss Beauty Pro Primer With Vit-C & E</p>
+                          <p>25ml</p>
+                        </div>
+                        <div>
+                          <p>Qty : 1</p>
+                          <p>
+                            <span>399s</span>
+                            <span>299d</span>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  ) : (
+                    <div>
+                      <p>3 Items in your Bag</p>
+                    </div>
+                  )}
+                  {cartEdit ? (
+                    <div></div>
+                  ) : (
+                    <button onClick={handleEdit}>EDIT ^</button>
+                  )}
                 </div>
                 <div className="priceDiv">
                   <div>
