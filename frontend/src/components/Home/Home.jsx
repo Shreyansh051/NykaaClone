@@ -1,10 +1,16 @@
-import Carousel from "./Carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import styles from "./Home.module.css";
-import Carousel from "react-multi-carousel";
-import "react-multi-carousel/lib/styles.css";
-import { Stack } from "@chakra-ui/react";
-
+import Carousel1 from "./Carousel1.1";
+import Carousel2 from "./Carousel1.2";
+import Hori from "./Horizontal.js";
+import {
+  Box,
+  Heading,
+  Text,
+  Image,
+  Stack,
+  useColorModeValue,
+} from "@chakra-ui/react";
 const cardImages = [
   {
     url: "https://images-static.nykaa.com/uploads/96039c37-f304-4b5a-afaf-42da418c7344.gif?tr=w-2400,cm-pad_resize",
@@ -56,7 +62,8 @@ const cardImages3 = [
 function HomePage() {
   return (
     <>
-      <Carousel />
+      <Carousel1 />
+
       <div className={styles.banner}>
         <img
           src="https://images-static.nykaa.com/uploads/19367bb9-be89-428e-8892-e6f1ad9718f2.jpg?tr=w-2400,cm-pad_resize"
@@ -165,6 +172,489 @@ function HomePage() {
           src="https://images-static.nykaa.com/uploads/ab1fe425-503f-45c9-9d47-69bdea1d8ad7.png?tr=w-2400,cm-pad_resize"
           alt="banner2"
         />
+      </div>
+      <Carousel2 />
+      <Hori />
+      <div className={styles.card2}>
+        <Box
+          maxW={"270px"}
+          h={"370px"}
+          w={"full"}
+          bg={useColorModeValue("white", "gray.800")}
+          boxShadow={"2xl"}
+          rounded={"md"}
+          overflow={"hidden"}
+          marginLeft={"50px"}
+          marginBottom={"20px"}
+        >
+          <Image
+            h={"270px"}
+            w={"270px"}
+            src={
+              "https://images.unsplash.com/photo-1612865547334-09cb8cb455da?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"
+            }
+            objectFit={"cover"}
+          />
+          <Box p={6}>
+            <Stack spacing={0} align={"center"} mb={5}>
+              <Heading>John Doe</Heading>
+              <Text>Frontend Developer</Text>
+            </Stack>
+          </Box>
+        </Box>
+        {/*  */}
+        <Box
+          maxW={"270px"}
+          h={"370px"}
+          w={"full"}
+          bg={useColorModeValue("white", "gray.800")}
+          boxShadow={"2xl"}
+          rounded={"md"}
+          overflow={"hidden"}
+          marginLeft={"20px"}
+        >
+          <Image
+            h={"270px"}
+            w={"270px"}
+            src={
+              "https://images.unsplash.com/photo-1612865547334-09cb8cb455da?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"
+            }
+            objectFit={"cover"}
+          />
+          <Box p={6}>
+            <Stack spacing={0} align={"center"} mb={5}>
+              <Heading>John Doe</Heading>
+              <Text>Frontend Developer</Text>
+            </Stack>
+          </Box>
+        </Box>
+        {/*  */}
+        <Box
+          maxW={"270px"}
+          h={"370px"}
+          w={"full"}
+          bg={useColorModeValue("white", "gray.800")}
+          boxShadow={"2xl"}
+          rounded={"md"}
+          overflow={"hidden"}
+          marginLeft={"20px"}
+        >
+          <Image
+            h={"270px"}
+            w={"270px"}
+            src={
+              "https://images.unsplash.com/photo-1612865547334-09cb8cb455da?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"
+            }
+            objectFit={"cover"}
+          />
+          <Box p={6}>
+            <Stack spacing={0} align={"center"} mb={5}>
+              <Heading>John Doe</Heading>
+              <Text>Frontend Developer</Text>
+            </Stack>
+          </Box>
+        </Box>
+        <Box
+          maxW={"270px"}
+          h={"370px"}
+          w={"full"}
+          bg={useColorModeValue("white", "gray.800")}
+          boxShadow={"2xl"}
+          rounded={"md"}
+          overflow={"hidden"}
+          marginLeft={"20px"}
+        >
+          <Image
+            h={"270px"}
+            w={"270px"}
+            src={
+              "https://images.unsplash.com/photo-1612865547334-09cb8cb455da?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"
+            }
+            objectFit={"cover"}
+          />
+          <Box p={6}>
+            <Stack spacing={0} align={"center"} mb={5}>
+              <Heading>John Doe</Heading>
+              <Text>Frontend Developer</Text>
+            </Stack>
+          </Box>
+        </Box>
+        <Box
+          maxW={"270px"}
+          h={"370px"}
+          w={"full"}
+          bg={useColorModeValue("white", "gray.800")}
+          boxShadow={"2xl"}
+          rounded={"md"}
+          overflow={"hidden"}
+          marginLeft={"200px"}
+        >
+          <Image
+            h={"270px"}
+            w={"270px"}
+            src={
+              "https://images.unsplash.com/photo-1612865547334-09cb8cb455da?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"
+            }
+            objectFit={"cover"}
+          />
+          <Box p={6}>
+            <Stack spacing={0} align={"center"} mb={5}>
+              <Heading>John Doe</Heading>
+              <Text>Frontend Developer</Text>
+            </Stack>
+          </Box>
+        </Box>
+        <Box
+          maxW={"270px"}
+          h={"370px"}
+          w={"full"}
+          bg={useColorModeValue("white", "gray.800")}
+          boxShadow={"2xl"}
+          rounded={"md"}
+          overflow={"hidden"}
+          marginLeft={"20px"}
+        >
+          <Image
+            h={"270px"}
+            w={"270px"}
+            src={
+              "https://images.unsplash.com/photo-1612865547334-09cb8cb455da?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"
+            }
+            objectFit={"cover"}
+          />
+          <Box p={6}>
+            <Stack spacing={0} align={"center"} mb={5}>
+              <Heading>John Doe</Heading>
+              <Text>Frontend Developer</Text>
+            </Stack>
+          </Box>
+        </Box>
+        <Box
+          maxW={"270px"}
+          h={"370px"}
+          w={"full"}
+          bg={useColorModeValue("white", "gray.800")}
+          boxShadow={"2xl"}
+          rounded={"md"}
+          overflow={"hidden"}
+          marginLeft={"20px"}
+        >
+          <Image
+            h={"270px"}
+            w={"270px"}
+            src={
+              "https://images.unsplash.com/photo-1612865547334-09cb8cb455da?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"
+            }
+            objectFit={"cover"}
+          />
+          <Box p={6}>
+            <Stack spacing={0} align={"center"} mb={5}>
+              <Heading>John Doe</Heading>
+              <Text>Frontend Developer</Text>
+            </Stack>
+          </Box>
+        </Box>
+      </div>
+      <div className={styles.card}>
+        {cardImages2.map((cards, index) => (
+          <Stack
+            borderWidth="1px"
+            borderRadius="lg"
+            w={{ sm: "100%", md: "540px" }}
+            height={{ sm: "476px", md: "20rem" }}
+            direction={{ base: "column", md: "row" }}
+            boxShadow={"2xl"}
+            padding={4}
+          >
+            {" "}
+            <div className="each-slide" key={index}>
+              <div>
+                <img
+                  className={styles.desimcal}
+                  src={`${cards.url}`}
+                  alt="card"
+                />
+              </div>
+            </div>
+          </Stack>
+        ))}
+      </div>
+      <h1>OFFERS YOU CAN'T MISS</h1>
+      <div className={styles.card2}>
+        <Box
+          maxW={"270px"}
+          h={"370px"}
+          w={"full"}
+          bg={useColorModeValue("white", "gray.800")}
+          boxShadow={"2xl"}
+          rounded={"md"}
+          overflow={"hidden"}
+          marginLeft={"50px"}
+          marginBottom={"20px"}
+        >
+          <Image
+            h={"270px"}
+            w={"270px"}
+            src={
+              "https://images.unsplash.com/photo-1612865547334-09cb8cb455da?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"
+            }
+            objectFit={"cover"}
+          />
+          <Box p={6}>
+            <Stack spacing={0} align={"center"} mb={5}>
+              <Heading>John Doe</Heading>
+              <Text>Frontend Developer</Text>
+            </Stack>
+          </Box>
+        </Box>
+        {/*  */}
+        <Box
+          maxW={"270px"}
+          h={"370px"}
+          w={"full"}
+          bg={useColorModeValue("white", "gray.800")}
+          boxShadow={"2xl"}
+          rounded={"md"}
+          overflow={"hidden"}
+          marginLeft={"20px"}
+        >
+          <Image
+            h={"270px"}
+            w={"270px"}
+            src={
+              "https://images.unsplash.com/photo-1612865547334-09cb8cb455da?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"
+            }
+            objectFit={"cover"}
+          />
+          <Box p={6}>
+            <Stack spacing={0} align={"center"} mb={5}>
+              <Heading>John Doe</Heading>
+              <Text>Frontend Developer</Text>
+            </Stack>
+          </Box>
+        </Box>
+        {/*  */}
+        <Box
+          maxW={"270px"}
+          h={"370px"}
+          w={"full"}
+          bg={useColorModeValue("white", "gray.800")}
+          boxShadow={"2xl"}
+          rounded={"md"}
+          overflow={"hidden"}
+          marginLeft={"20px"}
+        >
+          <Image
+            h={"270px"}
+            w={"270px"}
+            src={
+              "https://images.unsplash.com/photo-1612865547334-09cb8cb455da?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"
+            }
+            objectFit={"cover"}
+          />
+          <Box p={6}>
+            <Stack spacing={0} align={"center"} mb={5}>
+              <Heading>John Doe</Heading>
+              <Text>Frontend Developer</Text>
+            </Stack>
+          </Box>
+        </Box>
+        <Box
+          maxW={"270px"}
+          h={"370px"}
+          w={"full"}
+          bg={useColorModeValue("white", "gray.800")}
+          boxShadow={"2xl"}
+          rounded={"md"}
+          overflow={"hidden"}
+          marginLeft={"20px"}
+        >
+          <Image
+            h={"270px"}
+            w={"270px"}
+            src={
+              "https://images.unsplash.com/photo-1612865547334-09cb8cb455da?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"
+            }
+            objectFit={"cover"}
+          />
+          <Box p={6}>
+            <Stack spacing={0} align={"center"} mb={5}>
+              <Heading>John Doe</Heading>
+              <Text>Frontend Developer</Text>
+            </Stack>
+          </Box>
+        </Box>
+        <Box
+          maxW={"270px"}
+          h={"370px"}
+          w={"full"}
+          bg={useColorModeValue("white", "gray.800")}
+          boxShadow={"2xl"}
+          rounded={"md"}
+          overflow={"hidden"}
+          marginLeft={"200px"}
+        >
+          <Image
+            h={"270px"}
+            w={"270px"}
+            src={
+              "https://images.unsplash.com/photo-1612865547334-09cb8cb455da?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"
+            }
+            objectFit={"cover"}
+          />
+          <Box p={6}>
+            <Stack spacing={0} align={"center"} mb={5}>
+              <Heading>John Doe</Heading>
+              <Text>Frontend Developer</Text>
+            </Stack>
+          </Box>
+        </Box>
+        <Box
+          maxW={"270px"}
+          h={"370px"}
+          w={"full"}
+          bg={useColorModeValue("white", "gray.800")}
+          boxShadow={"2xl"}
+          rounded={"md"}
+          overflow={"hidden"}
+          marginLeft={"20px"}
+        >
+          <Image
+            h={"270px"}
+            w={"270px"}
+            src={
+              "https://images.unsplash.com/photo-1612865547334-09cb8cb455da?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"
+            }
+            objectFit={"cover"}
+          />
+          <Box p={6}>
+            <Stack spacing={0} align={"center"} mb={5}>
+              <Heading>John Doe</Heading>
+              <Text>Frontend Developer</Text>
+            </Stack>
+          </Box>
+        </Box>
+        <Box
+          maxW={"270px"}
+          h={"370px"}
+          w={"full"}
+          bg={useColorModeValue("white", "gray.800")}
+          boxShadow={"2xl"}
+          rounded={"md"}
+          overflow={"hidden"}
+          marginLeft={"20px"}
+        >
+          <Image
+            h={"270px"}
+            w={"270px"}
+            src={
+              "https://images.unsplash.com/photo-1612865547334-09cb8cb455da?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"
+            }
+            objectFit={"cover"}
+          />
+          <Box p={6}>
+            <Stack spacing={0} align={"center"} mb={5}>
+              <Heading>John Doe</Heading>
+              <Text>Frontend Developer</Text>
+            </Stack>
+          </Box>
+        </Box>
+      </div>
+      <h1 className={styles.header}>POP-UP STORES</h1>
+      <div className={styles.card}>
+        {cardImages2.map((cards, index) => (
+          <Stack
+            borderWidth="1px"
+            borderRadius="lg"
+            w={{ sm: "100%", md: "540px" }}
+            height={{ sm: "476px", md: "20rem" }}
+            direction={{ base: "column", md: "row" }}
+            boxShadow={"2xl"}
+            padding={4}
+          >
+            {" "}
+            <div className="each-slide" key={index}>
+              <div>
+                <img
+                  className={styles.desimcal}
+                  src={`${cards.url}`}
+                  alt="card"
+                />
+              </div>
+            </div>
+          </Stack>
+        ))}
+      </div>
+      <div>
+        <img
+          className={styles.banner2}
+          src="https://images-static.nykaa.com/uploads/58c1c0b0-5a0b-4614-acfc-3205e669d8a7.jpg?tr=w-2400,cm-pad_resize"
+        />
+      </div>
+      <div>
+        <img
+          className={styles.banner2}
+          src="https://images-static.nykaa.com/uploads/6dd86f98-19ac-4e60-8aae-61849054d13a.jpg?tr=w-2400,cm-pad_resize"
+        />
+      </div>
+      <h1 className={styles.header}>SPECIAL CURATIONS</h1>
+      <div className={styles.card}>
+        {cardImages2.map((cards, index) => (
+          <Stack
+            borderWidth="1px"
+            borderRadius="lg"
+            w={{ sm: "100%", md: "540px" }}
+            height={{ sm: "476px", md: "20rem" }}
+            direction={{ base: "column", md: "row" }}
+            boxShadow={"2xl"}
+            padding={4}
+          >
+            {" "}
+            <div className="each-slide" key={index}>
+              <div>
+                <img
+                  className={styles.desimcal}
+                  src={`${cards.url}`}
+                  alt="card"
+                />
+              </div>
+            </div>
+          </Stack>
+        ))}
+      </div>
+      <h1 className={styles.header}>GIFT CARDS</h1>
+      <div align="center">
+        <img
+          width="560px"
+          height="233.33px"
+          src="https://images-static.nykaa.com/uploads/be2ce42f-6986-4a32-a258-8d5278950d99.jpg?tr=w-1200,cm-pad_resize"
+        />
+      </div>
+      <h1 className={styles.header}>BEAUTY ADVICE</h1>
+      <div className={styles.card}>
+        {cardImages2.map((cards, index) => (
+          <Stack
+            // borderWidth="1px"
+            // borderRadius="lg"
+            // w={{ sm: "100%", md: "540px" }}
+            // height={{ sm: "476px", md: "20rem" }}
+            // direction={{ base: "column", md: "row" }}
+            boxShadow={"2xl"}
+            // padding={4}
+
+          >
+            {" "}
+            <div className="each-slide" key={index}>
+              <div>
+                <img
+                  className={styles.desimcal}
+                  src={`${cards.url}`}
+                  alt="card"
+                />
+              </div>
+            </div>
+          </Stack>
+        ))}
       </div>
     </>
   );

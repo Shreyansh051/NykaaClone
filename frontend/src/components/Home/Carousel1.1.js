@@ -38,7 +38,7 @@ const properties = {
     console.log(`slide transition from ${oldIndex} to ${newIndex}`);
   },
 };
-const Carousel = () => {
+const Carousel1 = () => {
   return (
     <div className="slide-container">
       <Slide {...properties}>
@@ -52,4 +52,5 @@ const Carousel = () => {
   );
 };
 
-export default Carousel;
+export default Carousel1;
+
