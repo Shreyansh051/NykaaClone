@@ -1,11 +1,9 @@
 import "./App.css";
-import { ChakraProvider } from "@chakra-ui/react";
-import Home from "./components/Home/Home.jsx";
+import HomePages from "./components/Home/HomePage"
 function App() {
   return (
-    <ChakraProvider>
-      <Home />
-    </ChakraProvider>
+      <HomePages />
+  
   );
 }
 
