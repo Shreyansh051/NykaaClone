@@ -1,0 +1,77 @@
+.slide-container {
+    width: 100%;
+    margin: auto;
+    margin-top: 20px;
+  }
+  
+  h3 {
+    text-align: center;
+  }
+  
+  .each-slide > div {
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    height: 320px;
+  }
+  
+  .each-slide span {
+    padding: 20px;
+    font-size: 20px;
+    background: #efefef;
+    text-align: center;
+  }
+  
+  .each-fade {
+    display: flex;
+  }
+  
+  .each-fade .image-container {
+    width: 75%;
+    overflow: hidden;
+  }
+  
+  .each-fade .image-container img {
+    width: 100%;
+  }
+  
+  .each-fade h2 {
+    width: 25%;
+    display: flex;
+    justify-content: centser;
+    align-items: center;
+    margin: 0;
+    background: #adceed;
+  }
+  /* .react-slideshow-container+ul.indicators {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px
+    ;
+    width:auto;
+    height: 100px;
+    border:2px solid rebeccapurple;
+    color: pink;
+}
+  .react-slideshow-container+ul.indicators .each-slideshow-indicator:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 10px;
+    border:2px solid red;
+    height: 10px;
+    border-radius: 50%;
+    background: #000;
+    text-align: center;
+    color: green;
+  }
+  .react-slideshow-container+ul.indicators .each-slideshow-indicator {
+    border: 0;
+    opacity: .25;
+    cursor: pointer;
+    padding: 15px;
+    border: 2px solid yellow;
+    background: transparent;
+    color: pink;
+  } */
