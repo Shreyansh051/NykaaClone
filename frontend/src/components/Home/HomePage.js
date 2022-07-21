@@ -1,5 +1,5 @@
 import { ChakraProvider } from "@chakra-ui/react";
-import Home from "./components/Home/Home.jsx";
+import Home from "./Home.jsx";
 
 function HomePages(){
     return(
@@ -8,3 +8,4 @@ function HomePages(){
       </ChakraProvider>
     )
 }
+export default HomePages;
