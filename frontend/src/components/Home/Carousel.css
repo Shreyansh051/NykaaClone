@@ -43,35 +43,3 @@
     margin: 0;
     background: #adceed;
   }
-  /* .react-slideshow-container+ul.indicators {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-top: 20px
-    ;
-    width:auto;
-    height: 100px;
-    border:2px solid rebeccapurple;
-    color: pink;
-}
-  .react-slideshow-container+ul.indicators .each-slideshow-indicator:before {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 10px;
-    border:2px solid red;
-    height: 10px;
-    border-radius: 50%;
-    background: #000;
-    text-align: center;
-    color: green;
-  }
-  .react-slideshow-container+ul.indicators .each-slideshow-indicator {
-    border: 0;
-    opacity: .25;
-    cursor: pointer;
-    padding: 15px;
-    border: 2px solid yellow;
-    background: transparent;
-    color: pink;
-  } */
