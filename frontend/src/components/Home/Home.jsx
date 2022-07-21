@@ -1,4 +1,4 @@
-// import Carousel from "./Carousel";
+import Carousel from "./Carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import styles from "./Home.module.css";
 import Carousel from "react-multi-carousel";
@@ -56,7 +56,7 @@ const cardImages3 = [
 function HomePage() {
   return (
     <>
-      {/* <Carousel /> */}
+      <Carousel />
       <div className={styles.banner}>
         <img
           src="https://images-static.nykaa.com/uploads/19367bb9-be89-428e-8892-e6f1ad9718f2.jpg?tr=w-2400,cm-pad_resize"

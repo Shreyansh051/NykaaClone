@@ -8,6 +8,7 @@ import styles from "./Products.module.css";
 
 const Products = () => {
   const { products } = useSelector((state) => state);
+  console.log(products);
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(getAllProducts());
