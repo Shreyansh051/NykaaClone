@@ -115,7 +115,7 @@ p {
 }
 
 .addFrom hr {
-    background-color: #8c8d94;
+    background-color: #b6b6b6;
     margin-bottom: 20px;
 }
 
@@ -154,6 +154,7 @@ p {
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     border-radius: 2px;
     padding: 10px 23px 0 23px;
+    height: max-content;
 }
 
 .cartDet button {
