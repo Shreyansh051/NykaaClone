@@ -1,16 +1,17 @@
 import "./App.css";
-import { Payment } from "./components/Payment/Payment";
-// import HomePages from "./components/Home/HomePage"
-import Products from "./components/Product page/Products";
-import { Address } from "./components/Address/Address";
+
+
+
+import HomePages from "./components/Home/HomePage"
+// import Products from "./components/Product page/Products";
+import Main from './Main';
+import Products from './components/Product page/Products';
+// import { Siderbar } from './components/Product page/Sidebar';
 function App() {
   return (
     <div className="App">
-      {/* <Products/> */}
-      {/* <Payment /> */}
-      <Address />
+    <Products/>
+    {/* <Siderbar/> */}
     </div>
-  );
-}
-
+  )};
 export default App;
