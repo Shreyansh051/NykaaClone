@@ -1,0 +1,63 @@
+.banner {
+  width: 90%;
+  height: auto;
+  margin: auto;
+  margin-top: 15px;
+  margin-bottom: 20px;
+}
+.bigheader {
+  font-size: 25px;
+  color: black;
+  text-align: center;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+.card {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
+  width: 89%;
+  margin: auto;
+  gap: 20px;
+}
+.card2 {
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  width: auto;
+  margin-top: 50px;
+  height: auto;
+
+  /* width: 89%;
+  margin: auto; */
+}
+.desimcal {
+  width: 560px;
+  height: 300px;
+  object-fit: cover;
+}
+.banner2 {
+  width: 89%;
+  height: auto;
+  margin: auto;
+  margin-top: 15px;
+  
+}
+.banner3 {
+  width: 89%;
+  height: auto;
+  margin: auto;
+  margin-top: 15px;
+}
+.cardwidth {
+  width: 250px;
+  /* border: 2px solid red; */
+}
+.cardsquare {
+  display: flex;
+  width: 1140px;
+  margin-left: 70px;
+  gap: 20px;
+  margin-top: 30px;
+}

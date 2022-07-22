@@ -1,10 +1,11 @@
 import React from 'react'
-import {Routes, Route} from 'react-router-dom'
+import { Routes, Route } from 'react-router-dom'
+import Login from './components/Authentication/Login'
 function Main() {
   return (
       <div>
           <Routes>
-              <Route path="" element />
+              <Route path="/login" element={<Login/>} />
           </Routes>
     </div>
   )
