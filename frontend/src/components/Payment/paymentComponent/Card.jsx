@@ -26,7 +26,7 @@ export const Card = () => {
         </Box>
         <div>
           <div className={Style.lae}>
-            <label>expiry</label>
+            <p>expiry</p>
           </div>
 
           <div className={Style.cardInput}>

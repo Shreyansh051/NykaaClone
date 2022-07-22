@@ -7,6 +7,7 @@ import { Card } from "./paymentComponent/Card";
 import { Cod } from "./paymentComponent/Cod";
 import { GooglePay } from "./paymentComponent/GooglePay";
 import { Upi } from "./paymentComponent/Upi";
+import { useState } from "react";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -41,7 +42,16 @@ function a11yProps(index) {
   };
 }
 export const Payment = () => {
+  const [cartEdit, setCartEdit] = useState(false);
+  const [detail, setDetail] = useState(false);
   const [value, setValue] = React.useState(0);
+
+  const handleEdit = () => {
+    setCartEdit(true);
+  };
+  const handleDetail = () => {
+    setDetail(true);
+  };
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -129,7 +139,75 @@ export const Payment = () => {
               Item Seven
             </TabPanel>
           </div>
-          <div className={Style.pDetail}>djhjkhfj</div>
+          <div className={Style.pDetail}>
+            <div>
+              <div className="bag">
+                {detail ? (
+                  <div>
+                    <div>
+                      <img src="" alt="" />
+                    </div>
+                    <div>
+                      <div>
+                        <p>Swiss Beauty Pro Primer With Vit-C & E</p>
+                        <p>25ml</p>
+                      </div>
+                      <div>
+                        <p>Qty : 1</p>
+                        <p>
+                          <span>399s</span>
+                          <span>299d</span>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                ) : (
+                  <div>
+                    <p>3 Items in your Bag</p>
+                  </div>
+                )}
+                {cartEdit ? (
+                  <div></div>
+                ) : (
+                  <button
+                    style={{
+                      backgroundColor: "#fff",
+                      border: "none",
+                      color: "#fc2779",
+                      fontSize: "12px",
+                      fontWeight: "600",
+                      letterSpacing: "1px",
+                      width: "auto",
+                      margin: "-10px 0 0 0",
+                    }}
+                    onClick={handleEdit}
+                  >
+                    EDIT ^
+                  </button>
+                )}
+              </div>
+              <div className="priceDiv">
+                <div>
+                  <p>Sub Total</p>
+                  <p>₹1647</p>
+                </div>
+                <div>
+                  <p>Shipping Charge</p>
+                  <p style={{ color: "#4db6ac" }}>Free</p>
+                </div>
+                <div style={{ paddingBottom: "10px" }}>
+                  <p>Discount</p>
+                  <p>₹79.9</p>
+                </div>
+              </div>
+            </div>
+            <hr />
+            <div className="grandiv">
+              <h4>Grand Total</h4>
+              <p>₹848</p>
+            </div>
+            <hr />
+          </div>
         </div>
       </div>
     </div>
