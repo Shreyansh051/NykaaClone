@@ -1,12 +1,11 @@
-import React,{useState} from 'react'
+import React,{useState,useRef} from 'react'
 import { crossButton, input } from "./login.css";
 import { signInWithPhoneNumber } from "firebase/auth";
 import firebaseAuth from "./firebase";
 import { RecaptchaVerifier } from "firebase/auth";
 
-function Register({ setView}) {
-  const [number, setNumber] = useState("");
-
+function Register({ setView, number,setNumber }) {
+  
   //<---------------------------------------------------------------->//ReCaptcha
   const generateReCaptcha = () => {
     window.recaptchaVerifier = new RecaptchaVerifier(
@@ -24,19 +23,22 @@ function Register({ setView}) {
 
   const handleClick = (e) => {
     e.preventDefault();
-    var phone = "+91"+number;
+    var phone = "+91" + number;
     generateReCaptcha();
     const appVerifier = window.recaptchaVerifier;
     signInWithPhoneNumber(firebaseAuth, phone, appVerifier)
       .then((confirmation) => {
         console.log(confirmation);
-        window.confirmation= confirmation;
+        window.confirmation = confirmation;
         setView("AuthOTP");
       })
       .catch((error) => {
         console.log(error);
       });
+    
   };
+
+  //<---------------------------------------------------------------->*******
   return (
     <div>
       <button onClick={() => setView("front")} style={crossButton}>
@@ -95,7 +97,10 @@ function Register({ setView}) {
         >
           <h5 style={{ color: "gray" }}>REQUIRED</h5>
         </div>
-        <div style={{ width: "80%", margin: "20px auto" }} id="recaptcha-Div"></div>
+        <div
+          style={{ width: "80%", margin: "20px auto" }}
+          id="recaptcha-Div"
+        ></div>
         <div style={{ width: "80%", margin: "150px auto" }}>
           <button type="submit" style={input}>
             PROCEED

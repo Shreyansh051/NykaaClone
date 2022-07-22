@@ -45,10 +45,19 @@ function Front({setView}) {
       <img src={loginImage} alt="gift Image" />
       <div style={para}>
         <button onClick={() => setView("register")} style={input}>
-          Enter Phone Number or Email
+          Enter Phone Number
+        </button>
+        <br /><br />
+        <button onClick={() => navigate("/register")} style={input}>
+          register
         </button>
         <br />
-          <img onClick={signInWithFirebase} style={googlecss} src={google} alt="google Login" />
+        <img
+          onClick={signInWithFirebase}
+          style={googlecss}
+          src={google}
+          alt="google Login"
+        />
       </div>
       <div style={para}>
         <p>

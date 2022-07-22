@@ -46,7 +46,7 @@ const para = {
     textAlign: "justify",
     color: "gray",
     fontSize: "20px",
-    lineHeight: "1.6",
+    lineHeight: "1.3",
 }
 const a = {
     color: "gray",
@@ -77,5 +77,36 @@ const submitButton = {
     cursor: "pointer",
     fontSize: "20px"
 }
-const googlecss = { width: "100%", cursor: "pointer",marginTop:"20px" }
-export { container, crossButton, Signin, h1, p, input, para, a, googlecss, grayBox, inputOTP, submitButton }
+const alertPopup = {
+    width: "100%",
+    height: "150px",
+    margin: "auto",
+    position: "sticky",
+    top: "300px",
+    background: "#c9c9c9",
+    borderRadius: "10px",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+}
+const googlecss = { width: "100%", cursor: "pointer", marginTop: "20px" }
+const submit= {
+    color: "white",
+    background: "#fc2779",
+    padding: "10px",
+    border: "none",
+    borderRadius: "10px",
+    cursor: "pointer",
+    width: "90%",
+    margin: "auto"
+}
+const inputReg = {
+    width: "90%",
+    height: "35px",
+    outline: "none",
+    border: "1px solid gray",
+}
+const h2Reg = {
+    color: "gray",
+}
+export { container, crossButton, Signin, h1, p, input, para, a, googlecss, grayBox, inputOTP, submitButton, alertPopup, submit, inputReg,h2Reg }
