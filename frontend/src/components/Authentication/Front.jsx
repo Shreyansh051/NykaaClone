@@ -1,19 +1,21 @@
 import React from 'react'
-import {
-  crossButton,
-  Signin,
-  h1,
-  p,
-  input,
-  para,
-  a,
-  googlecss,
-} from "./login.css";
+import { crossButton,Signin,h1,p,input,para,a,googlecss } from "./login.css";
 import { useNavigate } from "react-router-dom";
 import loginImage from "./login.png";
 import google from "./google.png";
+import googleAuth from "./firebase"
+import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 function Front({register,setRegister}) {
-    const navigate = useNavigate();
+  const navigate = useNavigate();
+  const signInWithFirebase = () => {
+    var googleProvider = new GoogleAuthProvider()
+    signInWithPopup(googleAuth,googleProvider).then((response) => {
+      console.log(response)
+    })
+      .catch((error) => {
+      console.log(error)
+    })
+  }
   return (
     <div>
       <button
@@ -41,9 +43,11 @@ function Front({register,setRegister}) {
       </div>
       <img src={loginImage} alt="gift Image" />
       <div style={para}>
-        <button onClick={()=>setRegister(!register)} style={input}>Enter Phone Number or Email</button>
+        <button onClick={() => setRegister(!register)} style={input}>
+          Enter Phone Number or Email
+        </button>
         <br />
-        <img style={googlecss} src={google} alt="google Login" />
+          <img onClick={signInWithFirebase} style={googlecss} src={google} alt="google Login" />
       </div>
       <div style={para}>
         <p>
