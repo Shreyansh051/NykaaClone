@@ -8,6 +8,7 @@ import { MuiDrawer, Siderbar } from "./MuiDrawer";
 import { ChakraProvider } from "@chakra-ui/react";
 import Accordian from "./Accordian";
 
+
 const Products = () => {
   const { products } = useSelector((state) => state.products);
   const dispatch = useDispatch();
