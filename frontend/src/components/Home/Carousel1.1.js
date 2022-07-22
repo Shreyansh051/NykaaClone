@@ -5,25 +5,19 @@ import "../Home/Carousel.css";
 
 const slideImages = [
   {
-    url: "https://images-static.nykaa.com/uploads/96039c37-f304-4b5a-afaf-42da418c7344.gif?tr=w-2400,cm-pad_resize",
+    url: "https://images-static.nykaa.com/uploads/eb2071c9-8d07-47b1-8c36-9c95c412129f.jpg?tr=w-2400,cm-pad_resize",
   },
   {
-    url: "https://images-static.nykaa.com/uploads/bcf8e6b6-085e-4790-bb46-bb98d484de50.gif?tr=w-2400,cm-pad_resize",
+    url: "https://images-static.nykaa.com/uploads/c84d9e2f-ec73-4d3f-922e-953ab90a415e.jpg?tr=w-2400,cm-pad_resize",
   },
   {
-    url: "https://images-static.nykaa.com/uploads/420e5dfe-1e4c-48db-8169-fb677365db43.jpg?tr=w-2400,cm-pad_resize",
+    url: "https://images-static.nykaa.com/uploads/7ab97b4f-837b-40d8-82f1-259e79c67ca7.jpg?tr=w-2400,cm-pad_resize",
   },
   {
-    url: "https://images-static.nykaa.com/uploads/64ce2e5a-dbca-4065-a90d-f22aff6787a7.jpg?tr=w-2400,cm-pad_resize",
+    url: "https://images-static.nykaa.com/uploads/b5803dc0-fb0a-4507-9e8a-a88c5ec99868.gif?tr=w-2400,cm-pad_resize",
   },
   {
-    url: "https://images-static.nykaa.com/uploads/8d78575e-72d8-4ad9-943b-50601678d510.gif?tr=w-2400,cm-pad_resize",
-  },
-  {
-    url: "https://images-static.nykaa.com/uploads/13f4f223-4928-435c-87ab-1f933b0b0a78.jpg?tr=w-2400,cm-pad_resize",
-  },
-  {
-    url: "https://images-static.nykaa.com/uploads/0e92263a-4a47-4006-8bb0-721e4dbe9b8d.gif?tr=w-2400,cm-pad_resize",
+    url: "https://images-static.nykaa.com/uploads/4f8da256-1e17-46b6-8c74-f49919b4c158.jpg?tr=w-2400,cm-pad_resize",
   },
 ];
 
@@ -53,4 +47,3 @@ const Carousel1 = () => {
 };
 
 export default Carousel1;
-
