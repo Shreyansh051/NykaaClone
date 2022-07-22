@@ -52,5 +52,30 @@ const a = {
     color: "gray",
     fontSize: "20px"
 }
+const grayBox = {
+    width: "80%",
+    background: "#dbdbdb",
+    margin: "10px auto",
+    padding: "15px",
+    fontWeight: "300",
+}
+const inputOTP = {
+    textAlign: "left",
+    outline: "none",
+    border: "none",
+    borderBottom: "1px solid red",
+    width: "150px",
+    height: "30px",
+}
+const submitButton = {
+    border: "none",
+    background: "#dbdbdb",
+    width: "100%",
+    padding: "10px 10px",
+    borderRadius: "5px",
+    color: "white",
+    cursor: "pointer",
+    fontSize: "20px"
+}
 const googlecss = { width: "100%", cursor: "pointer",marginTop:"20px" }
-export { container, crossButton, Signin,h1,p,input,para,a,googlecss}
+export { container, crossButton, Signin, h1, p, input, para, a, googlecss, grayBox, inputOTP, submitButton }

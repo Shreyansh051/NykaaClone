@@ -3,18 +3,19 @@ import { crossButton,Signin,h1,p,input,para,a,googlecss } from "./login.css";
 import { useNavigate } from "react-router-dom";
 import loginImage from "./login.png";
 import google from "./google.png";
-import googleAuth from "./firebase"
+import firebaseAuth from "./firebase";
 import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
-function Front({register,setRegister}) {
+function Front({setView}) {
   const navigate = useNavigate();
   const signInWithFirebase = () => {
     var googleProvider = new GoogleAuthProvider()
-    signInWithPopup(googleAuth,googleProvider).then((response) => {
-      console.log(response)
-    })
+    signInWithPopup(firebaseAuth, googleProvider)
+      .then((response) => {
+        console.log(response);
+      })
       .catch((error) => {
-      console.log(error)
-    })
+        console.log(error);
+      });
   }
   return (
     <div>
@@ -43,7 +44,7 @@ function Front({register,setRegister}) {
       </div>
       <img src={loginImage} alt="gift Image" />
       <div style={para}>
-        <button onClick={() => setRegister(!register)} style={input}>
+        <button onClick={() => setView("register")} style={input}>
           Enter Phone Number or Email
         </button>
         <br />
