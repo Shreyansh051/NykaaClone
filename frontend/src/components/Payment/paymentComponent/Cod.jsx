@@ -4,7 +4,7 @@ export const Cod = () => {
   return (
     <div>
       <div>
-        <h3>GooglePay</h3>
+        <h3>CASH ON DELIVERY</h3>
       </div>
       <hr />
       <div>

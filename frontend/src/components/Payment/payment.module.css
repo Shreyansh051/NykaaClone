@@ -1,10 +1,52 @@
-.Psidebar {
-    width: 80%;
+.pcnt {
+    width: 75%;
     margin: auto;
     position: relative;
     top: 120px;
 }
 
-.pbox {
-    margin-top: 100px;
+.pcnt div h3 {
+    text-align: left;
+    margin: 0px;
+    padding-left: 20px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.Psidebar {
+    display: flex;
+    margin-top: 10px;
+}
+
+.pTab {
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 2px;
+    padding-left: 5px;
+    position: fixed;
+    width: 18.5%;
+    font-size: 16px;
+    text-align: left;
+}
+
+
+.pTabpanel {
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 2px;
+    position: relative;
+    left: 330px;
+    width: 465px;
+    text-align: left;
+}
+
+.pDetail {
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 2px;
+    position: relative;
+    height: fit-content;
+    left: 350px;
+    width: 374px;
+    text-align: left;
 }

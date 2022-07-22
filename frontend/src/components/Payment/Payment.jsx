@@ -1,8 +1,10 @@
-import { Box, Tab, Tabs, Typography } from "@mui/material";
+import { Box, Divider, Tab, Tabs, Typography } from "@mui/material";
+import { textAlign } from "@mui/system";
 import PropTypes from "prop-types";
 import React from "react";
 import { CheckOutHeader } from "../Address/CheckOutHeader";
 import Style from "./payment.module.css";
+import { Card } from "./paymentComponent/Card";
 import { Cod } from "./paymentComponent/Cod";
 import { GooglePay } from "./paymentComponent/GooglePay";
 import { Upi } from "./paymentComponent/Upi";
@@ -50,46 +52,86 @@ export const Payment = () => {
       <div>
         <CheckOutHeader />
       </div>
-      <div className={Style.Psidebar}>
-        <Box
-          sx={{
-            flexGrow: 1,
-            bgcolor: "background.paper",
-            display: "flex",
-            height: 335,
-          }}
-        >
-          <Tabs
-            orientation="vertical"
-            value={value}
-            onChange={handleChange}
-            aria-label="Vertical tabs example"
-            sx={{ borderRight: 1, borderColor: "divider" }}
-          >
-            <Tab label="Credit/Debit Card" {...a11yProps(0)} />
-            <Tab label="UPI" {...a11yProps(1)} />
-            <Tab label="GooglePay" {...a11yProps(2)} />
-            <Tab label="Net Banking" {...a11yProps(3)} />
-            <Tab label="Mobile Wallets" {...a11yProps(4)} />
-            <Tab label="Cash on Delivery" {...a11yProps(6)} />
-            <Tab label="Gift  Card" {...a11yProps(7)} />
-          </Tabs>
-          <TabPanel value={value} index={0}>
-            Item One
-          </TabPanel>
-          <TabPanel value={value} index={1}>
-            <Upi />
-          </TabPanel>
-          <TabPanel value={value} index={2}>
-            <GooglePay />
-          </TabPanel>  
-          <TabPanel value={value} index={5}>
-            <Cod />
-          </TabPanel>
-          <TabPanel value={value} index={6}>
-            Item Seven
-          </TabPanel>
-        </Box>
+      <div className={Style.pcnt}>
+        <div>
+          <h3>CHOOSE PAYMENT METHOD</h3>
+        </div>
+        <div className={Style.Psidebar}>
+          <div className={Style.pTab}>
+            <Tabs
+              orientation="vertical"
+              value={value}
+              onChange={handleChange}
+              aria-label="Vertical tabs example"
+              sx={{
+                borderRight: 2,
+                borderColor: "divider",
+              }}
+            >
+              <Tab
+                sx={{
+                  borderBottom: 0.5,
+                  borderColor: "#ebebeb",
+                  fontSize: 15,
+                }}
+                label="Credit/Debit Card"
+                {...a11yProps(0)}
+              />
+
+              <Tab
+                sx={{ borderBottom: 0.5, borderColor: "#ebebeb", fontSize: 15 }}
+                label="UPI"
+                {...a11yProps(1)}
+              />
+
+              <Tab
+                sx={{ borderBottom: 0.5, borderColor: "#ebebeb", fontSize: 15 }}
+                label="GooglePay"
+                {...a11yProps(2)}
+              />
+
+              <Tab
+                sx={{ borderBottom: 0.5, borderColor: "#ebebeb", fontSize: 15 }}
+                label="Net Banking"
+                {...a11yProps(3)}
+              />
+
+              <Tab
+                sx={{ borderBottom: 0.5, borderColor: "#ebebeb", fontSize: 15 }}
+                label="Mobile Wallets"
+                {...a11yProps(4)}
+              />
+
+              <Tab
+                sx={{ borderBottom: 0.5, borderColor: "#ebebeb", fontSize: 15 }}
+                label="Cash on Delivery"
+                {...a11yProps(5)}
+              />
+
+              <Tab label="Gift Card" sx={{ fontSize: 15 }} {...a11yProps(6)} />
+            </Tabs>
+          </div>
+          <div className={Style.pTabpanel}>
+            <TabPanel value={value} index={0}>
+              <Card />
+            </TabPanel>
+            <TabPanel value={value} index={1}>
+              <Upi />
+            </TabPanel>
+            <TabPanel value={value} index={2}>
+              <GooglePay />
+            </TabPanel>
+            <TabPanel value={value} index={3}></TabPanel>
+            <TabPanel value={value} index={4}></TabPanel>
+            <TabPanel value={value} index={5}>
+              <Cod />
+            </TabPanel>
+            <TabPanel value={value} index={6}>
+              Item Seven
+            </TabPanel>
+          </div>
+          <div className={Style.pDetail}>djhjkhfj</div>
+        </div>
       </div>
     </div>
   );
