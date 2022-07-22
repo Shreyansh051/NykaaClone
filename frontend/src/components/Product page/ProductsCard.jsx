@@ -5,7 +5,12 @@ import Stack from "@mui/material/Stack";
 import { fontSize } from "@mui/system";
 import { useState } from "react";
 import pic from "./images/heart.png"
+import { useDispatch, useSelector } from "react-redux";
+import { AddToCart } from "../../actions/products";
+import { MuiDrawer } from "./MuiDrawer";
+
 const ProductsCard = ({
+  _id,
   image_url,
   tags,
   name,
@@ -16,12 +21,10 @@ const ProductsCard = ({
   s_price,
   n_reviews,
 }) => {
+  const dispatch = useDispatch();
+  
 
   const [show, setShow] = useState(false);
-
-  const addToCart = () => {
-    
-  }
   return (
     <div  onMouseOver={() => setShow(true)}  onMouseOut={() => setShow(false)} className={styles.container}>
       <div style={{height:"53vh"}}>
@@ -95,7 +98,7 @@ const ProductsCard = ({
       </div>
       </div>
       {show && (
-        <div onClick={addToCart} className={styles.add_to_bag}>
+        <div onClick={() => dispatch(AddToCart(_id))} className={styles.add_to_bag}>
         <div><img src={pic} alt="" /></div>
         <div><h3>Add To Bag</h3></div>
       </div>
