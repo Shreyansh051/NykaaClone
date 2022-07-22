@@ -1,14 +1,15 @@
 import "./App.css";
-import { Address } from "./components/Address/Address";
-import Main from "./Main";
 
+import HomePages from "./components/Home/HomePage"
+// import Products from "./components/Product page/Products";
+import Main from './Main';
+import Products from './components/Product page/Products';
+// import { Siderbar } from './components/Product page/Sidebar';
 function App() {
   return (
-    <div>
-      <Main />
-      <Address />
+    <div className="App">
+    <Products/>
+    {/* <Siderbar/> */}
     </div>
-  );
-}
-
+  )};
 export default App;

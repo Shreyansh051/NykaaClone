@@ -1,0 +1,20 @@
+.cardContainer{
+    display: grid;
+    grid-template-columns: repeat(3,300px);
+    row-gap: 30px;
+    padding-right: 3%;
+    margin-left: 20px;
+}
+.container{
+    background-color: rgb(243,243,243);
+    padding-left: 10%;
+    padding-right: 10%;
+}
+.Side_Bar{
+   height: 100vh;
+   width: 20vw;
+   border: 1px solid black;
+}
+.out_container{
+    display: flex;
+}

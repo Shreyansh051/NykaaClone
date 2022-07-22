@@ -1,0 +1,37 @@
+.container{
+    width: 18vw;
+    background-color: white;
+    border-radius: 5px;
+    height: 61vh;
+}
+.add_to_bag{
+    display: flex;
+    width: 100%;
+    margin-top: auto;
+    cursor: pointer;
+}
+.add_to_bag>:first-child{
+    width: 30%;
+    height: 5vh;
+    border-top: 1px solid lightgrey;
+}
+.add_to_bag>:first-child>img{
+    height: 45px;
+}
+.add_to_bag>:last-child{
+    width: 70%;
+    height: 6vh;
+    background-color: rgb(252,40,122);
+   
+}
+.add_to_bag>:last-child>h3{
+    color: white;
+    margin-top: 10px;
+}
+
+
+
+
+/* app.css  */
+
+
