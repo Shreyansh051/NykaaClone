@@ -1,4 +1,4 @@
-import "./Horizontal.css";
+// import "./Horizontal.css";
 function Hori() {
   return (
     <>
