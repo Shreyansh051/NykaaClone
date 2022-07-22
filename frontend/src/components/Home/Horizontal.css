@@ -1,4 +1,4 @@
-@import "https://unpkg.com/open-props";
+/* @import "https://unpkg.com/open-props";
 @import "https://unpkg.com/open-props/normalize.min.css";
 
 .media-scroller {
@@ -49,7 +49,6 @@
   scroll-snap-align: start;
 }
 
-/* general styling */
 
 .container {
   inline-size: min(100% - 4rem, 70rem);
@@ -80,4 +79,4 @@
 .section-title {
   padding-inline-start: var(--size-6);
   margin-block: var(--size-9) var(--size-3);
-}
+} */
