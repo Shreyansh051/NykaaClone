@@ -51,10 +51,10 @@
 
 /* general styling */
 
-.container {
+/* .container {
   inline-size: min(100% - 4rem, 70rem);
   margin-inline: auto;
-}
+} */
 
 .flow {
   display: grid;
