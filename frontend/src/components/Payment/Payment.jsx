@@ -1,7 +1,6 @@
-import { Box, Divider, Tab, Tabs, Typography } from "@mui/material";
-import { textAlign } from "@mui/system";
-import PropTypes from "prop-types";
 import React from "react";
+import { Box, Divider, Tab, Tabs, Typography } from "@mui/material";
+import PropTypes from "prop-types";
 import { CheckOutHeader } from "../Address/CheckOutHeader";
 import Style from "./payment.module.css";
 import { Card } from "./paymentComponent/Card";
@@ -54,7 +53,7 @@ export const Payment = () => {
       </div>
       <div className={Style.pcnt}>
         <div>
-          <h3>CHOOSE PAYMENT METHOD</h3>
+          <h3 className={Style.phe}>CHOOSE PAYMENT METHOD</h3>
         </div>
         <div className={Style.Psidebar}>
           <div className={Style.pTab}>

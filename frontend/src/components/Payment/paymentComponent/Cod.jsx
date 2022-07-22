@@ -8,7 +8,7 @@ export const Cod = () => {
       </div>
       <hr />
       <div>
-        <input type="submit" value={"Pay"} />
+        <button style={{ marginTop: "15px" }}>{`Pay By Cash`}</button>
       </div>
     </div>
   );
