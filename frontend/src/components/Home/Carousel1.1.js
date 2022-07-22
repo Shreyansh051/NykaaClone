@@ -1,7 +1,7 @@
 import React from "react";
 import { Slide } from "react-slideshow-image";
 import "react-slideshow-image/dist/styles.css";
-// import "../Home/Carousel.css";
+import styles from "./Carousel.module.css";
 
 const slideImages = [
   {
@@ -34,10 +34,10 @@ const properties = {
 };
 const Carousel1 = () => {
   return (
-    <div className="slide-container">
+    <div className={styles.slidecontainer}>
       <Slide {...properties}>
         {slideImages.map((slideImage, index) => (
-          <div className="each-slide" key={index}>
+          <div className={styles.eachslide} key={index}>
             <div style={{ backgroundImage: `url(${slideImage.url})` }}></div>
           </div>
         ))}
