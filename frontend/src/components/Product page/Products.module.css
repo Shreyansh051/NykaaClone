@@ -7,8 +7,7 @@
 }
 .container{
     background-color: rgb(243,243,243);
-    padding-left: 10%;
-    padding-right: 10%;
+    padding: 20px 10%;
 }
 .Side_Bar{
    height: 100vh;

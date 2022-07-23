@@ -27,5 +27,6 @@
         "subtittle",
         "totalreview",
         "Zontol"
-    ]
+    ],
+    "git.ignoreLimitWarning": true
 }
