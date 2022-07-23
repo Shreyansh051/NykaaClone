@@ -41,7 +41,9 @@ function ManualRegistration() {
               .post("http://localhost:8080/auth/register", data)
                 .then((response) => {
                     console.log(response)
-                    localStorage.setItem("user",JSON.stringify(response.data))
+                  localStorage.setItem("user", JSON.stringify(response.data))
+                  alert("Login Successful");
+                  navigate("/")
               })
               .catch((error) => {
                 console.log(error);

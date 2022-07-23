@@ -5,13 +5,33 @@ import loginImage from "./login.png";
 import google from "./google.png";
 import firebaseAuth from "./firebase";
 import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
+import axios from "axios";
 function Front({setView}) {
   const navigate = useNavigate();
   const signInWithFirebase = () => {
     var googleProvider = new GoogleAuthProvider()
     signInWithPopup(firebaseAuth, googleProvider)
       .then((response) => {
-        console.log(response);
+        console.log(response._tokenResponse.email);
+        localStorage.setItem(
+          "oAuth",
+          JSON.stringify(response._tokenResponse.oauthAccessToken)
+        );
+        const user = {
+          Email: response._tokenResponse.email,
+          Photo: response._tokenResponse.photoUrl,
+          Name: response._tokenResponse.displayName,
+          Password:"12345"
+        };
+        axios
+          .post("http://localhost:8080/auth/register", user)
+          .then((response) => {
+            alert("Login Successful");
+            navigate("/")
+          })
+          .catch((error) => {
+            console.log(error);
+          });
       })
       .catch((error) => {
         console.log(error);

@@ -2,6 +2,7 @@ const UserModel = require("../Models/UserModel")
 const bcrypt = require("bcrypt")
 const jwt = require("jsonwebtoken")
 const SECRET = "NYKAACLONESECRET"
+//<------------------------------------------------------------------------------------------------>
 const register = async (req, res) => {
     const search = await UserModel.find({ Email: req.body.Email })
     if (search.length) {
@@ -17,6 +18,7 @@ const register = async (req, res) => {
         })
     }
 }
+//<------------------------------------------------------------------------------------------------>
 const login = async (req, res) => {
     const search = await UserModel.find({ Email: req.body.Email })
     if (search.length) {
@@ -33,6 +35,7 @@ const login = async (req, res) => {
         })
     } else res.send({ Message: "Account does not exist" })
 }
+//<------------------------------------------------------------------------------------------------>
 const verify = async (req, res)=> {
     const token = req.body.token
     jwt.verify(token, SECRET, (err, decoded) => {
@@ -42,4 +45,25 @@ const verify = async (req, res)=> {
         }
     })
 }
-module.exports= {register,login,verify}
+//<------------------------------------------------------------------------------------------------>
+module.exports = { register, login, verify }
+
+
+
+// useEffect(() => {
+//     const Oauth = JSON.parse(localStorage.getItem("oAuth")) || null
+//     if (!Oauth) {
+//         const token = JSON.parse(localStorage.getItem("user")) || "null"
+//         if (token == "null") {
+//             navigate("/login")
+//         } else {
+//             const data = { token: token }
+//             axios.post("http://localhost:8080/auth/verify", data).then((response) => {
+//                 if (response.data.Message == "failed") {
+//                     alert("Session expired, login Again")
+//                     navigate("/login")
+//                 }
+//             })
+//         }
+//     }
+// },[])

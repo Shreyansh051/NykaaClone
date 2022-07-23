@@ -5,7 +5,8 @@ const container = {
     margin: "80px auto 0px auto",
     borderRadius: "15px 15px 0px 0px",
     background: "white",
-    position: "relative"
+    position: "relative",
+    textAlign: "center"
 }
 const crossButton = {
     border: "none",
@@ -32,6 +33,7 @@ const p = {
     color: "#595959"
 }
 const input = {
+    textAlign: "center",
     border: "none",
     background: "#fc2779",
     width: "100%",
@@ -58,6 +60,7 @@ const grayBox = {
     margin: "10px auto",
     padding: "15px",
     fontWeight: "300",
+    textAlign: "center"
 }
 const inputOTP = {
     textAlign: "left",
@@ -83,7 +86,7 @@ const alertPopup = {
     margin: "auto",
     position: "sticky",
     top: "300px",
-    background: "#c9c9c9",
+    background: "#e9d8ce",
     borderRadius: "10px",
     display: "flex",
     justifyContent: "center",

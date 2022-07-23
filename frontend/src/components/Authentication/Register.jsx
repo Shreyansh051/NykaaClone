@@ -28,7 +28,6 @@ function Register({ setView, number,setNumber }) {
     const appVerifier = window.recaptchaVerifier;
     signInWithPhoneNumber(firebaseAuth, phone, appVerifier)
       .then((confirmation) => {
-        console.log(confirmation);
         window.confirmation = confirmation;
         setView("AuthOTP");
       })
