@@ -1,11 +1,11 @@
 import { ChakraProvider } from "@chakra-ui/react";
 import Home from "./Home.jsx";
 
-function HomePages() {
+function HomePage() {
   return (
     <ChakraProvider>
       <Home />
     </ChakraProvider>
   );
 }
-export default HomePages;
+export default HomePage;

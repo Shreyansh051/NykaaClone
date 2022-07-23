@@ -1,15 +1,17 @@
 {
     "cSpell.words": [
+        "bigheader",
         "cardimage",
+        "cardsquare",
+        "cardwidth",
         "cdimg",
         "Chakra",
         "desimcal",
+        "eachslide",
+        "Hori",
+        "hovereffect",
         "imagescal",
         "mediaelement",
-<<<<<<< Updated upstream
-        "NYKAA"
-    ]
-=======
         "NYKAA",
         "offprice",
         "orignalprice",
@@ -27,5 +29,4 @@
         "Zontol"
     ],
     "git.ignoreLimitWarning": true
->>>>>>> Stashed changes
 }

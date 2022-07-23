@@ -3,9 +3,10 @@ import "react-multi-carousel/lib/styles.css";
 import styles from "./Home.module.css";
 import { Box, Image, useColorModeValue } from "@chakra-ui/react";
 
-function Carousel3() {
+function Carousel2() {
   return (
     <>
+    <div>
       <Carousel
         additionalTransfrom={0}
         arrows
@@ -13,7 +14,7 @@ function Carousel3() {
         className=""
         containerClass="container"
         focusOnSelect={false}
-        infinite={false}
+        infinite
         itemClass=""
         keyBoardControl
         // minimumTouchDrag={80}
@@ -107,16 +108,74 @@ function Carousel3() {
               h={"312.25px"}
               w={"233.46"}
               src={
+                "https://images-static.nykaa.com/uploads/96b20db6-e6b1-4576-a7c8-314de6d7fa67.png?tr=w-480,cm-pad_resize"
+              }
+              objectFit={"cover"}
+            />
+          </Box>
+        </div>
+        <div>
+          <Box
+            maxW={"235px"}
+            w={"full"}
+            bg={useColorModeValue("white", "gray.800")}
+            boxShadow={"2xl"}
+            rounded={"md"}
+            overflow={"hidden"}
+          >
+            <Image
+              h={"312.25px"}
+              w={"233.46"}
+              src={
+                "https://images-static.nykaa.com/uploads/4bf7f0f9-3075-4a43-bd5d-c78f618c3eed.png?tr=w-480,cm-pad_resize"
+              }
+              objectFit={"cover"}
+            />
+          </Box>
+        </div>
+        <div>
+          <Box
+            maxW={"235px"}
+            w={"full"}
+            bg={useColorModeValue("white", "gray.800")}
+            boxShadow={"2xl"}
+            rounded={"md"}
+            overflow={"hidden"}
+          >
+            <Image
+              h={"312.25px"}
+              w={"233.46"}
+              src={
                 "https://images-static.nykaa.com/uploads/a8d2592a-0de3-42b0-87d9-32f163a86f50.png?tr=w-480,cm-pad_resize"
               }
               objectFit={"cover"}
             />
           </Box>
         </div>
+        <div>
+          <Box
+            maxW={"235px"}
+            w={"full"}
+            bg={useColorModeValue("white", "gray.800")}
+            boxShadow={"2xl"}
+            rounded={"md"}
+            overflow={"hidden"}
+          >
+            <Image
+              h={"312.25px"}
+              w={"233.46"}
+              src={
+                "https://images-static.nykaa.com/uploads/ac99be64-68ff-4afd-92d2-98e9b4df2b50.png?tr=w-480,cm-pad_resize"
+              }
+              objectFit={"cover"}
+            />
+          </Box>
+        </div>
       </Carousel>
+      </div>
       ;
     </>
   );
 }
 
-export default Carousel3;
+export default Carousel2;
