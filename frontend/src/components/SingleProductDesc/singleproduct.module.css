@@ -1,0 +1,126 @@
+.sgCont {
+    width: 75%;
+    margin: auto;
+    background-color: #f3f3f3;
+    margin-top: 30px;
+}
+
+.sgParent {
+    display: flex;
+    gap: 2px;
+}
+
+.sgimg {
+    width: 35%;
+    background-color: #fff;
+    padding: 25px 16px;
+}
+
+.sgProminiD {
+    width: 65%;
+    background-color: #fff;
+    padding: 20px;
+    text-align: left;
+}
+
+.sgpq h2 {
+    font-size: 22px;
+    font-weight: 480;
+}
+
+.sgpg p {
+    font-weight: 400;
+}
+
+.sgra {
+    margin: 5px 0;
+}
+
+.sgmrp {
+    margin: 8px 0px;
+    color: #8c8c8c;
+}
+
+.freeDiv {
+    background-color: rgba(101, 119, 134, 0.12);
+    border-radius: 2px;
+    color: rgba(0, 19, 37, 0.92);
+    padding: 0.5rem 1rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.75rem;
+    line-height: 1.4;
+    max-width: 85%;
+}
+
+.freeDiv p {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0px;
+    padding-left: 0.75rem;
+    position: relative;
+    margin-bottom: 0.25rem;
+}
+
+.freeDiv p::before {
+    content: "•";
+    padding-right: 0.5rem;
+    position: absolute;
+    left: 0px;
+}
+
+.addPin {
+    padding: 15px 0px 15px 15px;
+    display: flex;
+}
+
+.sgabag {
+    width: 41%;
+    padding: 20px 0px 20px 20px;
+    border-right: 2px solid #f3f3f3;
+}
+
+.sgabag button {
+    width: 80%;
+    border: none;
+    height: 48px;
+    background-color: #fc2779;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 550;
+}
+
+.sgdel {
+    padding: 0 30px;
+}
+
+.sgloc {
+    padding: 5px 0;
+}
+
+.sgCheck {
+    display: flex;
+    border: 1px solid #a7a6a6;
+}
+
+.sgCheck input {
+    width: 190px;
+    height: 24px;
+    padding: 8px;
+    border: none;
+    font-size: 16px;
+}
+
+.sgCheck input:focus {
+    border: none;
+    outline: none;
+}
+
+.sgCheck button {
+    background-color: #fff;
+    border: none;
+    color: #fc2779;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 550;
+}
