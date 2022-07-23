@@ -28,7 +28,7 @@ const Products = () => {
           <Accordian />
           <div className={styles.cardContainer}>
             {products?.map((e, i) => (
-              <ProductsCard key={e._id} {...e} />
+                <ProductsCard key={e._id} {...e} />
             ))}
           </div>
         </div>
