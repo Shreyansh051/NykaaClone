@@ -1,0 +1,177 @@
+/* .hemain {
+    box-shadow: 0 4px 10px 0 rgb(0 0 0 / 10%);
+    width: 100%;
+    z-index: 100;
+    position: fixed;
+    background-color: #fff;
+}
+
+.hcontainer {
+    width: 81%;
+    margin: auto;
+    margin-top: 0px;
+    padding: 0 30px;
+    height: 85px;
+    background-color: #fff;
+
+}
+
+.hParent {
+    display: grid;
+    grid-template-columns: 25% 65%;
+}
+
+.hsvg {
+    text-align: left;
+    padding: 25px 0px 30px 50px;
+}
+
+.hdetails {
+    display: grid;
+    grid-template-columns: 25% 25% 40%;
+    font-size: 16px;
+}
+
+.vertical {
+    height: 65px;
+    width: 0.8px;
+    background-color: #c1c1c1;
+    margin: 8px 10px;
+}
+
+.hcom {
+    padding: 22px 0px;
+}
+
+.hcom p {
+    color: #8c8d94;
+}
+
+h4,
+p {
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: -0.1px;
+    margin: 0px;
+}
+
+.hConadd {
+    width: 80%;
+    margin: auto;
+    margin-top: 100px;
+}
+
+.hparadd {
+    display: grid;
+    grid-template-columns: 25% 40% 30%;
+    gap: 20px;
+    height: auto;
+}
+
+.naddbut {
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 2px;
+    padding: 10px 23px 0 23px;
+    color: #fc2779;
+    letter-spacing: 0.5px;
+    border-right: 3px solid #fc2779;
+    height: 40px;
+}
+
+
+
+.addDet {
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 2px;
+    padding: 10px 30px 0 25px;
+}
+
+.addFrom input {
+    height: 35px;
+    width: 100%;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    margin: 15px 0;
+    border: none;
+    border-bottom: 1px solid #8c8d94;
+}
+
+.addFrom input:focus {
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #fc2779;
+}
+
+.addFrom hr {
+    background-color: #b6b6b6;
+    margin-bottom: 20px;
+}
+
+.addFrom textarea {
+    border: none;
+    resize: none;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.addFrom textarea:focus {
+    outline: none;
+    border-color: #fc2779;
+}
+
+.addFrom fieldset {
+    font-size: 14px;
+    color: #797777
+}
+
+
+
+.bag {
+    padding: 7px 0px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.bag p {
+    color: #fea838;
+    cursor: pointer;
+}
+
+.cartDet {
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 2px;
+    padding: 10px 23px 0 23px;
+    height: max-content;
+}
+
+.cartDet button {
+    background-color: #fff;
+    border: none;
+    color: #fc2779;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+.priceDiv div {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 2px;
+    padding-bottom: 5px;
+}
+
+.priceDiv p {
+    font-size: 16px;
+    font-weight: 360;
+    letter-spacing: 0.5px;
+}
+
+.grandiv {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+} */
