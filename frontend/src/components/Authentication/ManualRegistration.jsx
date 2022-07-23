@@ -17,7 +17,16 @@ function ManualRegistration() {
                 Password: password,
             }
             axios.post("http://localhost:8080/auth/login", data).then((response) => {
-                localStorage.setItem("user", JSON.stringify(response));
+                console.log(response)
+                if (response.data.Message == "Account does not exist") {
+                    alert("Account does not exist, please create one")
+                    setLogin(false)
+                }
+                if (response.data.Message == "Password doesn't match!") {
+                    alert("Password doesn't match, Try once again")
+                    setPassword("")
+                }
+                  localStorage.setItem("user", JSON.stringify(response.data));
             }).catch((error) => {
                 console.log(error)
             })
@@ -31,7 +40,8 @@ function ManualRegistration() {
             axios
               .post("http://localhost:8080/auth/register", data)
                 .then((response) => {
-                    localStorage.setItem("user",JSON.stringify(response))
+                    console.log(response)
+                    localStorage.setItem("user",JSON.stringify(response.data))
               })
               .catch((error) => {
                 console.log(error);
@@ -104,15 +114,6 @@ function ManualRegistration() {
         <>
           <div style={{ width: "90%", margin: "auto", textAlign: "left" }}>
             <form onSubmit={(e) => handleSubmit(e, "register")}>
-              <h2 style={h2Reg}>Name:</h2>
-              <input
-                onChange={(e) => setName(e.target.value)}
-                style={inputReg}
-                required="required"
-                type="text"
-                placeholder="Enter Name"
-              />
-              <br />
               <h2 style={h2Reg}>Email:</h2>
               <input
                 onChange={(e) => setEmail(e.target.value)}
@@ -131,6 +132,15 @@ function ManualRegistration() {
                 placeholder="Enter Password"
               />
               <br />
+              <h2 style={h2Reg}>Name:</h2>
+              <input
+                onChange={(e) => setName(e.target.value)}
+                style={inputReg}
+                required="required"
+                type="text"
+                placeholder="Enter Name"
+              />
+              <br /> 
               <h2 style={h2Reg}>Phone:</h2>
               <input
                 onChange={(e) => setPhone(e.target.value)}
