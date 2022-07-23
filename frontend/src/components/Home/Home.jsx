@@ -2,7 +2,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import styles from "./Home.module.css";
 import Carousel1 from "./Carousel1.1";
 import Carousel2 from "./Carousel1.2";
-import HoriZontol from "./Horizontal";
+import Horizontol from "./Horizontal";
 import {
   Box,
   Text,
@@ -277,7 +277,7 @@ function HomePage() {
       </div>
       <Carousel2 />
       <h1 className={styles.bigheader}>Bestsellers</h1>
-      <HoriZontol />
+      <Horizontol />
       <h1 className={styles.bigheader}>FEATURED BRANDS</h1>
       <div className={styles.card2}>
         <Box

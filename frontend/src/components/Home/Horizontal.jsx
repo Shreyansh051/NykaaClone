@@ -90,7 +90,7 @@ const products = [
   },
 ];
 
-function HoriZontol() {
+function Horizontol() {
   return (
     <>
       <div className={styles.media_scroller}>
@@ -176,4 +176,4 @@ function HoriZontol() {
   );
 }
 
-export default HoriZontol;
+export default Horizontol;
