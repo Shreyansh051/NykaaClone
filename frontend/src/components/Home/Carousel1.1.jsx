@@ -2,7 +2,6 @@ import React from "react";
 import { Slide } from "react-slideshow-image";
 import "react-slideshow-image/dist/styles.css";
 import styles from "./Carousel.module.css";
-
 const slideImages = [
   {
     url: "https://images-static.nykaa.com/uploads/eb2071c9-8d07-47b1-8c36-9c95c412129f.jpg?tr=w-2400,cm-pad_resize",
@@ -20,6 +19,7 @@ const slideImages = [
     url: "https://images-static.nykaa.com/uploads/4f8da256-1e17-46b6-8c74-f49919b4c158.jpg?tr=w-2400,cm-pad_resize",
   },
 ];
+
 
 const properties = {
   duration: 2000,

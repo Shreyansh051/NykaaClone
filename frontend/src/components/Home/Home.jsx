@@ -509,7 +509,7 @@ function HomePage() {
           h={"370px"}
           w={"full"}
           bg={useColorModeValue("white", "gray.800")}
-          className={styles.card2hovereffect}
+          className={styles.cardhovereffect}
           rounded={"md"}
           overflow={"hidden"}
           marginLeft={"310px"}
@@ -538,7 +538,7 @@ function HomePage() {
           h={"370px"}
           w={"full"}
           bg={useColorModeValue("white", "gray.800")}
-          className={styles.card2hovereffect}
+          className={styles.cardhovereffect}
           rounded={"md"}
           overflow={"hidden"}
           marginLeft={"20px"}

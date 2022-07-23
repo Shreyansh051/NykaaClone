@@ -1,6 +1,9 @@
-import './App.css';
-// import Footer from './components/Footer/Footer';
-// import MainNavbar from './components/Navbar/MainNavbar';
+import "./App.css";
+
+
+
+// import HomePage from "./components/Home/HomePage"
+// import Products from "./components/Product page/Products";
 // import Main from './Main';
 import React, { useState,useEffect} from 'react';
 import {useLocation} from 'react-router-dom'
@@ -16,10 +19,10 @@ function App() {
   },[params])
   return (
     <div className="App">
-      {/* {visible && <MainNavbar/>}
-      <Main />
-      {visible && <Footer/>} */}
-    <Products/>
+    {/* <Products/> */}
+    {/* <HomePage/> */}
+   
+    {/* <Siderbar/> */}
     </div>
   )};
 export default App;
