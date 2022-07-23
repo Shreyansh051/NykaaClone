@@ -32,8 +32,12 @@
     font-weight: 400;
 }
 
+.sgra {
+    margin: 5px 0;
+}
+
 .sgmrp {
-    margin: 15px 0px;
+    margin: 8px 0px;
     color: #8c8c8c;
 }
 

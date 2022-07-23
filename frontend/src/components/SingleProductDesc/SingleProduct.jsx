@@ -17,11 +17,11 @@ export const SingleProduct = () => {
             <h2>{"Namya"}</h2>
             <p>{"(33g)"}</p>
           </div>
-          <div>
+          <div className={Style.sgra}>
             <p>{"Rating"}</p>
           </div>
           <div className={Style.sgmrp}>
-            <span style={{ margin: "10px 0" }}>MRP: </span>
+            <span style={{ margin: "4px 0" }}>MRP: </span>
             <span
               style={{ fontWeight: "550", color: "black", fontSize: "18px" }}
             >
