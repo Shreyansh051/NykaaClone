@@ -17,6 +17,8 @@ function App() {
       {/* <Products/> */}
       <Main/>
     {/* <HomePages/> */}
+    {/* <Products/> */}
+    {/* <HomePage/> */}
     {/* <Siderbar/> */}
     </div>
   )};

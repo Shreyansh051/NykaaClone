@@ -6,6 +6,26 @@
         "desimcal",
         "imagescal",
         "mediaelement",
+<<<<<<< Updated upstream
         "NYKAA"
     ]
+=======
+        "NYKAA",
+        "offprice",
+        "orignalprice",
+        "percentoff",
+        "pricediscountprice",
+        "priceoffer",
+        "reviewcount",
+        "reviewstar",
+        "setcontainer",
+        "setdiv",
+        "slidecontainer",
+        "starwrap",
+        "subtittle",
+        "totalreview",
+        "Zontol"
+    ],
+    "git.ignoreLimitWarning": true
+>>>>>>> Stashed changes
 }
