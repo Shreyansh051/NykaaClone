@@ -1,4 +1,7 @@
-import "./App.css";
+import './App.css';
+import Footer from './components/Footer/Footer';
+import MainNavbar from './components/Navbar/MainNavbar';
+import Products from './components/Product page/Products';
 
 
 
