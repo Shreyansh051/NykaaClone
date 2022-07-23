@@ -2,6 +2,7 @@
 import './App.css';
 // import Footer from './components/Footer/Footer';
 // import MainNavbar from './components/Navbar/MainNavbar';
+import { Payment } from './components/Payment/Payment';
 import Products from './components/Product page/Products';
 // import HomePage from "./components/Home/HomePage"
 // import Products from "./components/Product page/Products";
@@ -11,7 +12,8 @@ import Main from './Main';
 function App() {
   return (
     <div className="App">
-    <Products/>
+    {/* <Products/> */}
+    <Payment/>
     {/* <Main/> */}
     {/* <HomePage/> */}
     {/* <Siderbar/> */}
