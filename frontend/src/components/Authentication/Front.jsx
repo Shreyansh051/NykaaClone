@@ -12,26 +12,13 @@ function Front({setView}) {
     var googleProvider = new GoogleAuthProvider()
     signInWithPopup(firebaseAuth, googleProvider)
       .then((response) => {
-        console.log(response._tokenResponse.email);
-        localStorage.setItem(
-          "oAuth",
-          JSON.stringify(response._tokenResponse.oauthAccessToken)
-        );
         const user = {
           Email: response._tokenResponse.email,
           Photo: response._tokenResponse.photoUrl,
           Name: response._tokenResponse.displayName,
-          Password:"12345"
-        };
-        axios
-          .post("http://localhost:8080/auth/register", user)
-          .then((response) => {
-            alert("Login Successful");
-            navigate("/")
-          })
-          .catch((error) => {
-            console.log(error);
-          });
+          Token: response._tokenResponse.oauthAccessToken,
+        }
+        localStorage.setItem("oAuth", JSON.stringify(user));
       })
       .catch((error) => {
         console.log(error);
@@ -65,7 +52,7 @@ function Front({setView}) {
       <img src={loginImage} alt="gift Image" />
       <div style={para}>
         <button onClick={() => setView("register")} style={input}>
-          Enter Phone Number
+          Login By OTP
         </button>
         <br /><br />
         <button onClick={() => navigate("/register")} style={input}>

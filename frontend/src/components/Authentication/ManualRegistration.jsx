@@ -39,9 +39,15 @@ function ManualRegistration() {
             };
             axios
               .post("http://localhost:8080/auth/register", data)
-                .then((response) => {
-                    console.log(response)
-                  localStorage.setItem("user", JSON.stringify(response.data))
+              .then((response) => {
+                const localData = {
+                  Email: email,
+                  Name: name,
+                  Token: response.data,
+                  Photo:
+                    "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460__340.png",
+                };
+                  localStorage.setItem("user", JSON.stringify(localData))
                   alert("Login Successful");
                   navigate("/")
               })

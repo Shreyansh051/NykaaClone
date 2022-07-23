@@ -4,8 +4,7 @@ import { signInWithPhoneNumber } from "firebase/auth";
 import firebaseAuth from "./firebase";
 import { RecaptchaVerifier } from "firebase/auth";
 
-function Register({ setView, number,setNumber }) {
-  
+function Register({ setView, number, setNumber, setPassword ,setName, setEmail}) {
   //<---------------------------------------------------------------->//ReCaptcha
   const generateReCaptcha = () => {
     window.recaptchaVerifier = new RecaptchaVerifier(
@@ -34,7 +33,6 @@ function Register({ setView, number,setNumber }) {
       .catch((error) => {
         console.log(error);
       });
-    
   };
 
   //<---------------------------------------------------------------->*******
@@ -85,22 +83,68 @@ function Register({ setView, number,setNumber }) {
               outline: "none",
             }}
           />
+          <br />
+          <br />
+          <br />
+          <input
+            onChange={(e) => setName(e.target.value)}
+            required
+            type="text"
+            placeholder="Enter Name"
+            style={{
+              border: "1px solid red",
+              background: "#f3f3f3",
+              width: "100%",
+              height: "40px",
+              fontSize: "16px",
+              textAlign: "center",
+              outline: "none",
+            }}
+          />
+          <br />
+          <br />
+          <br />
+          <input
+            onChange={(e) => setEmail(e.target.value)}
+            required
+            type="email"
+            placeholder="Enter Email"
+            style={{
+              border: "1px solid red",
+              background: "#f3f3f3",
+              width: "100%",
+              height: "40px",
+              fontSize: "16px",
+              textAlign: "center",
+              outline: "none",
+            }}
+          />
+
+          <br />
+          <br />
+          <br />
+          <input
+            onChange={(e) => setPassword(e.target.value)}
+            required
+            type="password"
+            placeholder="Enter New Password"
+            style={{
+              border: "1px solid red",
+              background: "#f3f3f3",
+              width: "100%",
+              height: "40px",
+              fontSize: "16px",
+              textAlign: "center",
+              outline: "none",
+            }}
+          />
         </div>
-        <div
-          style={{
-            width: "80%",
-            margin: "-20px auto",
-            display: "flex",
-            justifyContent: "flex-end",
-          }}
-        >
-          <h5 style={{ color: "gray" }}>REQUIRED</h5>
-        </div>
+
         <div
           style={{ width: "80%", margin: "20px auto" }}
           id="recaptcha-Div"
         ></div>
-        <div style={{ width: "80%", margin: "150px auto" }}>
+        <div style={{ width: "80%", margin: "50px auto" }}>
           <button type="submit" style={input}>
             PROCEED
           </button>

@@ -9,13 +9,13 @@ import {
   alertPopup,
 } from "./login.css";
 import Timer from "./Timer"
+import axios from "axios"
 
-function AuthOTP({ setView, number}) {
+function AuthOTP({ setView, number,name, password, email}) {
   const navigate = useNavigate();
   const [otp, setOtp] = useState("");
   const [Alert, setAlert] = useState(false)
-  const ref = null
-  const popUp= true
+  const [popUp, setPopUp] = useState(true)
   //<---------------------------------------------------------------->//SetInterval for 30 sec timer
   useEffect(() => {
     setTimeout(() => {
@@ -32,9 +32,24 @@ function AuthOTP({ setView, number}) {
       .then((result) => {
         // User signed in successfully.
         const user = result.user;
-        localStorage.setItem("oAuth", JSON.stringify(user.accessToken));
-        alert("Login Successful")
-        navigate("/")
+        const userData = {
+          Email: email,
+          Password: password,
+          Name: name,
+          Phone: number,
+        }
+        axios.post("http://localhost:8080/auth/register", userData).then((response) => {
+          const localData = {
+            Email: email,
+            Name: name,
+            Token: user.accessToken,
+            Photo:
+              "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460__340.png",
+          };
+          localStorage.setItem("oAuth", JSON.stringify(localData));
+          alert("Login Successful");
+          navigate("/");
+        })
       })
       .catch((error) => {
         // User couldn't sign in (bad verification code?)
@@ -110,6 +125,7 @@ function AuthOTP({ setView, number}) {
               }}
             >
               <input
+                onClick={()=>setPopUp(false)}
                 required
                 pattern="[0-9]{4}"
                 minLength="4"
