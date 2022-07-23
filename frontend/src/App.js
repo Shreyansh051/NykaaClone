@@ -14,8 +14,8 @@ import HomePage from "./components/Home/HomePage"
 function App() {
   return (
     <div className="App">
-    <Products/>
-    {/* <HomePage/> */}
+    {/* <Products/> */}
+    <HomePage/>
     {/* <Siderbar/> */}
     </div>
   )};
