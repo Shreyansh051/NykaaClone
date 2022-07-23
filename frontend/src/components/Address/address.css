@@ -1,4 +1,4 @@
-.hemain {
+/* .hemain {
     box-shadow: 0 4px 10px 0 rgb(0 0 0 / 10%);
     width: 100%;
     z-index: 100;
@@ -55,7 +55,6 @@ p {
     margin: 0px;
 }
 
-/*address page style */
 .hConadd {
     width: 80%;
     margin: auto;
@@ -80,15 +79,6 @@ p {
     height: 40px;
 }
 
-/* .addSaN div+div {
-    height: 40px;
-    margin-top: 18px;
-    margin-left: -22px;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    background-color: #fff;
-    padding: 10px 23px 0 23px;
-    width: 255px;
-} */
 
 
 .addDet {
@@ -184,4 +174,4 @@ p {
     display: flex;
     justify-content: space-between;
     padding: 10px 0;
-}
+} */

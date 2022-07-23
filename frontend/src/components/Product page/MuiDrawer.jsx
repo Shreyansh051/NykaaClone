@@ -134,7 +134,7 @@ export const MuiDrawer = () => {
             </div>
             <div className={styles.reward}>
                 <img className={styles.rewardImg} src="https://adn-static1.nykaa.com/media/wysiwyg/Payments/3Success.svg" alt="" />
-                <Typography fontSize={10} marginTop={1.4} variatnt="subtitle1">Yay! You will earn 3449 Reward points {total} reward point</Typography >
+                <Typography fontSize={13} marginTop={1.2} variatnt="subtitle1">Yay! You will earn {total} reward point</Typography >
             </div>
           </div>
           <Divider  style={{marginTop:"40px", width:"104%"}}/>
