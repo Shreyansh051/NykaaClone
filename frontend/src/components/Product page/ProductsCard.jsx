@@ -33,7 +33,7 @@ const ProductsCard = ({
     >
       <div>
         <div>
-          {tags == "FEATURED" ? (
+          {tags == "FEATURED" && (
             <div
               style={{
                 marginLeft: "-10vw",
@@ -45,7 +45,8 @@ const ProductsCard = ({
             >
               {tags}
             </div>
-          ) : (
+          )}
+          {tags == "BESTSELLER" && (
             <div
               style={{
                 marginLeft: "-10vw",
@@ -55,9 +56,20 @@ const ProductsCard = ({
                 padding: "10px 0px",
               }}
             >
-              {tags || "."}
+              {tags}
             </div>
           )}
+          {tags != "FEATURED" && tags != "BESTSELLER" && (<div
+              style={{
+                marginLeft: "-10vw",
+                color: "white",
+                fontSize: "13px",
+                fontWeight: "bold",
+                padding: "10px 0px",
+              }}
+            >
+              hhh
+            </div>)}
           <img style={{ marginTop: "0px" }} src={image_url} alt="" />
           <div
             style={{
