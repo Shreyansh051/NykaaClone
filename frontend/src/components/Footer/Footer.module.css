@@ -1,0 +1,95 @@
+*{
+    text-align: left;
+}
+.box{
+    display: flex;
+    justify-content: center;
+    gap: 5vw; 
+    background: #3f414d;
+    padding: 2vh 0 2vh 0;
+}
+.box>div{
+    height: 19vh;
+}
+.box1{
+    display: flex;
+    gap: 0.5vw;
+    font-weight: 600;
+    color: white;
+    font-size: 14px;
+}
+.box3>input {
+    height: 3vh;
+    width: 13vw;
+    outline: 0;
+    border-width: 0 0 2px;
+    border-color: rgb(232, 232, 235);
+    margin-right:1vw;
+    padding-left: 1.5vw;
+    background-color: #3f414d;
+    color: white;
+  }
+  .box3>button{
+    height: 5vh;
+    width: 5vw;
+    background: #3f414d;
+    color:white;
+    border-radius: 5px;
+    border: 1px solid white;
+    text-align: center;
+}
+.box4{
+    display: flex;
+   gap: 1vw;
+justify-content: center;
+}
+.box4>img{
+    height: 5vh;
+    width: 9vw;
+     
+}
+.box5{
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    gap: 7vw;
+    background: #8c8d94;
+    padding: 3vh 0 3vh 0;
+}
+.box5>div>p{
+    line-height: 2.5vh;
+    font-size: 13px;
+    color: white;
+}
+.box5>div>h4{
+ 
+    color: white;
+}
+.box5>div>p:hover{
+     color:#fc3581;
+     cursor: pointer;
+}
+.box6{
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    gap: 3vw;
+    padding: 5vh 5vw 5vh 5vw;
+}
+.box6>div{  
+  display: flex;
+  line-height: 15px;
+  gap: 1.5vw;
+  font-size: 14px;
+} 
+.box7{
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    gap: 3vw;
+    
+    
+}
+.box7>p{
+    cursor: pointer;
+}

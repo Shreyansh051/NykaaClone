@@ -2,10 +2,9 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import styles from "./Home.module.css";
 import Carousel1 from "./Carousel1.1";
 import Carousel2 from "./Carousel1.2";
-import Hori from "./Horizontal.js";
+import HoriZontol from "./Horizontal";
 import {
   Box,
-  Heading,
   Text,
   Image,
   Stack,
@@ -24,62 +23,94 @@ const cardImages1 = [
 const cardImages2 = [
   {
     url: "https://images-static.nykaa.com/uploads/45e77657-2fba-49f1-b077-437dc02b978c.gif?tr=w-1200,cm-pad_resize",
+    tittle: "For Every Skin Type",
+    discount: " Upto 35% Off%",
   },
   {
     url: "https://images-static.nykaa.com/uploads/2aaabbf7-64bb-4ec8-b73c-671074554789.jpg?tr=w-1200,cm-pad_resize",
+    tittle: "On Entire Range",
+    discount: " Upto 25% Off",
   },
   {
     url: "https://images-static.nykaa.com/uploads/ebbf5f5b-9f8c-4839-9063-d4b3d4fb5656.gif?tr=w-1200,cm-pad_resize",
+    tittle: "For Every Skin Type",
+    discount: "Upto 35% Off%",
   },
   {
     url: "https://images-static.nykaa.com/uploads/1555b61a-a163-408a-ab3d-3a666832acfb.jpg?tr=w-1200,cm-pad_resize",
+    tittle: " Explore Waterproof Makeup +",
+    discount: "Exciting Gifts On Orders!",
   },
+
   {
     url: "https://images-static.nykaa.com/uploads/83247895-0a7e-4141-9b86-ce7b039e7c3a.gif?tr=w-1200,cm-pad_resize",
+    tittle: "For Every Skin Type",
+    discount: "Exciting Gifts On Orders!",
   },
   {
     url: "https://images-static.nykaa.com/uploads/3856736f-82d6-45c0-a10e-8bc90e891bb2.gif?tr=w-1200,cm-pad_resize",
+    tittle: "On Entire Range",
+    discount: "Upto 25% Off",
   },
   {
     url: "https://images-static.nykaa.com/uploads/b1189a45-6537-415f-ae55-bdd500d074b0.gif?tr=w-1200,cm-pad_resize",
+    tittle: " worth Rs. 525 on Rs. 800",
+    discount: "Upto 40% Off + Free lipstick",
   },
   {
     url: "https://images-static.nykaa.com/uploads/64c65727-2d07-41a5-b4a5-6e0dbfee8b98.jpg?tr=w-1200,cm-pad_resize",
+    tittle: "SKY HIGH Mascara Has Landed In India !",
+    discount: "Upto 30% Off On Maybelline Bestsellers  ",
   },
 ];
 const cardImages3 = [
   {
     url: "https://images-static.nykaa.com/uploads/db316f35-4e1f-49a2-942e-c730599ff776.gif?tr=w-1200,cm-pad_resize",
+    tittle: "Moisturizer Worth Rs. 399 On Rs. 1000",
+    discount: "Upto 15% Off + Free 5% Niacinamide",
   },
   {
     url: "https://images-static.nykaa.com/uploads/4e85e306-4fcf-463a-ae04-d0066fb010de.gif?tr=w-1200,cm-pad_resize",
+    tittle: "explore more+",
+    discount: "Upto 20% Off",
   },
-  
 ];
-const cardImages31=[
+const cardImages31 = [
   {
     url: "https://images-static.nykaa.com/uploads/4c447fa5-0de0-4c69-a138-177321485adf.gif?tr=w-1200,cm-pad_resize",
+    tittle: "Complimentary Gifts On International Favourites",
+    discount: " Upto 30% Off +",
   },
-]
+];
 const cardImages4 = [
   {
     url: "https://images-static.nykaa.com/uploads/1ca5ddd3-c263-40b7-9713-d8dede28b4be.jpg?tr=w-1200,cm-pad_resize",
+    tittle: "explore more+",
+    discount: "Additional 5% Off On Rs. 399",
   },
 ];
 const cardImages5 = [
   {
     url: "https://images-static.nykaa.com/uploads/5c11bb71-1500-477e-9943-491d57a1ec57.gif?tr=w-1200,cm-pad_resize",
+    tittle: "explore more+",
+    discount: " Grab SUGAR Favorites On Purchase Of Rs.799",
   },
   {
     url: "https://images-static.nykaa.com/uploads/62eb4f26-ccb1-4a18-82e0-28b99368314b.jpg?tr=w-1200,cm-pad_resize",
+    tittle: "Additional 5% Off On Rs. 399",
+    discount: "  Upto 30% Off",
   },
 ];
 const cardImages6 = [
   {
     url: "https://images-static.nykaa.com/uploads/3671a728-2665-44e1-8065-f7f75308c3cb.gif?tr=w-1200,cm-pad_resize",
+    tittle: "explore more+",
+    discount: "50%-60%",
   },
   {
     url: "https://images-static.nykaa.com/uploads/0767a3b8-61ec-43b0-901b-76ae5563fdb8.png?tr=w-1200,cm-pad_resize",
+    tittle: "explore more+",
+    discount: "50%-60%",
   },
 ];
 const cardImages7 = [
@@ -116,9 +147,8 @@ function HomePage() {
             borderWidth="1px"
             borderRadius="lg"
             w={{ sm: "100%", md: "560px" }}
-            height={{ sm: "476px", md: "19rem" }}
+            height={{ sm: "476px", md: "18.8rem" }}
             direction={{ base: "column", md: "row" }}
-            boxShadow={"2xl"}
             marginTop={"20px"}
           >
             {" "}
@@ -163,18 +193,21 @@ function HomePage() {
             borderWidth="1px"
             borderRadius="lg"
             w={{ sm: "100%", md: "560px" }}
-            height={{ sm: "476px", md: "19rem" }}
+            height={{ sm: "476px", md: "18.8rem" }}
             direction={{ base: "column", md: "row" }}
-            boxShadow={"2xl"}
           >
             {" "}
             <div className="each-slide" key={index}>
-              <div>
+              <div className={styles.setcontainer}>
                 <img
                   className={styles.desimcal}
                   src={`${cards.url}`}
                   alt="card"
                 />
+                <div className={styles.setdiv}>
+                  <span className={styles.tittle}>{`${cards.tittle}`} </span>
+                  <p className={styles.discount}>{`${cards.discount}`}</p>
+                </div>
               </div>
             </div>
           </Stack>
@@ -187,18 +220,21 @@ function HomePage() {
             borderWidth="1px"
             borderRadius="lg"
             w={{ sm: "100%", md: "560px" }}
-            height={{ sm: "476px", md: "19rem" }}
+            height={{ sm: "476px", md: "18.8rem" }}
             direction={{ base: "column", md: "row" }}
-            boxShadow={"2xl"}
           >
             {" "}
             <div className="each-slide" key={index}>
-              <div>
+              <div className={styles.setcontainer}>
                 <img
                   className={styles.desimcal}
                   src={`${cards.url}`}
                   alt="card"
                 />
+                <div className={styles.setdiv}>
+                  <span className={styles.tittle}>{`${cards.tittle}`} </span>
+                  <p className={styles.discount}>{`${cards.discount}`}</p>
+                </div>
               </div>
             </div>
           </Stack>
@@ -210,20 +246,23 @@ function HomePage() {
             borderWidth="1px"
             borderRadius="lg"
             w={{ sm: "100%", md: "560px" }}
-            height={{ sm: "476px", md: "19rem" }}
+            height={{ sm: "476px", md: "18.8rem" }}
             direction={{ base: "column", md: "row" }}
-            boxShadow={"2xl"}
             marginLeft={"244px"}
             marginTop={"20px"}
           >
             {" "}
             <div className="each-slide" key={index}>
-              <div>
+              <div className={styles.setcontainer}>
                 <img
                   className={styles.desimcal}
                   src={`${cards.url}`}
                   alt="card"
                 />
+                <div className={styles.setdiv}>
+                  <span className={styles.tittle}>{`${cards.tittle}`} </span>
+                  <p className={styles.discount}>{`${cards.discount}`}</p>
+                </div>
               </div>
             </div>
           </Stack>
@@ -238,7 +277,7 @@ function HomePage() {
       </div>
       <Carousel2 />
       <h1 className={styles.bigheader}>Bestsellers</h1>
-      <Hori />
+      <HoriZontol />
       <h1 className={styles.bigheader}>FEATURED BRANDS</h1>
       <div className={styles.card2}>
         <Box
@@ -246,7 +285,7 @@ function HomePage() {
           h={"370px"}
           w={"full"}
           bg={useColorModeValue("white", "gray.800")}
-          boxShadow={"2xl"}
+          className={styles.card2hovereffect}
           rounded={"md"}
           overflow={"hidden"}
           marginLeft={"60px"}
@@ -263,7 +302,11 @@ function HomePage() {
           />
           <Box p={6}>
             <Stack spacing={0} align={"center"} mb={5}>
-              <Text> Flat 10% Off + Buy 5 Get 5 On Sheet Masks!</Text>
+              <Text className={styles.tittle}>
+                {" "}
+                Upto 20% Off + Free Face Scrub
+              </Text>
+              className={styles.title}
             </Stack>
           </Box>
         </Box>
@@ -273,7 +316,7 @@ function HomePage() {
           h={"370px"}
           w={"full"}
           bg={useColorModeValue("white", "gray.800")}
-          boxShadow={"2xl"}
+          className={styles.card2hovereffect}
           rounded={"md"}
           overflow={"hidden"}
           marginLeft={"20px"}
@@ -289,7 +332,10 @@ function HomePage() {
           />
           <Box p={6}>
             <Stack spacing={0} align={"center"} mb={5}>
-              <Text> Flat 10% Off + Buy 5 Get 5 On Sheet Masks!</Text>
+              <Text className={styles.tittle}>
+                {" "}
+                Moisturizer Worth Rs. 399 On Rs. 1000
+              </Text>
             </Stack>
           </Box>
         </Box>
@@ -299,7 +345,7 @@ function HomePage() {
           h={"370px"}
           w={"full"}
           bg={useColorModeValue("white", "gray.800")}
-          boxShadow={"2xl"}
+          className={styles.card2hovereffect}
           rounded={"md"}
           overflow={"hidden"}
           marginLeft={"20px"}
@@ -315,7 +361,10 @@ function HomePage() {
           />
           <Box p={6}>
             <Stack spacing={0} align={"center"} mb={5}>
-              <Text> Flat 10% Off + Buy 5 Get 5 On Sheet Masks!</Text>
+              <Text className={styles.tittle}>
+                {" "}
+                Free Fab Bullet Lipstick Free On ₹799
+              </Text>
             </Stack>
           </Box>
         </Box>
@@ -324,7 +373,7 @@ function HomePage() {
           h={"370px"}
           w={"full"}
           bg={useColorModeValue("white", "gray.800")}
-          boxShadow={"2xl"}
+          className={styles.card2hovereffect}
           rounded={"md"}
           overflow={"hidden"}
           marginLeft={"20px"}
@@ -340,7 +389,10 @@ function HomePage() {
           />
           <Box p={6}>
             <Stack spacing={0} align={"center"} mb={5}>
-              <Text> Flat 10% Off + Buy 5 Get 5 On Sheet Masks!</Text>
+              <Text className={styles.tittle}>
+                {" "}
+                Flat 10% Off + Buy 5 Get 5 On Sheet Masks!
+              </Text>
             </Stack>
           </Box>
         </Box>
@@ -349,7 +401,7 @@ function HomePage() {
           h={"370px"}
           w={"full"}
           bg={useColorModeValue("white", "gray.800")}
-          boxShadow={"2xl"}
+          className={styles.card2hovereffect}
           rounded={"md"}
           overflow={"hidden"}
           marginLeft={"60px"}
@@ -365,7 +417,9 @@ function HomePage() {
           />
           <Box p={6}>
             <Stack spacing={0} align={"center"} mb={5}>
-              <Text> Flat 10% Off + Buy 5 Get 5 On Sheet Masks!</Text>
+              <Text className={styles.tittle}>
+                Upto 20% Off + Free Face Wash
+              </Text>
             </Stack>
           </Box>
         </Box>
@@ -374,7 +428,7 @@ function HomePage() {
           h={"370px"}
           w={"full"}
           bg={useColorModeValue("white", "gray.800")}
-          boxShadow={"2xl"}
+          className={styles.card2hovereffect}
           rounded={"md"}
           overflow={"hidden"}
           marginLeft={"20px"}
@@ -390,7 +444,10 @@ function HomePage() {
           />
           <Box p={6}>
             <Stack spacing={0} align={"center"} mb={5}>
-              <Text> Flat 10% Off + Buy 5 Get 5 On Sheet Masks!</Text>
+              <Text className={styles.tittle}>
+                {" "}
+                Upto 30% Off + Buy 2, Choose 2 Free Minis
+              </Text>
             </Stack>
           </Box>
         </Box>
@@ -399,7 +456,7 @@ function HomePage() {
           h={"370px"}
           w={"full"}
           bg={useColorModeValue("white", "gray.800")}
-          boxShadow={"2xl"}
+          className={styles.card2hovereffect}
           rounded={"md"}
           overflow={"hidden"}
           marginLeft={"20px"}
@@ -415,7 +472,10 @@ function HomePage() {
           />
           <Box p={6}>
             <Stack spacing={0} align={"center"} mb={5}>
-              <Text> Flat 10% Off + Buy 5 Get 5 On Sheet Masks!</Text>
+              <Text className={styles.tittle}>
+                {" "}
+                Upto 30% Off + Buy 2, Choose 2 Free Minis
+              </Text>
             </Stack>
           </Box>
         </Box>
@@ -424,7 +484,7 @@ function HomePage() {
           h={"370px"}
           w={"full"}
           bg={useColorModeValue("white", "gray.800")}
-          boxShadow={"2xl"}
+          className={styles.card2hovereffect}
           rounded={"md"}
           overflow={"hidden"}
           marginLeft={"20px"}
@@ -440,7 +500,7 @@ function HomePage() {
           />
           <Box p={6}>
             <Stack spacing={0} align={"center"} mb={5}>
-              <Text> Flat 10% Off + Buy 5 Get 5 On Sheet Masks!</Text>
+              <Text className={styles.tittle}> nykaa-naturals-all</Text>
             </Stack>
           </Box>
         </Box>
@@ -449,7 +509,7 @@ function HomePage() {
           h={"370px"}
           w={"full"}
           bg={useColorModeValue("white", "gray.800")}
-          boxShadow={"2xl"}
+          className={styles.card2hovereffect}
           rounded={"md"}
           overflow={"hidden"}
           marginLeft={"310px"}
@@ -466,7 +526,10 @@ function HomePage() {
           />
           <Box p={6}>
             <Stack spacing={0} align={"center"} mb={5}>
-              <Text> Flat 10% Off + Buy 5 Get 5 On Sheet Masks!</Text>
+              <Text className={styles.tittle}>
+                {" "}
+                Experience Beauty From Within
+              </Text>
             </Stack>
           </Box>
         </Box>
@@ -475,7 +538,7 @@ function HomePage() {
           h={"370px"}
           w={"full"}
           bg={useColorModeValue("white", "gray.800")}
-          boxShadow={"2xl"}
+          className={styles.card2hovereffect}
           rounded={"md"}
           overflow={"hidden"}
           marginLeft={"20px"}
@@ -492,7 +555,7 @@ function HomePage() {
           />
           <Box p={6}>
             <Stack spacing={0} align={"center"} mb={5}>
-              <Text> Flat 10% Off + Buy 5 Get 5 On Sheet Masks!</Text>
+              <Text className={styles.tittle}> Worth Rs. 249 On Rs. 800</Text>
             </Stack>
           </Box>
         </Box>
@@ -503,27 +566,28 @@ function HomePage() {
             borderWidth="1px"
             borderRadius="lg"
             w={{ sm: "100%", md: "560px" }}
-            height={{ sm: "476px", md: "19rem" }}
+            height={{ sm: "476px", md: "18.8rem" }}
             direction={{ base: "column", md: "row" }}
-            boxShadow={"2xl"}
             marginLeft={"244px"}
             marginTop={"20px"}
           >
             {" "}
             <div className="each-slide" key={index}>
-              <div>
+              <div className={styles.setcontainer}>
                 <img
                   className={styles.desimcal}
                   src={`${cards.url}`}
                   alt="card"
                 />
+                <div className={styles.setdiv}>
+                  <span className={styles.tittle}>{`${cards.tittle}`}</span>
+                  <p className={styles.discount}>{`${cards.discount}`}</p>
+                </div>
               </div>
             </div>
           </Stack>
         ))}
       </div>
-
-      <h1 className={styles.bigheader}>5 slideshow </h1>
       <div>
         <img
           className={styles.banner2}
@@ -538,7 +602,7 @@ function HomePage() {
           h={"370px"}
           w={"full"}
           bg={useColorModeValue("white", "gray.800")}
-          boxShadow={"2xl"}
+          className={styles.card2hovereffect}
           rounded={"md"}
           overflow={"hidden"}
           marginLeft={"60px"}
@@ -555,7 +619,7 @@ function HomePage() {
           />
           <Box p={6}>
             <Stack spacing={0} align={"center"} mb={5}>
-              <Text> Flat 10% Off + Buy 5 Get 5 On Sheet Masks!</Text>
+              <Text className={styles.tittle}> Up To 25% Off</Text>
             </Stack>
           </Box>
         </Box>
@@ -565,7 +629,7 @@ function HomePage() {
           h={"370px"}
           w={"full"}
           bg={useColorModeValue("white", "gray.800")}
-          boxShadow={"2xl"}
+          className={styles.card2hovereffect}
           rounded={"md"}
           overflow={"hidden"}
           marginLeft={"20px"}
@@ -581,7 +645,7 @@ function HomePage() {
           />
           <Box p={6}>
             <Stack spacing={0} align={"center"} mb={5}>
-              <Text> Flat 10% Off + Buy 5 Get 5 On Sheet Masks!</Text>
+              <Text className={styles.tittle}> On Salon Quality Hair Care</Text>
             </Stack>
           </Box>
         </Box>
@@ -591,7 +655,7 @@ function HomePage() {
           h={"370px"}
           w={"full"}
           bg={useColorModeValue("white", "gray.800")}
-          boxShadow={"2xl"}
+          className={styles.card2hovereffect}
           rounded={"md"}
           overflow={"hidden"}
           marginLeft={"20px"}
@@ -607,7 +671,7 @@ function HomePage() {
           />
           <Box p={6}>
             <Stack spacing={0} align={"center"} mb={5}>
-              <Text> Flat 10% Off + Buy 5 Get 5 On Sheet Masks!</Text>
+              <Text className={styles.tittle}>Upto 50% Off</Text>
             </Stack>
           </Box>
         </Box>
@@ -616,7 +680,7 @@ function HomePage() {
           h={"370px"}
           w={"full"}
           bg={useColorModeValue("white", "gray.800")}
-          boxShadow={"2xl"}
+          className={styles.card2hovereffect}
           rounded={"md"}
           overflow={"hidden"}
           marginLeft={"20px"}
@@ -632,7 +696,7 @@ function HomePage() {
           />
           <Box p={6}>
             <Stack spacing={0} align={"center"} mb={5}>
-              <Text> Flat 10% Off + Buy 5 Get 5 On Sheet Masks!</Text>
+              <Text className={styles.tittle}>Worth Rs. 139 On Rs. 700</Text>
             </Stack>
           </Box>
         </Box>
@@ -641,7 +705,7 @@ function HomePage() {
           h={"370px"}
           w={"full"}
           bg={useColorModeValue("white", "gray.800")}
-          boxShadow={"2xl"}
+          className={styles.card2hovereffect}
           rounded={"md"}
           overflow={"hidden"}
           marginLeft={"60px"}
@@ -657,7 +721,7 @@ function HomePage() {
           />
           <Box p={6}>
             <Stack spacing={0} align={"center"} mb={5}>
-              <Text> Flat 10% Off + Buy 5 Get 5 On Sheet Masks!</Text>
+              <Text className={styles.tittle}>Worth Rs. 139 On Rs. 700</Text>
             </Stack>
           </Box>
         </Box>
@@ -666,7 +730,7 @@ function HomePage() {
           h={"370px"}
           w={"full"}
           bg={useColorModeValue("white", "gray.800")}
-          boxShadow={"2xl"}
+          className={styles.card2hovereffect}
           rounded={"md"}
           overflow={"hidden"}
           marginLeft={"20px"}
@@ -682,7 +746,10 @@ function HomePage() {
           />
           <Box p={6}>
             <Stack spacing={0} align={"center"} mb={5}>
-              <Text> Flat 10% Off + Buy 5 Get 5 On Sheet Masks!</Text>
+              <Text className={styles.tittle}>
+                {" "}
+                Experience Beauty From Within
+              </Text>
             </Stack>
           </Box>
         </Box>
@@ -691,7 +758,7 @@ function HomePage() {
           h={"370px"}
           w={"full"}
           bg={useColorModeValue("white", "gray.800")}
-          boxShadow={"2xl"}
+          className={styles.card2hovereffect}
           rounded={"md"}
           overflow={"hidden"}
           marginLeft={"20px"}
@@ -706,7 +773,9 @@ function HomePage() {
           />
           <Box p={6}>
             <Stack spacing={0} align={"center"} mb={5}>
-              <Text> Flat 10% Off + Buy 5 Get 5 On Sheet Masks!</Text>
+              <Text className={styles.tittle}>
+                Experience Beauty From Within
+              </Text>
             </Stack>
           </Box>
         </Box>
@@ -715,7 +784,7 @@ function HomePage() {
           h={"370px"}
           w={"full"}
           bg={useColorModeValue("white", "gray.800")}
-          boxShadow={"2xl"}
+          className={styles.card2hovereffect}
           rounded={"md"}
           overflow={"hidden"}
           marginLeft={"20px"}
@@ -730,7 +799,10 @@ function HomePage() {
           />
           <Box p={6}>
             <Stack spacing={0} align={"center"} mb={5}>
-              <Text> Flat 10% Off + Buy 5 Get 5 On Sheet Masks!</Text>
+              <Text className={styles.tittle}>
+                {" "}
+                Moisturizer Worth Rs. 399 On Rs. 1000
+              </Text>
             </Stack>
           </Box>
         </Box>
@@ -742,18 +814,21 @@ function HomePage() {
             borderWidth="1px"
             borderRadius="lg"
             w={{ sm: "100%", md: "560px" }}
-            height={{ sm: "476px", md: "19rem" }}
+            height={{ sm: "476px", md: "18.8rem" }}
             direction={{ base: "column", md: "row" }}
-            boxShadow={"2xl"}
           >
             {" "}
             <div className="each-slide" key={index}>
-              <div>
+              <div className={styles.setcontainer}>
                 <img
                   className={styles.desimcal}
                   src={`${cards.url}`}
                   alt="card"
                 />
+                <div className={styles.setdiv}>
+                  <span className={styles.tittle}>{`${cards.tittle}`}</span>
+                  <p className={styles.discount}>{`${cards.discount}`}</p>
+                </div>
               </div>
             </div>
           </Stack>
@@ -780,18 +855,21 @@ function HomePage() {
             borderWidth="1px"
             borderRadius="lg"
             w={{ sm: "100%", md: "560px" }}
-            height={{ sm: "476px", md: "19rem" }}
+            height={{ sm: "476px", md: "18.8rem" }}
             direction={{ base: "column", md: "row" }}
-            boxShadow={"2xl"}
           >
             {" "}
             <div className="each-slide" key={index}>
-              <div>
+              <div className={styles.setcontainer}>
                 <img
                   className={styles.desimcal}
                   src={`${cards.url}`}
                   alt="card"
                 />
+                <div className={styles.setdiv}>
+                  <span className={styles.tittle}>{`${cards.tittle}`}</span>
+                  <p className={styles.discount}>{`${cards.discount}`}</p>
+                </div>
               </div>
             </div>
           </Stack>
@@ -800,6 +878,7 @@ function HomePage() {
       <h1 className={styles.bigheader}>GIFT CARDS</h1>
       <div align="center">
         <img
+          className={styles.card2hovereffect}
           width="560px"
           height="233.33px"
           src="https://images-static.nykaa.com/uploads/be2ce42f-6986-4a32-a258-8d5278950d99.jpg?tr=w-1200,cm-pad_resize"
@@ -813,9 +892,8 @@ function HomePage() {
             borderWidth="1px"
             borderRadius="lg"
             w={{ sm: "100%", md: "560px" }}
-            height={{ sm: "476px", md: "19rem" }}
+            height={{ sm: "476px", md: "18.8rem" }}
             direction={{ base: "column", md: "row" }}
-            boxShadow={"2xl"}
           >
             {" "}
             <div className="each-slide" key={index}>
@@ -830,6 +908,7 @@ function HomePage() {
           </Stack>
         ))}
       </div>
+      {/* <Carousel3 /> */}
     </>
   );
 }

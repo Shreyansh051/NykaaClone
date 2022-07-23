@@ -6,21 +6,20 @@ import { Box, Image, useColorModeValue } from "@chakra-ui/react";
 function Carousel2() {
   return (
     <>
+    <div>
       <Carousel
         additionalTransfrom={0}
         arrows
-        autoPlaySpeed={3000}
         centerMode={false}
         className=""
         containerClass="container"
-        draggable
         focusOnSelect={false}
-        infinite={false}
+        infinite
         itemClass=""
         keyBoardControl
-        minimumTouchDrag={80}
-        pauseOnHover
-        renderArrowsWhenDisabled={false}
+        // minimumTouchDrag={80}
+        // pauseOnHover
+        renderArrowsWhenDisabled={true}
         renderButtonGroupOutside={false}
         renderDotsOutside={false}
         responsive={{
@@ -56,7 +55,7 @@ function Carousel2() {
         showDots={false}
         sliderClass=""
         slidesToSlide={1}
-        swipeable
+  
       >
         <div className={styles.cardwidth}>
           <Box
@@ -173,6 +172,7 @@ function Carousel2() {
           </Box>
         </div>
       </Carousel>
+      </div>
       ;
     </>
   );
