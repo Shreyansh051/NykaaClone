@@ -1,5 +1,5 @@
 const UserModel = require("../Models/UserModel")
-const bcrypt = require("bcrypt")
+const bcrypt = require("bcryptjs")
 const jwt = require("jsonwebtoken")
 const SECRET = "NYKAACLONESECRET"
 //<------------------------------------------------------------------------------------------------>
