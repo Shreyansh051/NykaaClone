@@ -8,7 +8,14 @@
         "imagescal",
         "mediaelement",
         "NYKAA",
+        "offprice",
+        "pricediscountprice",
+        "priceoffer",
+        "reviewcount",
+        "reviewstar",
         "setcontainer",
-        "setdiv"
+        "setdiv",
+        "starwrap",
+        "subtittle"
     ]
 }
