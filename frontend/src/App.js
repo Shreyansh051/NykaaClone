@@ -1,6 +1,6 @@
 import './App.css';
-import Footer from './components/Footer/Footer';
-import MainNavbar from './components/Navbar/MainNavbar';
+// import Footer from './components/Footer/Footer';
+// import MainNavbar from './components/Navbar/MainNavbar';
 import Products from './components/Product page/Products';
 
 
@@ -13,8 +13,8 @@ import HomePage from "./components/Home/HomePage"
 function App() {
   return (
     <div className="App">
-    <Products/>
-    {/* <HomePage/> */}
+    {/* <Products/> */}
+    <HomePage/>
     {/* <Siderbar/> */}
     </div>
   )};
