@@ -3,18 +3,26 @@ import { crossButton,Signin,h1,p,input,para,a,googlecss } from "./login.css";
 import { useNavigate } from "react-router-dom";
 import loginImage from "./login.png";
 import google from "./google.png";
-import googleAuth from "./firebase"
+import firebaseAuth from "./firebase";
 import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
-function Front({register,setRegister}) {
+import axios from "axios";
+function Front({setView}) {
   const navigate = useNavigate();
   const signInWithFirebase = () => {
     var googleProvider = new GoogleAuthProvider()
-    signInWithPopup(googleAuth,googleProvider).then((response) => {
-      console.log(response)
-    })
+    signInWithPopup(firebaseAuth, googleProvider)
+      .then((response) => {
+        const user = {
+          Email: response._tokenResponse.email,
+          Photo: response._tokenResponse.photoUrl,
+          Name: response._tokenResponse.displayName,
+          Token: response._tokenResponse.oauthAccessToken,
+        }
+        localStorage.setItem("oAuth", JSON.stringify(user));
+      })
       .catch((error) => {
-      console.log(error)
-    })
+        console.log(error);
+      });
   }
   return (
     <div>
@@ -43,11 +51,20 @@ function Front({register,setRegister}) {
       </div>
       <img src={loginImage} alt="gift Image" />
       <div style={para}>
-        <button onClick={() => setRegister(!register)} style={input}>
-          Enter Phone Number or Email
+        <button onClick={() => setView("register")} style={input}>
+          Login By OTP
+        </button>
+        <br /><br />
+        <button onClick={() => navigate("/register")} style={input}>
+          register
         </button>
         <br />
-          <img onClick={signInWithFirebase} style={googlecss} src={google} alt="google Login" />
+        <img
+          onClick={signInWithFirebase}
+          style={googlecss}
+          src={google}
+          alt="google Login"
+        />
       </div>
       <div style={para}>
         <p>
