@@ -1,7 +1,9 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { CheckOutHeader } from "./CheckOutHeader";
 import "./address.css";
 import { useNavigate } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { getAllCart } from "../../actions/products";
 
 export const Address = () => {
   const [cartEdit, setCartEdit] = useState(false);
@@ -22,7 +24,14 @@ export const Address = () => {
       [data]: e.target.value,
     });
   };
-  console.log(address);
+
+  const { total } = useSelector((state) => state.cart);
+  console.log(total);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(getAllCart());
+  }, [dispatch]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -77,6 +86,7 @@ export const Address = () => {
                       id=""
                       placeholder="Phone Number"
                       onChange={handleChange}
+                      maxLength={10}
                       required
                     />
                   </div>
@@ -86,6 +96,7 @@ export const Address = () => {
                       name="postalcode"
                       id=""
                       placeholder="Postal Code"
+                      maxLength={6}
                       onChange={handleChange}
                       required
                     />
@@ -159,7 +170,7 @@ export const Address = () => {
                 <div className="priceDiv">
                   <div>
                     <p>Sub Total</p>
-                    <p>₹1647</p>
+                    <p>₹{total}</p>
                   </div>
                   <div>
                     <p>Shipping Charge</p>
@@ -167,14 +178,14 @@ export const Address = () => {
                   </div>
                   <div style={{ paddingBottom: "10px" }}>
                     <p>Discount</p>
-                    <p>₹79.9</p>
+                    <p>₹0</p>
                   </div>
                 </div>
               </div>
               <hr />
               <div className="grandiv">
                 <h4>Grand Total</h4>
-                <p>₹848</p>
+                <p>₹{total}</p>
               </div>
               <hr style={{ marginBottom: "20px" }} />
             </div>

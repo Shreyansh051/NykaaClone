@@ -1,13 +1,12 @@
 import React from "react";
 import "./address.css";
 
+let addres = JSON.parse(localStorage.getItem("address"));
+const setUs = [addres];
+
 export const CheckOutHeader = () => {
   return (
-    <div className="hemain"
-      style={{
-        
-      }}
-    >
+    <div className="hemain" style={{}}>
       <div className="hcontainer">
         <div className="hParent">
           <div className="hsvg">
@@ -33,7 +32,13 @@ export const CheckOutHeader = () => {
               <div className="vertical"></div>
               <div className="hcom">
                 <h4>2 - ADDRESS</h4>
-                <p></p>
+                {setUs.map((el) => {
+                  return (
+                    <div>
+                      <p>{el.address}</p>
+                    </div>
+                  );
+                })}
               </div>
             </div>
             <div className="hpay" style={{ display: "flex" }}>
