@@ -6,16 +6,29 @@ import { useNavigate } from "react-router-dom";
 export const Address = () => {
   const [cartEdit, setCartEdit] = useState(false);
   const [detail, setDetail] = useState(false);
-
+  const [address, setAddress] = useState({});
+  const navigate = useNavigate();
   const handleEdit = () => {
     setCartEdit(true);
   };
   const handleDetail = () => {
     setDetail(true);
   };
+  const handleChange = (e) => {
+    const data = e.target.name;
+    console.log(data);
+    setAddress({
+      ...address,
+      [data]: e.target.value,
+    });
+  };
+  console.log(address);
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    // navigate("/delhivery");
+    let add = address || "";
+    localStorage.setItem("address", JSON.stringify(add));
+    navigate("/payment");
   };
   return (
     <>
@@ -44,14 +57,15 @@ export const Address = () => {
                   <hr />
                   <div>
                     <label htmlFor=""></label>
-                    <input type="text" name="" id="" value={"India"} />
+                    <input type="text" name="india" id="" value={"India"} />
                   </div>
                   <div>
                     <input
                       type="text"
-                      name=""
+                      name="name"
                       id=""
                       placeholder="Name"
+                      onChange={handleChange}
                       required
                     />
                   </div>
@@ -59,18 +73,20 @@ export const Address = () => {
                     <label htmlFor=""></label>
                     <input
                       type="text"
-                      name=""
+                      name="phonenumber"
                       id=""
                       placeholder="Phone Number"
+                      onChange={handleChange}
                       required
                     />
                   </div>
                   <div>
                     <input
                       type="text"
-                      name=""
+                      name="postalcode"
                       id=""
                       placeholder="Postal Code"
+                      onChange={handleChange}
                       required
                     />
                   </div>
@@ -78,10 +94,11 @@ export const Address = () => {
                     <fieldset>
                       <legend>Addresss</legend>
                       <textarea
-                        name=""
+                        name="address"
                         id=""
                         cols="30"
                         rows="3"
+                        onChange={handleChange}
                         required
                       ></textarea>
                     </fieldset>
@@ -98,6 +115,7 @@ export const Address = () => {
                       name=""
                       id=""
                       value={"SHIP TO THIS ADDRESS >"}
+                      onClick={handleSubmit}
                     />
                   </div>
                 </form>
@@ -130,11 +148,12 @@ export const Address = () => {
                       <p>3 Items in your Bag</p>
                     </div>
                   )}
-                  {cartEdit ? (
-                    <div></div>
-                  ) : (
-                    <button onClick={handleEdit}>EDIT ^</button>
-                  )}
+                  <button
+                    style={{ margin: "-10px 0 0 0", width: "70px" }}
+                    onClick={handleEdit}
+                  >
+                    EDIT ^
+                  </button>
                 </div>
                 <div className="priceDiv">
                   <div>
@@ -156,7 +175,7 @@ export const Address = () => {
                 <h4>Grand Total</h4>
                 <p>₹848</p>
               </div>
-              <hr />
+              <hr style={{ marginBottom: "20px" }} />
             </div>
           </div>
         </div>

@@ -35,22 +35,22 @@
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     border-radius: 2px;
     position: relative;
-    left: 330px;
+    height:max-content ;
+    left: 315px;
     width: 465px;
     text-align: left;
 }
 
-.pDetail {
+.pSubdetail {
     background-color: #fff;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    padding: 10px 23px 0 23px;
+    padding: 10px 23px 15px 23px;
     border-radius: 2px;
     position: relative;
-    height: fit-content;
+    height: max-content;
     left: 350px;
     width: 325px;
     text-align: left;
-
 }
 
 button {
@@ -62,6 +62,30 @@ button {
     margin-top: 35px;
     cursor: pointer;
     font-size: 16px,
+}
+
+.shipAdd {
+    width: 325px;
+    background-color: #f3f3f3;
+    padding: 10px 23px 15px 23px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 2px;
+    position: relative;
+    left: 350px;
+    text-align: left;
+}
+
+.shipAdd h3 {
+    font-size: 16px;
+    font-weight: 550;
+    letter-spacing: 0.5px;
+}
+
+.shipAdd p {
+    font-size: 16px;
+    font-weight: 450;
+    letter-spacing: 0.5px;
+    line-height: 1.5;
 }
 
 /*---------------------cardstyle-------------*/
@@ -111,4 +135,9 @@ button {
     margin: 0px;
     font-size: 16px;
     font-weight: 550;
+    margin-bottom: 5px;
+}
+
+hr {
+    margin-bottom: 8px;
 }

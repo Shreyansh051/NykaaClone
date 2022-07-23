@@ -8,6 +8,7 @@ export const Card = () => {
       <div>
         <h4>Credit/Debit Card</h4>
       </div>
+      <hr style={{ background: "#8c8d94" }} />
       <div>
         <Box
           component="form"
