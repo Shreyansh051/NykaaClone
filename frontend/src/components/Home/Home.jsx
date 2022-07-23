@@ -876,7 +876,7 @@ function HomePage() {
         ))}
       </div>
       <h1 className={styles.bigheader}>GIFT CARDS</h1>
-      <div align="center">
+      <div>
         <img
           className={styles.card2hovereffect}
           width="560px"
