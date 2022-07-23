@@ -1,7 +1,16 @@
 import { Box, TextField } from "@mui/material";
-import React from "react";
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { getAllCart } from "../../../actions/products";
 import Style from "../payment.module.css";
 export const Upi = () => {
+  const { total } = useSelector((state) => state.cart);
+  console.log(total);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(getAllCart());
+  }, [dispatch]);
   return (
     <div>
       <div>
@@ -26,7 +35,7 @@ export const Upi = () => {
           </Box>
         </div>
         <div>
-          <button>{`Pay Now`}</button>
+          <button className={Style.cbutton}>{`Pay ₹${total} Now`}</button>
         </div>
       </div>
     </div>

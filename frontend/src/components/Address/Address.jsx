@@ -110,6 +110,7 @@ export const Address = () => {
                         color: "#fff",
                         backgroundColor: "#fc2779",
                         fontWeight: "500",
+                        textAlign: "center",
                       }}
                       type="submit"
                       name=""

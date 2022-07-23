@@ -62,8 +62,8 @@ export const Payment = () => {
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
-  const { cart, total } = useSelector((state) => state.cart);
-  console.log(cart, total);
+  const { total } = useSelector((state) => state.cart);
+  console.log(total);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -139,7 +139,7 @@ export const Payment = () => {
           </div>
           <div className={Style.pTabpanel}>
             <TabPanel value={value} index={0}>
-              <Card />
+              <Card total={total} />
             </TabPanel>
             <TabPanel value={value} index={1}>
               <Upi />
@@ -215,14 +215,14 @@ export const Payment = () => {
                   </div>
                   <div style={{ paddingBottom: "10px" }}>
                     <p>Discount</p>
-                    <p>₹79.9</p>
+                    <p>₹ 0</p>
                   </div>
                 </div>
               </div>
               <hr />
               <div className="grandiv">
                 <h4>Grand Total</h4>
-                <p>₹848</p>
+                <p>₹{total}</p>
               </div>
               <hr />
             </div>
