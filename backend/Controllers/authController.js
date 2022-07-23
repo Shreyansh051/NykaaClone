@@ -11,7 +11,7 @@ const register = async (req, res) => {
         data.save((err, success) => {
             if (err) res.send(err)
             else {
-                const token = jwt.sign({ email: req.body.Email }, SECRET)
+                const token = jwt.sign({ email: req.body.Email }, SECRET,{ expiresIn: "1h" })
                 res.send(token)
             }
         })
@@ -27,7 +27,7 @@ const login = async (req, res) => {
                 res.send({ Message: "Password doesn't match!" })
             } else {
                 //Password matches
-                const token = jwt.sign({ email: req.body.Email }, SECRET)
+                const token = jwt.sign({ email: req.body.Email }, SECRET, { expiresIn: "1h" })
                 res.send(token)
             }
         })
