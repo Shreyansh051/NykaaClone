@@ -3,7 +3,7 @@ import styles from "./Home.module.css";
 import Carousel1 from "./Carousel1.1";
 import Carousel2 from "./Carousel1.2";
 import Hori from "./Horizontal.js";
-import Carousel3 from "./Carousel1.3"
+// import Carousel3 from "./Carousel1.3";
 import {
   Box,
   Heading,
@@ -15,7 +15,7 @@ import {
 
 const cardImages1 = [
   {
-    url: "https://images-static.nykaa.com/uploads/046de71f-4797-44bc-b7d2-1c198e65d050.png?tr=w-1200,cm-pad_resize",
+    url: "https://images-static.nykaa.com/uploads/046de71f-4797-44bc-b7d2-1c198e65d050.png?tr=w-1200,cm-pad_resize",    
   },
   {
     url: "https://images-static.nykaa.com/uploads/57c0cdd9-3cbc-470e-a47b-c08ee7ca0144.png?tr=w-1200,cm-pad_resize",
@@ -25,62 +25,97 @@ const cardImages1 = [
 const cardImages2 = [
   {
     url: "https://images-static.nykaa.com/uploads/45e77657-2fba-49f1-b077-437dc02b978c.gif?tr=w-1200,cm-pad_resize",
+    tittle:"For Every Skin Type",
+    discount:" Upto 35% Off%"
   },
   {
     url: "https://images-static.nykaa.com/uploads/2aaabbf7-64bb-4ec8-b73c-671074554789.jpg?tr=w-1200,cm-pad_resize",
+    tittle:"On Entire Range",
+    discount:" Upto 25% Off"
+   
+
   },
   {
     url: "https://images-static.nykaa.com/uploads/ebbf5f5b-9f8c-4839-9063-d4b3d4fb5656.gif?tr=w-1200,cm-pad_resize",
+    tittle:"explore more+",
+    discount:"50%-60%"
   },
   {
     url: "https://images-static.nykaa.com/uploads/1555b61a-a163-408a-ab3d-3a666832acfb.jpg?tr=w-1200,cm-pad_resize",
+    tittle:"explore more+",
+    discount:"50%-60%"
   },
   {
     url: "https://images-static.nykaa.com/uploads/83247895-0a7e-4141-9b86-ce7b039e7c3a.gif?tr=w-1200,cm-pad_resize",
+    tittle:"For Every Skin Type",
+    discount:"Upto 35% Off"
   },
   {
     url: "https://images-static.nykaa.com/uploads/3856736f-82d6-45c0-a10e-8bc90e891bb2.gif?tr=w-1200,cm-pad_resize",
+    tittle:"On Entire Range",
+    discount:"Upto 25% Off"
   },
   {
     url: "https://images-static.nykaa.com/uploads/b1189a45-6537-415f-ae55-bdd500d074b0.gif?tr=w-1200,cm-pad_resize",
+    tittle:" worth Rs. 525 on Rs. 800",
+    discount:"Upto 40% Off + Free lipstick"
   },
   {
     url: "https://images-static.nykaa.com/uploads/64c65727-2d07-41a5-b4a5-6e0dbfee8b98.jpg?tr=w-1200,cm-pad_resize",
+    tittle:"SKY HIGH Mascara Has Landed In India !",
+    discount:"Upto 30% Off On Maybelline Bestsellers  "
+    
+
   },
 ];
 const cardImages3 = [
   {
     url: "https://images-static.nykaa.com/uploads/db316f35-4e1f-49a2-942e-c730599ff776.gif?tr=w-1200,cm-pad_resize",
+    tittle:"explore more+",
+    discount:"50%-60%"
   },
   {
     url: "https://images-static.nykaa.com/uploads/4e85e306-4fcf-463a-ae04-d0066fb010de.gif?tr=w-1200,cm-pad_resize",
+    tittle:"explore more+",
+    discount:"50%-60%"
   },
-  
 ];
-const cardImages31=[
+const cardImages31 = [
   {
     url: "https://images-static.nykaa.com/uploads/4c447fa5-0de0-4c69-a138-177321485adf.gif?tr=w-1200,cm-pad_resize",
+    tittle:"explore more+",
+    discount:"50%-60%"
   },
-]
+];
 const cardImages4 = [
   {
     url: "https://images-static.nykaa.com/uploads/1ca5ddd3-c263-40b7-9713-d8dede28b4be.jpg?tr=w-1200,cm-pad_resize",
-  },
+    tittle:"explore more+",
+    discount:"50%-60%"
+    },
 ];
 const cardImages5 = [
   {
     url: "https://images-static.nykaa.com/uploads/5c11bb71-1500-477e-9943-491d57a1ec57.gif?tr=w-1200,cm-pad_resize",
+    tittle:"explore more+",
+    discount:"50%-60%"
   },
   {
     url: "https://images-static.nykaa.com/uploads/62eb4f26-ccb1-4a18-82e0-28b99368314b.jpg?tr=w-1200,cm-pad_resize",
+    tittle:"explore more+",
+    discount:"50%-60%"
   },
 ];
 const cardImages6 = [
   {
     url: "https://images-static.nykaa.com/uploads/3671a728-2665-44e1-8065-f7f75308c3cb.gif?tr=w-1200,cm-pad_resize",
+    tittle:"explore more+",
+    discount:"50%-60%"
   },
   {
     url: "https://images-static.nykaa.com/uploads/0767a3b8-61ec-43b0-901b-76ae5563fdb8.png?tr=w-1200,cm-pad_resize",
+    tittle:"explore more+",
+    discount:"50%-60%"
   },
 ];
 const cardImages7 = [
@@ -117,9 +152,8 @@ function HomePage() {
             borderWidth="1px"
             borderRadius="lg"
             w={{ sm: "100%", md: "560px" }}
-            height={{ sm: "476px", md: "19rem" }}
+            height={{ sm: "476px", md: "18.8rem" }}
             direction={{ base: "column", md: "row" }}
-            boxShadow={"2xl"}
             marginTop={"20px"}
           >
             {" "}
@@ -164,18 +198,21 @@ function HomePage() {
             borderWidth="1px"
             borderRadius="lg"
             w={{ sm: "100%", md: "560px" }}
-            height={{ sm: "476px", md: "19rem" }}
+            height={{ sm: "476px", md: "18.8rem" }}
             direction={{ base: "column", md: "row" }}
-            boxShadow={"2xl"}
           >
             {" "}
             <div className="each-slide" key={index}>
-              <div>
+              <div className={styles.setcontainer}>
                 <img
                   className={styles.desimcal}
                   src={`${cards.url}`}
                   alt="card"
                 />
+                <div className={styles.setdiv}>
+                <span className={styles.tittle}>{`${cards.tittle}`} </span>
+                  <p className={styles.discount}>{`${cards.discount}`}</p>
+                </div>
               </div>
             </div>
           </Stack>
@@ -188,18 +225,21 @@ function HomePage() {
             borderWidth="1px"
             borderRadius="lg"
             w={{ sm: "100%", md: "560px" }}
-            height={{ sm: "476px", md: "19rem" }}
+            height={{ sm: "476px", md: "18.8rem" }}
             direction={{ base: "column", md: "row" }}
-            boxShadow={"2xl"}
           >
             {" "}
             <div className="each-slide" key={index}>
-              <div>
+              <div className={styles.setcontainer}>
                 <img
                   className={styles.desimcal}
                   src={`${cards.url}`}
                   alt="card"
                 />
+                <div className={styles.setdiv}>
+                <span className={styles.tittle}>{`${cards.tittle}`} </span>
+                  <p className={styles.discount}>{`${cards.discount}`}</p>
+                </div>
               </div>
             </div>
           </Stack>
@@ -211,20 +251,23 @@ function HomePage() {
             borderWidth="1px"
             borderRadius="lg"
             w={{ sm: "100%", md: "560px" }}
-            height={{ sm: "476px", md: "19rem" }}
+            height={{ sm: "476px", md: "18.8rem" }}
             direction={{ base: "column", md: "row" }}
-            boxShadow={"2xl"}
             marginLeft={"244px"}
             marginTop={"20px"}
           >
             {" "}
             <div className="each-slide" key={index}>
-              <div>
+              <div className={styles.setcontainer}>
                 <img
                   className={styles.desimcal}
                   src={`${cards.url}`}
                   alt="card"
                 />
+                <div className={styles.setdiv}>
+                  <span className={styles.tittle}>{`${cards.tittle}`} </span>
+                  <p className={styles.discount}>{`${cards.discount}`}</p>
+                </div>
               </div>
             </div>
           </Stack>
@@ -247,7 +290,7 @@ function HomePage() {
           h={"370px"}
           w={"full"}
           bg={useColorModeValue("white", "gray.800")}
-          boxShadow={"2xl"}
+          className={styles.card2hovereffect}
           rounded={"md"}
           overflow={"hidden"}
           marginLeft={"60px"}
@@ -274,7 +317,7 @@ function HomePage() {
           h={"370px"}
           w={"full"}
           bg={useColorModeValue("white", "gray.800")}
-          boxShadow={"2xl"}
+          className={styles.card2hovereffect}
           rounded={"md"}
           overflow={"hidden"}
           marginLeft={"20px"}
@@ -300,7 +343,7 @@ function HomePage() {
           h={"370px"}
           w={"full"}
           bg={useColorModeValue("white", "gray.800")}
-          boxShadow={"2xl"}
+          className={styles.card2hovereffect}
           rounded={"md"}
           overflow={"hidden"}
           marginLeft={"20px"}
@@ -325,7 +368,7 @@ function HomePage() {
           h={"370px"}
           w={"full"}
           bg={useColorModeValue("white", "gray.800")}
-          boxShadow={"2xl"}
+          className={styles.card2hovereffect}
           rounded={"md"}
           overflow={"hidden"}
           marginLeft={"20px"}
@@ -350,7 +393,7 @@ function HomePage() {
           h={"370px"}
           w={"full"}
           bg={useColorModeValue("white", "gray.800")}
-          boxShadow={"2xl"}
+          className={styles.card2hovereffect}
           rounded={"md"}
           overflow={"hidden"}
           marginLeft={"60px"}
@@ -375,7 +418,7 @@ function HomePage() {
           h={"370px"}
           w={"full"}
           bg={useColorModeValue("white", "gray.800")}
-          boxShadow={"2xl"}
+          className={styles.card2hovereffect}
           rounded={"md"}
           overflow={"hidden"}
           marginLeft={"20px"}
@@ -400,7 +443,7 @@ function HomePage() {
           h={"370px"}
           w={"full"}
           bg={useColorModeValue("white", "gray.800")}
-          boxShadow={"2xl"}
+          className={styles.card2hovereffect}
           rounded={"md"}
           overflow={"hidden"}
           marginLeft={"20px"}
@@ -425,7 +468,7 @@ function HomePage() {
           h={"370px"}
           w={"full"}
           bg={useColorModeValue("white", "gray.800")}
-          boxShadow={"2xl"}
+          className={styles.card2hovereffect}
           rounded={"md"}
           overflow={"hidden"}
           marginLeft={"20px"}
@@ -450,7 +493,7 @@ function HomePage() {
           h={"370px"}
           w={"full"}
           bg={useColorModeValue("white", "gray.800")}
-          boxShadow={"2xl"}
+          className={styles.card2hovereffect}
           rounded={"md"}
           overflow={"hidden"}
           marginLeft={"310px"}
@@ -476,7 +519,7 @@ function HomePage() {
           h={"370px"}
           w={"full"}
           bg={useColorModeValue("white", "gray.800")}
-          boxShadow={"2xl"}
+          className={styles.card2hovereffect}
           rounded={"md"}
           overflow={"hidden"}
           marginLeft={"20px"}
@@ -504,27 +547,28 @@ function HomePage() {
             borderWidth="1px"
             borderRadius="lg"
             w={{ sm: "100%", md: "560px" }}
-            height={{ sm: "476px", md: "19rem" }}
+            height={{ sm: "476px", md: "18.8rem" }}
             direction={{ base: "column", md: "row" }}
-            boxShadow={"2xl"}
             marginLeft={"244px"}
             marginTop={"20px"}
           >
             {" "}
             <div className="each-slide" key={index}>
-              <div>
+              <div className={styles.setcontainer}>
                 <img
                   className={styles.desimcal}
                   src={`${cards.url}`}
                   alt="card"
                 />
+                <div className={styles.setdiv}>
+                <span className={styles.tittle}>{`${cards.tittle}`}</span>
+                  <p className={styles.discount}>{`${cards.discount}`}</p>
+                </div>
               </div>
             </div>
           </Stack>
         ))}
       </div>
-
-      <h1 className={styles.bigheader}>5 slideshow </h1>
       <div>
         <img
           className={styles.banner2}
@@ -539,7 +583,7 @@ function HomePage() {
           h={"370px"}
           w={"full"}
           bg={useColorModeValue("white", "gray.800")}
-          boxShadow={"2xl"}
+          className={styles.card2hovereffect}
           rounded={"md"}
           overflow={"hidden"}
           marginLeft={"60px"}
@@ -566,7 +610,7 @@ function HomePage() {
           h={"370px"}
           w={"full"}
           bg={useColorModeValue("white", "gray.800")}
-          boxShadow={"2xl"}
+          className={styles.card2hovereffect}
           rounded={"md"}
           overflow={"hidden"}
           marginLeft={"20px"}
@@ -592,7 +636,7 @@ function HomePage() {
           h={"370px"}
           w={"full"}
           bg={useColorModeValue("white", "gray.800")}
-          boxShadow={"2xl"}
+          className={styles.card2hovereffect}
           rounded={"md"}
           overflow={"hidden"}
           marginLeft={"20px"}
@@ -617,7 +661,7 @@ function HomePage() {
           h={"370px"}
           w={"full"}
           bg={useColorModeValue("white", "gray.800")}
-          boxShadow={"2xl"}
+          className={styles.card2hovereffect}
           rounded={"md"}
           overflow={"hidden"}
           marginLeft={"20px"}
@@ -642,7 +686,7 @@ function HomePage() {
           h={"370px"}
           w={"full"}
           bg={useColorModeValue("white", "gray.800")}
-          boxShadow={"2xl"}
+          className={styles.card2hovereffect}
           rounded={"md"}
           overflow={"hidden"}
           marginLeft={"60px"}
@@ -667,7 +711,7 @@ function HomePage() {
           h={"370px"}
           w={"full"}
           bg={useColorModeValue("white", "gray.800")}
-          boxShadow={"2xl"}
+          className={styles.card2hovereffect}
           rounded={"md"}
           overflow={"hidden"}
           marginLeft={"20px"}
@@ -692,7 +736,7 @@ function HomePage() {
           h={"370px"}
           w={"full"}
           bg={useColorModeValue("white", "gray.800")}
-          boxShadow={"2xl"}
+          className={styles.card2hovereffect}
           rounded={"md"}
           overflow={"hidden"}
           marginLeft={"20px"}
@@ -716,7 +760,7 @@ function HomePage() {
           h={"370px"}
           w={"full"}
           bg={useColorModeValue("white", "gray.800")}
-          boxShadow={"2xl"}
+          className={styles.card2hovereffect}
           rounded={"md"}
           overflow={"hidden"}
           marginLeft={"20px"}
@@ -743,18 +787,21 @@ function HomePage() {
             borderWidth="1px"
             borderRadius="lg"
             w={{ sm: "100%", md: "560px" }}
-            height={{ sm: "476px", md: "19rem" }}
+            height={{ sm: "476px", md: "18.8rem" }}
             direction={{ base: "column", md: "row" }}
-            boxShadow={"2xl"}
           >
             {" "}
             <div className="each-slide" key={index}>
-              <div>
+              <div className={styles.setcontainer}>
                 <img
                   className={styles.desimcal}
                   src={`${cards.url}`}
                   alt="card"
                 />
+                <div className={styles.setdiv}>
+                <span className={styles.tittle}>{`${cards.tittle}`}</span>
+                  <p className={styles.discount}>{`${cards.discount}`}</p>
+                </div>
               </div>
             </div>
           </Stack>
@@ -781,18 +828,21 @@ function HomePage() {
             borderWidth="1px"
             borderRadius="lg"
             w={{ sm: "100%", md: "560px" }}
-            height={{ sm: "476px", md: "19rem" }}
+            height={{ sm: "476px", md: "18.8rem" }}
             direction={{ base: "column", md: "row" }}
-            boxShadow={"2xl"}
           >
             {" "}
             <div className="each-slide" key={index}>
-              <div>
+              <div className={styles.setcontainer}>
                 <img
                   className={styles.desimcal}
                   src={`${cards.url}`}
                   alt="card"
                 />
+                <div className={styles.setdiv}>
+                <span className={styles.tittle}>{`${cards.tittle}`}</span>
+                  <p className={styles.discount}>{`${cards.discount}`}</p>
+                </div>
               </div>
             </div>
           </Stack>
@@ -801,6 +851,7 @@ function HomePage() {
       <h1 className={styles.bigheader}>GIFT CARDS</h1>
       <div align="center">
         <img
+          className={styles.card2hovereffect}
           width="560px"
           height="233.33px"
           src="https://images-static.nykaa.com/uploads/be2ce42f-6986-4a32-a258-8d5278950d99.jpg?tr=w-1200,cm-pad_resize"
@@ -814,9 +865,8 @@ function HomePage() {
             borderWidth="1px"
             borderRadius="lg"
             w={{ sm: "100%", md: "560px" }}
-            height={{ sm: "476px", md: "19rem" }}
+            height={{ sm: "476px", md: "18.8rem" }}
             direction={{ base: "column", md: "row" }}
-            boxShadow={"2xl"}
           >
             {" "}
             <div className="each-slide" key={index}>
@@ -831,7 +881,7 @@ function HomePage() {
           </Stack>
         ))}
       </div>
-      <Carousel3/>
+      {/* <Carousel3 /> */}
     </>
   );
 }

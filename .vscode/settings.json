@@ -4,8 +4,11 @@
         "cdimg",
         "Chakra",
         "desimcal",
+        "hovereffect",
         "imagescal",
         "mediaelement",
-        "NYKAA"
+        "NYKAA",
+        "setcontainer",
+        "setdiv"
     ]
 }
