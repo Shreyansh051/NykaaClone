@@ -25,7 +25,7 @@ export const CheckOutHeader = () => {
             <div className="hlg" style={{ display: "flex" }}>
               <div className="vertical"></div>
               <div className="hcom">
-                <h4>1 - LOGIN</h4>
+                <h4 >1 - LOGIN</h4>
                 <p>12345678</p>
               </div>
             </div>

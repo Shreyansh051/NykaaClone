@@ -44,7 +44,7 @@ function a11yProps(index) {
   };
 }
 
-let addres = JSON.parse(localStorage.getItem("address"));
+let addres = JSON.parse(localStorage.getItem("address")) || []
 const setUs = [addres];
 // console.log(setUs);
 export const Payment = () => {
