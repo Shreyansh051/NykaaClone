@@ -1,73 +1,96 @@
 import styles from "./Horizontal.module.css";
 const products = [
   {
-    url: "https://images-static.nykaa.com/media/catalog/product/tr:h-800,w-800,cm-pad_resize/a/a/aadb28e8904320705275_1.jpg",
-    tittle: "this is a para",
-    subtittle: "1.1each",
-    badge: "BESTSELLER",
-    price: "899",
-  },
-  {
-    url: "https://images-static.nykaa.com/media/catalog/product/tr:h-800,w-800,cm-pad_resize/a/a/aadb28e8904320705275_1.jpg",
-    tittle: "this is a para",
-    subtittle: "1.1each",
-    badge: "BESTSELLER",
-    price: "899",
-  },
-  {
+    id: 1,
     url: "https://images-static.nykaa.com/media/catalog/product/tr:h-800,w-800,cm-pad_resize/a/a/aadb28e8904320705275_1.jpg",
     tittle: "SUGAR Smudge Me Not Liquid Mini Lipstick Bold Set(1.1ml E...",
-    subtittle: "1.1each",
+    subtittle: "1.1ml Each",
     badge: "BESTSELLER",
-    price: "899",
+    totalreview: "1776",
+    price: "₹999 Off",
+    orignalprice: "₹799",
+    percentoff: "20% Off!",
   },
   {
-    url: "https://images-static.nykaa.com/media/catalog/product/tr:h-800,w-800,cm-pad_resize/a/a/aadb28e8904320705275_1.jpg",
-    tittle: "this is a para",
-    subtittle: "1.1each",
+    id: 2,
+    url: "https://images-static.nykaa.com/media/catalog/product/tr:h-800,w-800,cm-pad_resize/n/y/nylagrl000033-a_1.png",
+    tittle: "L.A. Girl Pro Conceal HD",
+    subtittle: "39 Shades",
     badge: "BESTSELLER",
-    offprice: "₹999",
-    price: "899",
-    button: "view",
+    totalreview: "24873",
+    price: "₹875",
+    orignalprice: "₹695",
+    percentoff: "10% Off!",
   },
   {
-    url: "https://images-static.nykaa.com/media/catalog/product/tr:h-800,w-800,cm-pad_resize/a/a/aadb28e8904320705275_1.jpg",
-    tittle: "this is a para",
-    subtittle: "1.1each",
+    id: 3,
+    url: "https://images-static.nykaa.com/media/catalog/product/tr:h-800,w-800,cm-pad_resize/0/b/0b4f0c58904245701505_0.jpg",
+    tittle: "Just Herbs Ayurvedic Matte Lipstick Micro-Mini Trial Kit",
+    subtittle: "38gm",
     badge: "BESTSELLER",
-    price: "899",
+    totalreview: "8557",
+    price: "₹575",
+    orignalprice: "₹403",
+    percentoff: "30% Off!",
   },
   {
-    url: "https://images-static.nykaa.com/media/catalog/product/tr:h-800,w-800,cm-pad_resize/a/a/aadb28e8904320705275_1.jpg",
-    tittle: "this is a para",
-    subtittle: "1.1each",
+    id: 4,
+    url: "https://images-static.nykaa.com/media/catalog/product/tr:h-800,w-800,cm-pad_resize/5/e/5e73ea7800897813727_1.jpg",
+    tittle: "Nykaa Black Magic Liquid Eyeliner - Super Black 01",
+    subtittle: "5ml",
     badge: "BESTSELLER",
-    price: "899",
+    price: "499",
+    totalreview: "14427",
+    orignalprice: "₹299",
+    percentoff: "50% Off!",
   },
   {
-    url: "https://images-static.nykaa.com/media/catalog/product/tr:h-800,w-800,cm-pad_resize/a/a/aadb28e8904320705275_1.jpg",
-    tittle: "this is a para",
-    subtittle: "1.1each",
+    id: 5,
+    url: "https://images-static.nykaa.com/media/catalog/product/tr:h-800,w-800,cm-pad_resize/f/8/f8eeeadMINIM00000001_1n.jpg",
+    tittle: "NYX Professional Makeup Setting Spray Dewy Finish",
+    subtittle: "60ml",
     badge: "BESTSELLER",
-    price: "899",
+    totalreview: "3426",
+    price: "1200",
+    orignalprice: "₹875",
+    percentoff: "25% off!",
   },
   {
-    url: "https://images-static.nykaa.com/media/catalog/product/tr:h-800,w-800,cm-pad_resize/a/a/aadb28e8904320705275_1.jpg",
-    tittle: "this is a para",
-    subtittle: "1.1each",
+    id: 6,
+    url: "https://images-static.nykaa.com/media/catalog/product/tr:h-800,w-800,cm-pad_resize/8/7/8710103897392_1_.jpg",
+    tittle: "Minimalist 10% Niacinamide Face Serum With EUK-134 For Re...",
+    subtittle: "30ml",
     badge: "BESTSELLER",
-    price: "899",
+    price: "1000",
+    totalreview: "11915",
+    orignalprice: "₹599",
+    percentoff: "40% off!",
   },
   {
-    url: "https://images-static.nykaa.com/media/catalog/product/tr:h-800,w-800,cm-pad_resize/a/a/aadb28e8904320705275_1.jpg",
-    tittle: "this is a para",
-    subtittle: "1.1each",
+    id: 7,
+    url: "https://images-static.nykaa.com/media/catalog/product/tr:h-800,w-800,cm-pad_resize/8/a/8a541fbDOTKE00000054-1.jpg",
+    tittle: "Philips Heated Straightening Brush (BHH880/10)",
     badge: "BESTSELLER",
-    prize: "899",
+    subtittle: "180 ml",
+    totalreview: "1849",
+    price: "₹3695",
+    orignalprice: "₹3099",
+    percentoff: "16% Off!",
+  },
+  {
+    id: 8,
+    url: "https://images-static.nykaa.com/media/catalog/product/tr:h-800,w-800,cm-pad_resize/s/c/schwarzkopf-professional-osis_-sparkler-shine-spray.jpg",
+    tittle: "Dot & Key Vitamin C + E Super Bright Glow Moisturizer, Fa...",
+    subtittle: "60 ml",
+    badge: "BESTSELLER",
+    totalreview: "3415",
+    price: "₹595",
+    orignalprice: "₹536",
+    percentoff: "10% Off!",
   },
 ];
 
-function Hori() {
+function HoriZontol() {
   return (
     <>
       <div className={styles.media_scroller}>
@@ -75,19 +98,14 @@ function Hori() {
           <div className={styles.media_element}>
             <img src={`${product.url}`} alt="" />
             <p className={styles.detail}>{`${product.tittle}`}</p>
-            <div className={styles.subtittle}>1.1ml Each </div>
-            <div className="css-lf8wwq">
-              <ul className="css-op2i1d">
-                <li
-                  tabindex="0"
-                  role="button"
-                  className="bestseller default-tag css-nr4f1"
-                >
-                  BESTSELLER
+            <div className={styles.subtittle}> {`${product.subtittle}`} </div>
+            <div className={styles.badgediv}>
+              <ul className={styles.badgeul}>
+                <li tabindex="0" role="button" className={styles.badgeli}>
+                  {`${product.badge}`}
                 </li>
               </ul>
             </div>
-            <p>{`${product.badge}`}</p>
             <div className={styles.reviewstar}>
               <span className={styles.starwrap}>
                 <svg xmlns="http://www.w3.org/2000/svg" width="8" height="7">
@@ -134,7 +152,9 @@ function Hori() {
                   ></path>
                 </svg>
               </span>
-              <span className={styles.reviewcount}>1776</span>
+              <span
+                className={styles.reviewcount}
+              >{`${product.totalreview}`}</span>
             </div>
             <div className={styles.price1}>
               <span className={styles.offprice}>
@@ -142,11 +162,13 @@ function Hori() {
               </span>
               <span
                 className={styles.pricediscountprice}
-              >{`${product.price}`}</span>
-              <span className={styles.priceoffer}>{`${product.price}`}</span>
+              >{`${product.orignalprice}`}</span>
+              <span
+                className={styles.priceoffer}
+              >{`${product.percentoff}`}</span>
             </div>
-            <p>{`${product.subtittle}`}</p>
-            <button className={styles.viewbtn}>view</button>
+
+            <button className={styles.viewbtn}>View</button>
           </div>
         ))}
       </div>
@@ -154,4 +176,4 @@ function Hori() {
   );
 }
 
-export default Hori;
+export default HoriZontol;

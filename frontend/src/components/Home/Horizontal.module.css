@@ -20,11 +20,12 @@
   border-radius: var(--radius-2);
   box-shadow: var(--shadow-2);
   position: relative;
+  height: 300px;
   display: inline-block;
   background: rgb(255, 255, 255);
-  width: 218px;
+  width: 217px;
   min-width: 218px;
-  max-height: 324px;
+  max-height: 600px;
   vertical-align: top;
   cursor: pointer;
   border-top: 1px solid rgb(225, 225, 225);
@@ -33,32 +34,32 @@
   border-image: initial;
   border-left: none;
 }
-.detail{
-
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 20px;
-    letter-spacing: 0px;
-    overflow: hidden;
-    height: 40px;
-    display: block;
-    margin: 0px 0px 0.125rem;
-    color: rgb(0, 19, 37);
-    text-overflow: ellipsis;
-
+.detail {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0px;
+  overflow: hidden;
+  height: 40px;
+  display: block;
+  margin: 0px 0px 0px -10px;
+  color: rgb(0, 19, 37);
+  text-overflow: ellipsis;
+  text-align: left;
 }
-.subtittle{
+.subtittle {
   font-size: 12px;
-    font-weight: 400;
-    line-height: 16px;
-    letter-spacing: 0px;
-    color: rgb(117, 117, 117);
-    margin: 0px 0px 0.25rem;
-    padding: 0px;
-    text-transform: capitalize;
+  text-align: left;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 0px;
+  color: rgb(117, 117, 117);
+  margin: 0px 0px 0px -10px;
+  padding: 0px;
+  text-transform: capitalize;
 }
-.viewbtn{
-  width: 100%;
+.viewbtn {
+  width: 100px;
   height: 32px;
   font-size: 14px;
   font-weight: 600;
@@ -70,6 +71,7 @@
   cursor: pointer;
   margin-bottom: 2px;
   color: rgb(252, 39, 121);
+  margin-left: -60px;
 }
 .media_element img {
   width: 156px;
@@ -81,9 +83,8 @@
 .reviewstar {
   line-height: 12px;
   margin-bottom: 0.25rem;
-  border: 2px solid red;
   display: flex;
-  margin-left: 10px;
+  margin-left: -10px;
 }
 .starwrap {
   display: inline-block;
@@ -91,6 +92,8 @@
 }
 .reviewcount {
   margin-left: 5px;
+  font-size: 12px;
+  color: rgb(117, 117, 117);
 }
 .pricediscountprice {
   color: rgb(0, 19, 37);
@@ -116,49 +119,42 @@
   font-weight: 400;
   line-height: 20px;
   letter-spacing: 0px;
+
   text-decoration-line: line-through;
 }
 .price1 {
   line-height: 20px;
   margin-bottom: 0.25rem;
+  margin-left: -10px;
+  text-align: left;
 }
-.badgediv{
+.badgediv {
   margin: 0.5rem;
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    z-index: 1;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 1;
 }
-.badgeul{
+.badgeul {
+  width: 80px;
   padding-left: 0px;
-    list-style: none;
-    margin: 0px 0px 10px;
-    display: flex;
+  list-style: none;
+  margin: 0px 0px 0px -19px;
+  display: flex;
 }
-.badgeli{
+.badgeli {
+  width: 30px;
+
   margin-right: 4px;
-    border: none;
-    display: inline-block;
-    padding: 0px 5px;
-    text-transform: capitalize;
-    font-size: 10px;
-    font-weight: 600;
-    line-height: 12px;
-    letter-spacing: 0.9px;
-    background-color: rgb(223, 249, 229);
-    border: 1px solid rgb(195, 231, 206);
-    color: rgb(104, 166, 119);
-
-
+  border: none;
+  display: inline-block;
+  padding: 0px 5px;
+  text-transform: capitalize;
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 12px;
+  letter-spacing: 0.9px;
+  background-color: rgb(223, 249, 229);
+  border: 1px solid rgb(195, 231, 206);
+  color: rgb(104, 166, 119);
 }
-/* general styling */
-
-/* .container {
-  inline-size: min(100% - 4rem, 70rem);
-  margin-inline: auto;
-}
-
-.flow {
-  display: grid;
-  gap: var(--size-3);
-} */

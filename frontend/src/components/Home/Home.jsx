@@ -2,11 +2,9 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import styles from "./Home.module.css";
 import Carousel1 from "./Carousel1.1";
 import Carousel2 from "./Carousel1.2";
-import Hori from "./Horizontal.js";
-// import Carousel3 from "./Carousel1.3";
+import HoriZontol from "./Horizontal";
 import {
   Box,
-  Heading,
   Text,
   Image,
   Stack,
@@ -279,7 +277,7 @@ function HomePage() {
       </div>
       <Carousel2 />
       <h1 className={styles.bigheader}>Bestsellers</h1>
-      <Hori />
+      <HoriZontol />
       <h1 className={styles.bigheader}>FEATURED BRANDS</h1>
       <div className={styles.card2}>
         <Box
