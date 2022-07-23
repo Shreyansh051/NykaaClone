@@ -3,6 +3,7 @@ import styles from "./Home.module.css";
 import Carousel1 from "./Carousel1.1";
 import Carousel2 from "./Carousel1.2";
 import Hori from "./Horizontal.js";
+import Carousel3 from "./Carousel1.3"
 import {
   Box,
   Heading,
@@ -830,6 +831,7 @@ function HomePage() {
           </Stack>
         ))}
       </div>
+      <Carousel3/>
     </>
   );
 }
