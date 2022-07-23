@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Box, Tab, Tabs, Typography } from "@mui/material";
 import PropTypes from "prop-types";
 import { CheckOutHeader } from "../Address/CheckOutHeader";
@@ -8,6 +8,8 @@ import { Cod } from "./paymentComponent/Cod";
 import { GooglePay } from "./paymentComponent/GooglePay";
 import { Upi } from "./paymentComponent/Upi";
 import { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { getAllCart } from "../../actions/products";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -44,7 +46,7 @@ function a11yProps(index) {
 
 let addres = JSON.parse(localStorage.getItem("address"));
 const setUs = [addres];
-console.log(setUs);
+// console.log(setUs);
 export const Payment = () => {
   const [cartEdit, setCartEdit] = useState(false);
   const [detail, setDetail] = useState(false);
@@ -60,6 +62,13 @@ export const Payment = () => {
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
+  const { cart, total } = useSelector((state) => state.cart);
+  console.log(cart, total);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(getAllCart());
+  }, [dispatch]);
 
   return (
     <div>
@@ -198,7 +207,7 @@ export const Payment = () => {
                 <div className="priceDiv">
                   <div>
                     <p>Sub Total</p>
-                    <p>₹1647</p>
+                    <p>₹{total}</p>
                   </div>
                   <div>
                     <p>Shipping Charge</p>
@@ -226,7 +235,9 @@ export const Payment = () => {
                 return (
                   <div>
                     <p>{el.name}</p>
-                    <p>{el.address}, { el.postalcode}</p>
+                    <p>
+                      {el.address}, {el.postalcode}
+                    </p>
                     <p>{el.phonenumber}</p>
                   </div>
                 );

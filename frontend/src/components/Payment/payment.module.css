@@ -53,7 +53,7 @@
     text-align: left;
 }
 
-button {
+/* button {
     width: 100%;
     height: 50px;
     color: #fff;
@@ -62,7 +62,7 @@ button {
     margin-top: 35px;
     cursor: pointer;
     font-size: 16px,
-}
+} */
 
 .shipAdd {
     width: 325px;
