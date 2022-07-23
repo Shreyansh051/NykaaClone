@@ -19,7 +19,7 @@
 .sgProminiD {
     width: 65%;
     background-color: #fff;
-    padding: 15px;
+    padding: 20px;
     text-align: left;
 }
 
@@ -52,13 +52,13 @@
 }
 
 .addPin {
-    padding: 20px;
+    padding: 15px 0px 15px 15px;
     display: flex;
 }
 
 .sgabag {
     width: 41%;
-    padding: 20px;
+    padding: 20px 0px 20px 20px;
     border-right: 2px solid #f3f3f3;
 }
 
@@ -68,6 +68,41 @@
     height: 48px;
     background-color: #fc2779;
     color: #fff;
+    font-size: 15px;
+    font-weight: 550;
+}
+
+.sgdel {
+    padding: 0 30px;
+}
+
+.sgloc {
+    padding: 5px 0;
+}
+
+.sgCheck {
+    display: flex;
+    border: 1px solid #a7a6a6;
+}
+
+.sgCheck input {
+    width: 190px;
+    height: 24px;
+    padding: 8px;
+    border: none;
+    font-size: 16px;
+}
+
+.sgCheck input:focus {
+    border: none;
+    outline: none;
+}
+
+.sgCheck button {
+    background-color: #fff;
+    border: none;
+    color: #fc2779;
+    cursor: pointer;
     font-size: 15px;
     font-weight: 550;
 }

@@ -32,20 +32,30 @@ export const SingleProduct = () => {
             <div className={Style.sgabag}>
               <button>Add to Bag</button>
             </div>
-            <div>
-              <div>
-                <span>
+            <div className={Style.sgdel}>
+              <div className={Style.sgloc}>
+                <span style={{ marginTop: "5px" }}>
                   <RoomIcon color="#fff" />
                 </span>
-                <span>Delivery Options</span>
+                <span style={{ fontSize: "16px" }}>Delivery Options</span>
               </div>
-              <div style={{display:"flex"}}>
+              <div className={Style.sgCheck}>
                 <span>
-                  <input type="text" maxLength="6"  required/>
+                  <input
+                    type="text"
+                    maxLength="6"
+                    placeholder="Enter pincode"
+                    required
+                  />
                 </span>
                 <button>Check</button>
               </div>
             </div>
+          </div>
+          <div>
+            <div></div>
+            <div></div>
+            <div></div>
           </div>
         </div>
       </div>
