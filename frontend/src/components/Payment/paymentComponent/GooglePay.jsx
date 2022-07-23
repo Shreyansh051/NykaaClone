@@ -27,7 +27,7 @@ export const GooglePay = () => {
           </Box>
         </div>
         <div>
-          <button>SEND PAYMENT REQUEST</button>
+          <button className={Style.cbutton}>SEND PAYMENT REQUEST</button>
         </div>
       </div>
     </div>
