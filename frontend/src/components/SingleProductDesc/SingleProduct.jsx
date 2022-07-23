@@ -13,17 +13,23 @@ export const SingleProduct = () => {
           />
         </div>
         <div className={Style.sgProminiD}>
-          <div>
+          <div className={Style.sgpq}>
             <h2>{"Namya"}</h2>
-            <p>{"33g"}</p>
+            <p>{"(33g)"}</p>
           </div>
           <div>
             <p>{"Rating"}</p>
           </div>
-          <div>
-            <span>MRP: </span>
-            <span>₹{"200"}</span>
-            <p>inclusive of all taxes</p>
+          <div className={Style.sgmrp}>
+            <span style={{ margin: "10px 0" }}>MRP: </span>
+            <span
+              style={{ fontWeight: "550", color: "black", fontSize: "18px" }}
+            >
+              ₹{"200"}
+            </span>
+            <p style={{ margin: "8px 0", fontWeight: "400" }}>
+              inclusive of all taxes
+            </p>
           </div>
           <div className={Style.freeDiv}>
             <p>Free Molten Matte Lipstick worth Rs. 525 on Rs. 800</p>

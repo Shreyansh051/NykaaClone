@@ -23,6 +23,20 @@
     text-align: left;
 }
 
+.sgpq h2 {
+    font-size: 22px;
+    font-weight: 480;
+}
+
+.sgpg p {
+    font-weight: 400;
+}
+
+.sgmrp {
+    margin: 15px 0px;
+    color: #8c8c8c;
+}
+
 .freeDiv {
     background-color: rgba(101, 119, 134, 0.12);
     border-radius: 2px;
