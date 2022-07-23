@@ -1,9 +1,10 @@
 import './App.css';
-import Footer from './components/Footer/Footer';
-import MainNavbar from './components/Navbar/MainNavbar';
-import Main from './Main';
+// import Footer from './components/Footer/Footer';
+// import MainNavbar from './components/Navbar/MainNavbar';
+// import Main from './Main';
 import React, { useState,useEffect} from 'react';
 import {useLocation} from 'react-router-dom'
+import Products from './components/Product page/Products';
 function App() {
   const params = useLocation()
   const [visible, setVisible] = useState(true)
@@ -15,9 +16,10 @@ function App() {
   },[params])
   return (
     <div className="App">
-      {visible && <MainNavbar/>}
+      {/* {visible && <MainNavbar/>}
       <Main />
-      {visible && <Footer/>}
+      {visible && <Footer/>} */}
+    <Products/>
     </div>
   )};
 export default App;
