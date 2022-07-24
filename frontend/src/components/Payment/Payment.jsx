@@ -44,8 +44,7 @@ function a11yProps(index) {
   };
 }
 
-let addres = JSON.parse(localStorage.getItem("address")) || [];
-const setUs = [addres];
+
 // console.log(setUs);
 export const Payment = () => {
   const [cartEdit, setCartEdit] = useState(false);
@@ -65,9 +64,11 @@ export const Payment = () => {
   const { total } = useSelector((state) => state.cart);
   console.log(total);
   const dispatch = useDispatch();
-
+  var setUs=[]
   useEffect(() => {
     dispatch(getAllCart());
+    let addres = JSON.parse(localStorage.getItem("address")) || [];
+    setUs = [addres];
   }, [dispatch]);
 
   return (

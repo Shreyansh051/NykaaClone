@@ -1,7 +1,7 @@
 const express = require("express");
 const {Router} = require("express");
 const {getProducts} = require("../Controllers/productcontroller");
-const {addToBag,getAllCart,setQuantity,deleteItem, getSingleProduct} = require("../Controllers/cartController");
+const {addToBag,getAllCart,setQuantity,deleteItem, getSingleProduct11} = require("../Controllers/cartController");
 
 
 
@@ -18,7 +18,5 @@ router.get("/getAllCart/:id", getAllCart);
 router.patch("/setQuantity/:id", setQuantity);
 
 router.delete("/cart/:id", deleteItem);
-
-router.get("/product/:id", getSingleProduct);
 
 module.exports = router;

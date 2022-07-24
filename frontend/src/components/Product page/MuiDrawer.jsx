@@ -46,6 +46,7 @@ export const MuiDrawer = () => {
         aria-label="logo"
       >
         <ShoppingCartIcon style={{ marginLeft: "80%", color: "#fd7aac" }} />
+        <p style={{ color: "#fd7aac", fontSize: "16px" }}>{cart.length}</p>
       </IconButton>
       <Drawer
         anchor="right"
@@ -180,7 +181,7 @@ export const MuiDrawer = () => {
           <div className={styles.finalCon}>
             <h2 style={{ marginTop: "-5px" }}>₹{total}</h2>
             <Button
-              onClick={()=>navigate("/address")}
+              onClick={() => navigate("/address")}
               style={{
                 marginTop: "5px",
                 borderRadius: "10px",

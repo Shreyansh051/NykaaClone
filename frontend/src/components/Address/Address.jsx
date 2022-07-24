@@ -25,8 +25,7 @@ export const Address = () => {
     });
   };
 
-  const { total } = useSelector((state) => state.cart);
-  console.log(total);
+  const { total} = useSelector((state) => state.cart);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -178,14 +177,14 @@ export const Address = () => {
                   </div>
                   <div style={{ paddingBottom: "10px" }}>
                     <p>Discount</p>
-                    <p>₹0</p>
+                    <p>₹{total * 0.1}</p>
                   </div>
                 </div>
               </div>
               <hr />
               <div className="grandiv">
                 <h4>Grand Total</h4>
-                <p>₹{total}</p>
+                <p>₹{total - total * 0.1}</p>
               </div>
               <hr style={{ marginBottom: "20px" }} />
             </div>

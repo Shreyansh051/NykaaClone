@@ -26,8 +26,11 @@ const ProductsCard = ({
     JSON.parse(localStorage.getItem("oAuth")) ||
     JSON.parse(localStorage.getItem("user")) ||
     [];
-  const userID= localStorageData.ID
-
+  const userID = localStorageData.ID
+  const handleBag = () => {
+    dispatch(AddToCart(_id, userID));
+    alert("Added to bag")
+  }
   const [show, setShow] = useState(false);
   return (
     <div
@@ -130,7 +133,7 @@ const ProductsCard = ({
       <br />
       {show && (
         <div
-          onClick={() => dispatch(AddToCart(_id,userID))}
+          onClick={() => handleBag()}
           className={styles.add_to_bag}
         >
           <div>

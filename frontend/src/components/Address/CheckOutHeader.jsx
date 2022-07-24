@@ -5,6 +5,10 @@ let addres = JSON.parse(localStorage.getItem("address")) || []
 const setUs = [addres];
 
 export const CheckOutHeader = () => {
+  const user =
+    JSON.parse(localStorage.getItem("oAuth")) ||
+    JSON.parse(localStorage.getItem("user")) ||
+    [];
   const navigate = useNavigate();
   return (
     <div className="hemain" style={{}}>
@@ -32,7 +36,7 @@ export const CheckOutHeader = () => {
               <div className="vertical"></div>
               <div className="hcom">
                 <h4>1 - LOGIN</h4>
-                <p>12345678</p>
+                <p>{user.Name}</p>
               </div>
             </div>
             <div className="hadd" style={{ display: "flex" }}>
