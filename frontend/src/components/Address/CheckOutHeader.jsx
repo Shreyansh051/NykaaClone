@@ -1,7 +1,7 @@
 import React from "react";
 import "./address.css";
 
-let addres = JSON.parse(localStorage.getItem("address"));
+let addres = JSON.parse(localStorage.getItem("address")) || []
 const setUs = [addres];
 
 export const CheckOutHeader = () => {

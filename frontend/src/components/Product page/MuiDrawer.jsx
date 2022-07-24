@@ -10,7 +10,7 @@ import {
 } from "@mui/material";
 import React from "react";
 import { useState } from "react";
-import MenuIcon from "@mui/icons-material/Menu";
+import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
@@ -43,7 +43,7 @@ export const MuiDrawer = () => {
         color="inherit"
         aria-label="logo"
       >
-        <MenuIcon style={{ marginLeft: "80%" }} />
+        <ShoppingCartIcon style={{ marginLeft: "80%", color: "#fd7aac" }} />
       </IconButton>
       <Drawer
         anchor="right"
@@ -63,90 +63,144 @@ export const MuiDrawer = () => {
             </Typography>
           </Stack>
           <Divider />
-       {cart? (
-         cart.map((e, i) => (
-          <div key={i} className={styles.card_container}>
-            <Stack
-              padding={1}
-              flexDirection="row"
-              justifyContent={"space-between"}
-            >
-              <img className={styles.cartImage} src={e.image_url} alt="" />
-              <Typography marginLeft={1} marginRight={1} variant="subtitle2">
-                {e.name}
-              </Typography>
-              <Stack>
-                <IconButton onClick={() => dispatch(deleteItem(e._id))}>
-                  <DeleteOutlineOutlinedIcon
-                    fontSize="small"
-                    style={{ color: "rgba(0,0,0,0.30)" }}
-                  />
-                </IconButton>
-              </Stack>
-            </Stack>
-            <Divider style={{ width: "90%", margin: "auto" }} />
-            <div style={{ display: "flex" }}>
-              <Box marginTop={2} marginLeft={2} sx={{ minWidth: 80 }}>
-                <FormControl fullWidth>
-                  <InputLabel id="demo-simple-select-label">
-                    Quantity
-                  </InputLabel>
-                  <Select
-                    size="small"
-                    labelId="demo-simple-select-label"
-                    id="demo-simple-select"
-                    value={e.quantity}
-                    label="Quantity"
-                    onChange={(event) =>
-                      dispatch(changeQuantity(e._id, event.target.value))
-                    }
+          {cart ? (
+            cart.map((e, i) => (
+              <div key={i} className={styles.card_container}>
+                <Stack
+                  padding={1}
+                  flexDirection="row"
+                  justifyContent={"space-between"}
+                >
+                  <img className={styles.cartImage} src={e.image_url} alt="" />
+                  <Typography
+                    marginLeft={1}
+                    marginRight={1}
+                    variant="subtitle2"
                   >
-                    <MenuItem value={1}>1</MenuItem>
-                    <MenuItem value={2}>2</MenuItem>
-                    <MenuItem value={3}>3</MenuItem>
-                  </Select>
-                </FormControl>
-              </Box>
-              <Typography variant="subtitle1" marginLeft={24} marginTop={3}>
-                ₹{e.price*e.quantity}
-              </Typography>
-            </div>
-          </div>
-        ))
-       ):( <Skeleton variant="rectangular" width={210} height={118} />)
-         }
+                    {e.name}
+                  </Typography>
+                  <Stack>
+                    <IconButton onClick={() => dispatch(deleteItem(e._id))}>
+                      <DeleteOutlineOutlinedIcon
+                        fontSize="small"
+                        style={{ color: "rgba(0,0,0,0.30)" }}
+                      />
+                    </IconButton>
+                  </Stack>
+                </Stack>
+                <Divider style={{ width: "90%", margin: "auto" }} />
+                <div style={{ display: "flex" }}>
+                  <Box marginTop={2} marginLeft={2} sx={{ minWidth: 80 }}>
+                    <FormControl fullWidth>
+                      <InputLabel id="demo-simple-select-label">
+                        Quantity
+                      </InputLabel>
+                      <Select
+                        size="small"
+                        labelId="demo-simple-select-label"
+                        id="demo-simple-select"
+                        value={e.quantity}
+                        label="Quantity"
+                        onChange={(event) =>
+                          dispatch(changeQuantity(e._id, event.target.value))
+                        }
+                      >
+                        <MenuItem value={1}>1</MenuItem>
+                        <MenuItem value={2}>2</MenuItem>
+                        <MenuItem value={3}>3</MenuItem>
+                      </Select>
+                    </FormControl>
+                  </Box>
+                  <Typography variant="subtitle1" marginLeft={24} marginTop={3}>
+                    ₹{e.price * e.quantity}
+                  </Typography>
+                </div>
+              </div>
+            ))
+          ) : (
+            <Skeleton variant="rectangular" width={210} height={118} />
+          )}
           <div
-            style={{ textAlign: "start", paddingLeft:"15px",paddingRight:"15px" }}
+            style={{
+              textAlign: "start",
+              paddingLeft: "15px",
+              paddingRight: "15px",
+            }}
             className={styles.paymentContainer}
           >
             <div>
-              <h3 >Price Details</h3>
+              <h3>Price Details</h3>
             </div>
-            <div style={{display:"flex", justifyContent:"space-between"}}>
-                <Typography fontSize={13} variatnt="subtitle1">Bag MRP ({cart.length} items)</Typography >
-                <Typography fontSize={13} variatnt="subtitle1">₹{total}</Typography >
+            <div style={{ display: "flex", justifyContent: "space-between" }}>
+              <Typography fontSize={13} variatnt="subtitle1">
+                Bag MRP ({cart.length} items)
+              </Typography>
+              <Typography fontSize={13} variatnt="subtitle1">
+                ₹{total}
+              </Typography>
             </div>
-            <div style={{display:"flex", justifyContent:"space-between", marginTop:"20px"}}>
-                <Typography fontSize={13} variatnt="subtitle1">Shipping</Typography >
-                <Typography fontSize={13} variatnt="subtitle1"><s>₹70</s> Free</Typography >
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "space-between",
+                marginTop: "20px",
+              }}
+            >
+              <Typography fontSize={13} variatnt="subtitle1">
+                Shipping
+              </Typography>
+              <Typography fontSize={13} variatnt="subtitle1">
+                <s>₹70</s> Free
+              </Typography>
             </div>
-            <div style={{display:"flex", justifyContent:"space-between", marginTop:"20px"}}>
-                <h3 style={{marginTop:"-8px"}}>You Pay</h3 >
-                <h3 style={{marginTop:"-8px"}}>₹{total}</h3 >
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "space-between",
+                marginTop: "20px",
+              }}
+            >
+              <h3 style={{ marginTop: "-8px" }}>You Pay</h3>
+              <h3 style={{ marginTop: "-8px" }}>₹{total}</h3>
             </div>
             <div className={styles.reward}>
-                <img className={styles.rewardImg} src="https://adn-static1.nykaa.com/media/wysiwyg/Payments/3Success.svg" alt="" />
-                <Typography fontSize={13} marginTop={1.2} variatnt="subtitle1">Yay! You will earn {total} reward point</Typography >
+              <img
+                className={styles.rewardImg}
+                src="https://adn-static1.nykaa.com/media/wysiwyg/Payments/3Success.svg"
+                alt=""
+              />
+              <Typography fontSize={13} marginTop={1.2} variatnt="subtitle1">
+                Yay! You will earn {total} reward point
+              </Typography>
             </div>
           </div>
-          <Divider  style={{marginTop:"40px", width:"104%"}}/>
+          <Divider style={{ marginTop: "40px", width: "104%" }} />
           <div className={styles.finalCon}>
-          <h2 style={{marginTop:"-5px"}}>₹{total}</h2 > 
-          <Button style={{marginTop:"5px",borderRadius:"10px",background:"rgb(232,0,113)", height:"40px",width:"150px",display:"flex",justifyContent:"space-between"}} variant="contained" >Proceed  <ArrowForwardIcon/></Button>
+            <h2 style={{ marginTop: "-5px" }}>₹{total}</h2>
+            <Button
+              style={{
+                marginTop: "5px",
+                borderRadius: "10px",
+                background: "rgb(232,0,113)",
+                height: "40px",
+                width: "150px",
+                display: "flex",
+                justifyContent: "space-between",
+              }}
+              variant="contained"
+            >
+              Proceed <ArrowForwardIcon />
+            </Button>
           </div>
-          <div style={{display:"flex", marginTop:"-20px"}}>
-          <Typography  fontSize={10}  variatnt="subtitle1">Grand Total</Typography >
-           <img style={{marginLeft:"10px"}} src="https://adn-static1.nykaa.com/media/wysiwyg/Payments/5TootltipInfo.svg" alt="" />
+          <div style={{ display: "flex", marginTop: "-20px" }}>
+            <Typography fontSize={10} variatnt="subtitle1">
+              Grand Total
+            </Typography>
+            <img
+              style={{ marginLeft: "10px" }}
+              src="https://adn-static1.nykaa.com/media/wysiwyg/Payments/5TootltipInfo.svg"
+              alt=""
+            />
           </div>
         </Box>
       </Drawer>
