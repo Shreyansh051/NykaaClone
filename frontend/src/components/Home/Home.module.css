@@ -28,7 +28,12 @@
   margin: auto;
   gap: 20px;
 }
-
+.discount{
+  /* border: 2px solid red; */
+  width: 100%;
+  margin: auto;
+  text-align: center;
+}
 .card2 {
   display: flex;
   flex-wrap: wrap;
