@@ -24,7 +24,7 @@ background-color:#fafafa;
 }
  
 .appliances>div>p{
-    line-height:12px;
+    line-height:1.2;
     font-size:15px;
 }
 .appliances>div>p:hover{

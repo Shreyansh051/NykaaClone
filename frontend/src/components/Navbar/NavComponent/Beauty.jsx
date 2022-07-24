@@ -2,33 +2,32 @@ import React from 'react'
 import styled from 'styled-components'
 
 const BeautyPop = styled.div`
-width:74%;
-display:flex;
-justify-content:center;
-margin:auto;
-text-align:left;
-padding:5vh 0 7vh 0;
-border-bottom-left-radius:5px;
-border-bottom-right-radius:5px;
-border:1px solid #e6dede;
-background-color:#fafafa;
-.beauty{
-    display:flex;
-    justify-content:center;
-    margin:auto;
-    gap:8vw;
-}
-.beauty>div>img{
-    height:20vh;
-    width:33vh;
-    border-radius:5px; 
-}
-.beauty>div{
-    line-height:1px;
-    font-size:14px;
-}
- 
-`
+  width: 74%;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  text-align: left;
+  padding: 5vh 0 7vh 0;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border: 1px solid #e6dede;
+  background-color: #fafafa;
+  .beauty {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    gap: 8vw;
+  }
+  .beauty > div > img {
+    height: 20vh;
+    width: 33vh;
+    border-radius: 5px;
+  }
+  .beauty > div {
+    line-height: 1.2;
+    font-size: 14px;
+  }
+`;
 
 const Beauty = () => {
     return (

@@ -2,36 +2,36 @@ import React from 'react'
 import styled from 'styled-components'
 
 const BathBody = styled.div`
-width:82%;
-display:flex;
-justify-content:center;
-margin:auto;
-text-align:left;
-padding:2vh 0 3vh 0;
-border-bottom-left-radius:5px;
-border-bottom-right-radius:5px;
-border:1px solid #e6dede;
-background-color:#fafafa;
-.bathbody{
-    display:flex;
-    justify-content:center;
-    margin:auto;
-    gap:1vw; 
-}
-.bathbody>div:nth-child(even){
+  width: 82%;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  text-align: left;
+  padding: 2vh 0 3vh 0;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border: 1px solid #e6dede;
+  background-color: #fafafa;
+  .bathbody {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    gap: 1vw;
+  }
+  .bathbody > div:nth-child(even) {
     background-color: #f4f4f4;
-    padding:5px 14px 5px 14px ;
-}
- 
-.bathbody>div>p{
-    line-height:10px;
-    font-size:14px;
-}
-.bathbody>div>p:hover{
-    color:#fc3581;
-    cursor:pointer;
-}
-`
+    padding: 5px 14px 5px 14px;
+  }
+
+  .bathbody > div > p {
+    line-height: 1.2;
+    font-size: 14px;
+  }
+  .bathbody > div > p:hover {
+    color: #fc3581;
+    cursor: pointer;
+  }
+`;
 
 const Bathbody = () => {
     return (

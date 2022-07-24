@@ -38,9 +38,11 @@ const Navbar = () => {
         <div className={style.card}>
           <div>
             <img
+              style={{cursor:"pointer"}}
+              onClick={()=>navigate("/")}
               src="https://cdn.iconscout.com/icon/free/png-256/nykaa-3384872-2822953.png"
               className={style.card4}
-              alt=""
+              alt="nykka"
             />
             <p>Categories</p>
             <p onMouseOver={() => hoverHandler("BRANDS")}>Brands</p>
@@ -50,10 +52,8 @@ const Navbar = () => {
           </div>
           <div>
             <div className={style.inputContainer}>
-              <p>
-                <IoIosSearch fontSize="3vh" cursor="pointer" />
-              </p>
               <input
+                style={{position: "relative"}}
                 type="text"
                 className={style.input}
                 placeholder="Search on Nykaa"
@@ -66,9 +66,7 @@ const Navbar = () => {
               <p onClick={() => handleLogin()}>{!login ? "Login" : "Logout"}</p>
             </div>
             <div className={style.card3}>
-              <p>
-                <RiGift2Line fontSize="3vh" color="#fc3581" cursor="pointer" />
-              </p>
+              
                 <MuiDrawer />
             </div>
           </div>

@@ -124,7 +124,7 @@ const cardImages7 = [
 
 function HomePage() {
   return (
-    <>
+    <div>
       <Carousel1 />
 
       <div className={styles.banner}>
@@ -909,7 +909,7 @@ function HomePage() {
         ))}
       </div>
       {/* <Carousel3 /> */}
-    </>
+    </div>
   );
 }
 

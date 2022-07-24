@@ -1,17 +1,24 @@
 import React from "react";
 import "./address.css";
-
+import {useNavigate} from "react-router-dom"
 let addres = JSON.parse(localStorage.getItem("address")) || []
 const setUs = [addres];
 
 export const CheckOutHeader = () => {
+  const navigate = useNavigate();
   return (
     <div className="hemain" style={{}}>
       <div className="hcontainer">
         <div className="hParent">
           <div className="hsvg">
             <i class="logo">
-              <svg xmlns="http://www.w3.org/2000/svg" width="106" height="37">
+              <svg
+                style={{cursor:"pointer"}}
+                onClick={() => navigate("/")}
+                xmlns="http://www.w3.org/2000/svg"
+                width="106"
+                height="37"
+              >
                 <path
                   fill="#FC2779"
                   fill-rule="evenodd"
@@ -24,7 +31,7 @@ export const CheckOutHeader = () => {
             <div className="hlg" style={{ display: "flex" }}>
               <div className="vertical"></div>
               <div className="hcom">
-                <h4 >1 - LOGIN</h4>
+                <h4>1 - LOGIN</h4>
                 <p>12345678</p>
               </div>
             </div>

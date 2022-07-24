@@ -1,9 +1,10 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
 import NavbarPopUpComponents from '../NavComponent/NavbarPopUpComponents';
- 
+ import {useNavigate} from 'react-router-dom'
 
 const SubNavbar = () => {
+    const navigate= useNavigate()
    const [howerState, setHowerState] = useState("");
 
     const hoverHandler = (type) => {
@@ -16,17 +17,17 @@ const SubNavbar = () => {
     return (
         <>
             <Subnav>
-                <p onMouseOver={() => hoverHandler('MAKEUP')}>Makeup </p>
-                <p onMouseEnter={() => hoverHandler('SKIN')}>Skin</p>
-                <p onMouseEnter={() => hoverHandler('HAIR')}>Hair</p>
-                <p onMouseEnter={() => hoverHandler('APPLIANCES')}>Appliances</p>
-                <p onMouseEnter={() => hoverHandler('BATH&BODY')}>Bath & Body</p>
-                <p onMouseEnter={() => hoverHandler('NATURAL')}>Natural</p>
-                <p onMouseEnter={() => hoverHandler('MOM&BABY')}>Mom & Baby</p>
-                <p onMouseEnter={() => hoverHandler('HEALTH')}>Health & Wellness</p>
-                <p onMouseEnter={() => hoverHandler('MEN')}>Men</p>
-                <p onMouseEnter={() => hoverHandler('FRAGRENCE')}>Fragrance</p>
-                <p onMouseEnter={() => hoverHandler('POPUPS')}>Pop Ups</p>
+                <p onClick={()=>navigate("/face")} onMouseOver={() => hoverHandler('MAKEUP')}>Makeup </p>
+                <p onClick={()=>navigate("/face")} onMouseEnter={() => hoverHandler('SKIN')}>Skin</p>
+                <p onClick={()=>navigate("/face")} onMouseEnter={() => hoverHandler('HAIR')}>Hair</p>
+                <p onClick={()=>navigate("/face")} onMouseEnter={() => hoverHandler('APPLIANCES')}>Appliances</p>
+                <p onClick={()=>navigate("/face")} onMouseEnter={() => hoverHandler('BATH&BODY')}>Bath & Body</p>
+                <p onClick={()=>navigate("/face")} onMouseEnter={() => hoverHandler('NATURAL')}>Natural</p>
+                <p onClick={()=>navigate("/face")} onMouseEnter={() => hoverHandler('MOM&BABY')}>Mom & Baby</p>
+                <p onClick={()=>navigate("/face")} onMouseEnter={() => hoverHandler('HEALTH')}>Health & Wellness</p>
+                <p onClick={()=>navigate("/face")} onMouseEnter={() => hoverHandler('MEN')}>Men</p>
+                <p onClick={()=>navigate("/face")} onMouseEnter={() => hoverHandler('FRAGRENCE')}>Fragrance</p>
+                <p onClick={()=>navigate("/face")} onMouseEnter={() => hoverHandler('POPUPS')}>Pop Ups</p>
             </Subnav>
             <Content>
                 <div className='content' onMouseLeave={handleNoHover}>

@@ -8,6 +8,7 @@ import {
   Button,
   Skeleton,
 } from "@mui/material";
+import {useNavigate} from "react-router-dom"
 import React from "react";
 import { useState } from "react";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
@@ -24,6 +25,7 @@ import Select from "@mui/material/Select";
 import { changeQuantity } from "../../actions/products";
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 export const MuiDrawer = () => {
+  const navigate= useNavigate()
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const {cart,total} = useSelector((state) => state.cart);
   const dispatch = useDispatch();
@@ -178,6 +180,7 @@ export const MuiDrawer = () => {
           <div className={styles.finalCon}>
             <h2 style={{ marginTop: "-5px" }}>₹{total}</h2>
             <Button
+              onClick={()=>navigate("/address")}
               style={{
                 marginTop: "5px",
                 borderRadius: "10px",
