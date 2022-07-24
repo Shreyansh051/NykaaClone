@@ -4,8 +4,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { getAllProducts } from "../../actions/products";
 import ProductsCard from "./ProductsCard";
 import styles from "./Products.module.css";
-import { MuiDrawer, Siderbar } from "./MuiDrawer";
-import { ChakraProvider } from "@chakra-ui/react";
 import Accordian from "./Accordian";
 
 
@@ -19,7 +17,6 @@ const Products = () => {
 
   return (
     <div style={{textAlign: 'center'}}>
-      <MuiDrawer />
       <div className={styles.container}>
         <div>
           <ProductsHeader />
