@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API = axios.create({ baseURL: "http://localhost:8080" });
+const API = axios.create({ baseURL: "https://nyku.herokuapp.com" });
 
 export const fetch_AllProducts = () => API.get("/getAllProducts");
 export const Add_to_cart = (id,userID) => API.post(`/AddToBag/${id}`,{ userID: userID})

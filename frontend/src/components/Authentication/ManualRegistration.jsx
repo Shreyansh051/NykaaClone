@@ -18,7 +18,7 @@ function ManualRegistration() {
                 Email: email,
                 Password: password,
             }
-            axios.post("http://localhost:8080/auth/login", data).then((response) => {
+            axios.post("https://nyku.herokuapp.com/auth/login", data).then((response) => {
                 console.log(response)
                 if (response.data.Message == "Account does not exist") {
                     alert("Account does not exist, please create one")
@@ -51,7 +51,7 @@ function ManualRegistration() {
             Phone: phone,
           };
             axios
-              .post("http://localhost:8080/auth/register", data)
+              .post("https://nyku.herokuapp.com/auth/register", data)
               .then((response) => {
                 const localData = {
                   ID: response.data.ID,

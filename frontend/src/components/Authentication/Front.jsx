@@ -21,17 +21,19 @@ function Front({setView}) {
           Token: response._tokenResponse.oauthAccessToken,
           Password: response._tokenResponse.email,
         }
-        axios.post("http://localhost:8080/auth/register", user).then((res) => {
-          const localData = {
-            ID: res.data.data,
-            Email: response._tokenResponse.email,
-            Name: response._tokenResponse.displayName,
-            Token: response._tokenResponse.oauthAccessToken,
-            Photo: response._tokenResponse.photoUrl,
-          };
-          localStorage.setItem("oAuth", JSON.stringify(localData));
-          navigate("/")
-        })
+        axios
+          .post("https://nyku.herokuapp.com/auth/register", user)
+          .then((res) => {
+            const localData = {
+              ID: res.data.data,
+              Email: response._tokenResponse.email,
+              Name: response._tokenResponse.displayName,
+              Token: response._tokenResponse.oauthAccessToken,
+              Photo: response._tokenResponse.photoUrl,
+            };
+            localStorage.setItem("oAuth", JSON.stringify(localData));
+            navigate("/");
+          });
       })
       .catch((error) => {
         console.log(error);

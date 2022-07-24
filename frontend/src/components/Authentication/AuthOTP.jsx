@@ -40,19 +40,21 @@ function AuthOTP({ setView, number,name, password, email}) {
           Name: name,
           Phone: number,
         }
-        axios.post("http://localhost:8080/auth/register", userData).then((response) => {
-          const localData = {
-            ID: response.data.ID,
-            Email: email,
-            Name: name,
-            Token: user.accessToken,
-            Photo:
-              "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460__340.png",
-          };
-          localStorage.setItem("oAuth", JSON.stringify(localData));
-          alert("Login Successful");
-          navigate("/");
-        })
+        axios
+          .post("https://nyku.herokuapp.com/auth/register", userData)
+          .then((response) => {
+            const localData = {
+              ID: response.data.ID,
+              Email: email,
+              Name: name,
+              Token: user.accessToken,
+              Photo:
+                "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460__340.png",
+            };
+            localStorage.setItem("oAuth", JSON.stringify(localData));
+            alert("Login Successful");
+            navigate("/");
+          });
       })
       .catch((error) => {
         // User couldn't sign in (bad verification code?)
