@@ -8,7 +8,7 @@ function App() {
   const params = useLocation()
   const [visible, setVisible] = useState(true)
   useEffect(() => {
-    if (params.pathname == "/login" || params.pathname == "/address" || params.pathname == "/payment" || params.pathname == "/register") {
+    if (params.pathname == "/login" || params.pathname == "/address" || params.pathname == "/payment" || params.pathname == "/register" || params.pathname == "/thanks") {
       setVisible(false)
     } else setVisible(true)
   },[params])

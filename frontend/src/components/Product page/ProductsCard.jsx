@@ -8,6 +8,8 @@ import pic from "./images/heart.png"
 import { useDispatch, useSelector } from "react-redux";
 import { AddToCart } from "../../actions/products";
 import { MuiDrawer } from "./MuiDrawer";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const ProductsCard = ({
   _id,
@@ -29,7 +31,7 @@ const ProductsCard = ({
   const userID = localStorageData.ID
   const handleBag = () => {
     dispatch(AddToCart(_id, userID));
-    alert("Added to bag")
+    toast("Added to bag");
   }
   const [show, setShow] = useState(false);
   return (
@@ -38,8 +40,8 @@ const ProductsCard = ({
       onMouseOut={() => setShow(false)}
       className={styles.container}
     >
-      <div>
-        <div>
+      <div style={{ textAlign: "center" }}>
+        <div style={{ textAlign: "center" }}>
           {tags == "FEATURED" && (
             <div
               style={{
@@ -48,6 +50,7 @@ const ProductsCard = ({
                 fontSize: "13px",
                 fontWeight: "bold",
                 padding: "10px 0px",
+                textAlign: "center",
               }}
             >
               {tags}
@@ -61,22 +64,26 @@ const ProductsCard = ({
                 fontSize: "13px",
                 fontWeight: "bold",
                 padding: "10px 0px",
+                textAlign: "center",
               }}
             >
               {tags}
             </div>
           )}
-          {tags != "FEATURED" && tags != "BESTSELLER" && (<div
+          {tags != "FEATURED" && tags != "BESTSELLER" && (
+            <div
               style={{
                 marginLeft: "-10vw",
                 color: "white",
                 fontSize: "13px",
                 fontWeight: "bold",
                 padding: "10px 0px",
+                textAlign: "center",
               }}
             >
               hhh
-            </div>)}
+            </div>
+          )}
           <img style={{ marginTop: "0px" }} src={image_url} alt="" />
           <div
             style={{
@@ -85,6 +92,7 @@ const ProductsCard = ({
               margin: "auto",
               fontSize: "14px",
               color: "#444444",
+              textAlign: "center",
             }}
           >
             <p>{name}</p>
@@ -123,6 +131,7 @@ const ProductsCard = ({
                 fontSize: "12px",
                 marginLeft: "2vw",
                 color: "grey",
+                textAlign: "center",
               }}
             >
               ( {n_ratings} )
@@ -131,15 +140,19 @@ const ProductsCard = ({
         </div>
       </div>
       <br />
+      <ToastContainer style={{marginTop: "100px", color: "pink"}} />
       {show && (
-        <div
-          onClick={() => handleBag()}
-          className={styles.add_to_bag}
-        >
+        <div onClick={() => handleBag()} className={styles.add_to_bag}>
           <div>
             <img style={{ height: "100%" }} src={pic} alt="" />
           </div>
-          <div>
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
             <h3>Add To Bag</h3>
           </div>
         </div>

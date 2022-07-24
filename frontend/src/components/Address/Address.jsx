@@ -4,12 +4,14 @@ import "./address.css";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { getAllCart } from "../../actions/products";
-
+import axios from "axios"
 export const Address = () => {
   const [cartEdit, setCartEdit] = useState(false);
   const [detail, setDetail] = useState(false);
   const [address, setAddress] = useState({});
+  const [total, setTotal] = useState(0)
   const navigate = useNavigate();
+  
   const handleEdit = () => {
     setCartEdit(true);
   };
@@ -24,14 +26,30 @@ export const Address = () => {
       [data]: e.target.value,
     });
   };
-
-  const { total} = useSelector((state) => state.cart);
-  const dispatch = useDispatch();
-
   useEffect(() => {
-    dispatch(getAllCart());
-  }, [dispatch]);
-
+    const count = JSON.parse(localStorage.getItem("total")).total;
+    setTotal(count)
+    const Oauth = JSON.parse(localStorage.getItem("oAuth")) || null;
+    if (!Oauth) {
+      const token = JSON.parse(localStorage.getItem("user")) || "null";
+      if (token == "null") {
+        navigate("/login");
+      } else {
+        const data = { token: token };
+        axios
+          .post("http://localhost:8080/auth/verify", data)
+          .then((response) => {
+            if (
+              response.data.Message == "failed" ||
+              response.data == undefined
+            ) {
+              alert("Session expired, login Again");
+              navigate("/login");
+            }
+          });
+      }
+    }
+  }, []);
   const handleSubmit = (e) => {
     e.preventDefault();
     let add = address || "";
@@ -177,14 +195,14 @@ export const Address = () => {
                   </div>
                   <div style={{ paddingBottom: "10px" }}>
                     <p>Discount</p>
-                    <p>₹{total * 0.1}</p>
+                    <p>₹0</p>
                   </div>
                 </div>
               </div>
               <hr />
               <div className="grandiv">
                 <h4>Grand Total</h4>
-                <p>₹{total - total * 0.1}</p>
+                <p>₹{total}</p>
               </div>
               <hr style={{ marginBottom: "20px" }} />
             </div>

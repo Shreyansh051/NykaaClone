@@ -9,13 +9,16 @@ export const Thnks = () => {
     navigate("/");
   };
   return (
-    <div>
+    <div style={{textAlign: "center"}}>
       <CheckOutHeader />
       <div
         style={{
           position: "relative",
           top: "150px",
           color: "##5e5e5e",
+          textAlign: "center",
+          width: "30%",
+          margin: "auto"
         }}
       >
         <h2 style={{ fontWeight: "550", lineHeight: "1.5" }}>
@@ -24,7 +27,7 @@ export const Thnks = () => {
         <h3 style={{ fontWeight: "550" }}>Hope you Like our Product</h3>
         <button
           className={Style.cbutton}
-          style={{ width: "20%" }}
+          style={{ width: "100%" }}
           onClick={handleNav}
         >
           Buy more Product

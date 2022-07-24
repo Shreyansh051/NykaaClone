@@ -27,9 +27,12 @@ import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 export const MuiDrawer = () => {
   const navigate= useNavigate()
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
-  const {cart,total} = useSelector((state) => state.cart);
+  const { cart, total } = useSelector((state) => state.cart);
   const dispatch = useDispatch();
-
+  const handleProceed = () => {
+    localStorage.setItem("total", JSON.stringify({ total: total }));
+    navigate("/address")
+  }
   useEffect(() => {  
     const localStorageData = JSON.parse(localStorage.getItem("oAuth")) || JSON.parse(localStorage.getItem("user")) || []
     const userID= localStorageData.ID
@@ -181,7 +184,7 @@ export const MuiDrawer = () => {
           <div className={styles.finalCon}>
             <h2 style={{ marginTop: "-5px" }}>₹{total}</h2>
             <Button
-              onClick={() => navigate("/address")}
+              onClick={() => handleProceed()}
               style={{
                 marginTop: "5px",
                 borderRadius: "10px",

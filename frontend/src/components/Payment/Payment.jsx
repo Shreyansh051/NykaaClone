@@ -10,10 +10,11 @@ import { Upi } from "./paymentComponent/Upi";
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getAllCart } from "../../actions/products";
-
+import axios from "axios";
+import {useNavigate} from "react-router-dom"
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
-
+  
   return (
     <div
       role="tabpanel"
@@ -50,7 +51,8 @@ export const Payment = () => {
   const [cartEdit, setCartEdit] = useState(false);
   const [detail, setDetail] = useState(false);
   const [value, setValue] = React.useState(0);
-
+  const [total, setTotal] = useState(0);
+  const navigate = useNavigate();
   const handleEdit = () => {
     setCartEdit(true);
   };
@@ -61,16 +63,38 @@ export const Payment = () => {
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
-  const { total } = useSelector((state) => state.cart);
-  console.log(total);
+  
   const dispatch = useDispatch();
   var setUs=[]
   useEffect(() => {
     dispatch(getAllCart());
     let addres = JSON.parse(localStorage.getItem("address")) || [];
+    const count = JSON.parse(localStorage.getItem("total")).total;
+    setTotal(count);
     setUs = [addres];
   }, [dispatch]);
-
+  useEffect(() => {
+    const Oauth = JSON.parse(localStorage.getItem("oAuth")) || null;
+    if (!Oauth) {
+      const token = JSON.parse(localStorage.getItem("user")) || "null";
+      if (token == "null") {
+        navigate("/login");
+      } else {
+        const data = { token: token };
+        axios
+          .post("http://localhost:8080/auth/verify", data)
+          .then((response) => {
+            if (
+              response.data.Message == "failed" ||
+              response.data == undefined
+            ) {
+              alert("Session expired, login Again");
+              navigate("/login");
+            }
+          });
+      }
+    }
+  }, []);
   return (
     <div>
       <div>

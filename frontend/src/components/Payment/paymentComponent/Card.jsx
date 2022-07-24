@@ -2,10 +2,11 @@ import { Box, ListItem, Stack, TextField } from "@mui/material";
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getAllCart } from "../../../actions/products";
-
+import {useNavigate} from "react-router-dom"
 import Style from "../payment.module.css";
 
 export const Card = () => {
+  const navigate = useNavigate()
   const { total } = useSelector((state) => state.cart);
   console.log(total);
   const dispatch = useDispatch();
@@ -57,6 +58,7 @@ export const Card = () => {
           </div>
           <div>
             <button
+              onClick={()=>navigate("/thanks")}
               style={{
                 width: "100%",
                 height: "50px",

@@ -20,6 +20,7 @@ const Navbar = () => {
       setLogin(false);
       localStorage.removeItem("user");
       localStorage.removeItem("oAuth");
+      window.location.reload()
     } else {
       navigate("/login");
     }

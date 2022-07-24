@@ -50,20 +50,3 @@ module.exports = { register, login, verify }
 
 
 
-// useEffect(() => {
-//     const Oauth = JSON.parse(localStorage.getItem("oAuth")) || null
-//     if (!Oauth) {
-//         const token = JSON.parse(localStorage.getItem("user")) || "null"
-//         if (token == "null") {
-//             navigate("/login")
-//         } else {
-//             const data = { token: token }
-//             axios.post("http://localhost:8080/auth/verify", data).then((response) => {
-//                 if (response.data.Message == "failed" || response.data == undefined) {
-//                     alert("Session expired, login Again")
-//                     navigate("/login")
-//                 }
-//             })
-//         }
-//     }
-// },[])
