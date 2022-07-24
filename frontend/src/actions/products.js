@@ -23,9 +23,9 @@ export const getAllProducts = () => async (dispatch) => {
   }
 };
 
-export const AddToCart = (id) => async (dispatch) => {
+export const AddToCart = (id,userID) => async (dispatch) => {
   try {
-    const { data } = await api.Add_to_cart(id);
+    const { data } = await api.Add_to_cart(id,userID);
     dispatch({
       type: ADD_TO_CART,
       payload: data,
@@ -35,9 +35,9 @@ export const AddToCart = (id) => async (dispatch) => {
   }
 };
 
-export const getAllCart = () => async (dispatch) => {
+export const getAllCart = (userID) => async (dispatch) => {
   try {
-    const { data } = await api.get_all_cart();
+    const { data } = await api.get_all_cart(userID);
     dispatch({
       type: GET_ALL_CART,
       payload: data,

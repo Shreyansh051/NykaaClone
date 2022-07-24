@@ -11,6 +11,7 @@ const cartSchema = mongoose.Schema({
   n_ratings: Number,
   n_reviews: Number,
   quantity: { type: Number, default: 1 },
+  userID: String,
 });
 
 const cartItem = mongoose.model("cartItem", cartSchema);

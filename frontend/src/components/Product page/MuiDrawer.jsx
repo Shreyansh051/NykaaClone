@@ -29,7 +29,9 @@ export const MuiDrawer = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {  
-        dispatch(getAllCart());
+    const localStorageData = JSON.parse(localStorage.getItem("oAuth")) || JSON.parse(localStorage.getItem("user")) || []
+    const userID= localStorageData.ID
+        dispatch(getAllCart(userID));
   }, [dispatch])
   return (
     <>

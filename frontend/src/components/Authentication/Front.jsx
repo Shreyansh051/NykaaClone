@@ -6,6 +6,7 @@ import google from "./google.png";
 import firebaseAuth from "./firebase";
 import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 import axios from "axios";
+import{v4} from "uuid"
 function Front({setView}) {
   const navigate = useNavigate();
   const signInWithFirebase = () => {
@@ -13,12 +14,24 @@ function Front({setView}) {
     signInWithPopup(firebaseAuth, googleProvider)
       .then((response) => {
         const user = {
+          ID: v4(),
           Email: response._tokenResponse.email,
           Photo: response._tokenResponse.photoUrl,
           Name: response._tokenResponse.displayName,
           Token: response._tokenResponse.oauthAccessToken,
+          Password: response._tokenResponse.email,
         }
-        localStorage.setItem("oAuth", JSON.stringify(user));
+        axios.post("http://localhost:8080/auth/register", user).then((res) => {
+          const localData = {
+            ID: res.data.data,
+            Email: response._tokenResponse.email,
+            Name: response._tokenResponse.displayName,
+            Token: response._tokenResponse.oauthAccessToken,
+            Photo: response._tokenResponse.photoUrl,
+          };
+          localStorage.setItem("oAuth", JSON.stringify(localData));
+          navigate("/")
+        })
       })
       .catch((error) => {
         console.log(error);

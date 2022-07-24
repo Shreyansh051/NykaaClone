@@ -18,7 +18,7 @@ const Products = () => {
   console.log(products);
 
   return (
-    <>
+    <div style={{textAlign: 'center'}}>
       <MuiDrawer />
       <div className={styles.container}>
         <div>
@@ -33,7 +33,7 @@ const Products = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

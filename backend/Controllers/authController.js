@@ -6,14 +6,14 @@ const SECRET = "NYKAACLONESECRET"
 const register = async (req, res) => {
     const search = await UserModel.find({ Email: req.body.Email })
     if (search.length) {
-        res.send({ Message: "Account already registered" })
+        res.send({ Message: "Account already registered", data: search[0].ID })
     } else {
         const data = new UserModel(req.body)
         data.save((err, success) => {
             if (err) res.send(err)
             else {
-                const token = jwt.sign({ email: req.body.Email }, SECRET,{ expiresIn: "1h" })
-                res.send(token)
+                const Token = jwt.sign({ email: req.body.Email }, SECRET,{ expiresIn: "1h" })
+                res.send({ Token: Token, Name: req.body.Name, Email: req.body.Email, ID: req.body.Id })
             }
         })
     }
@@ -29,8 +29,8 @@ const login = async (req, res) => {
                 res.send({ Message: "Password doesn't match!" })
             } else {
                 //Password matches
-                const token = jwt.sign({ email: req.body.Email }, SECRET, { expiresIn: "1h" })
-                res.send(token)
+                const Token = jwt.sign({ email: req.body.Email }, SECRET, { expiresIn: "1h" })
+                res.send({ Token:Token, Name:req.body.Name, Email:req.body.Email, ID:req.body.Id })
             }
         })
     } else res.send({ Message: "Account does not exist" })
@@ -39,7 +39,7 @@ const login = async (req, res) => {
 const verify = async (req, res)=> {
     const token = req.body.token
     jwt.verify(token, SECRET, (err, decoded) => {
-        if(err) console.log(err)
+        if(err) res.send({ Message: "failed"})
         else {
             res.send(decoded.email)
         }
@@ -59,7 +59,7 @@ module.exports = { register, login, verify }
 //         } else {
 //             const data = { token: token }
 //             axios.post("http://localhost:8080/auth/verify", data).then((response) => {
-//                 if (response.data.Message == "failed") {
+//                 if (response.data.Message == "failed" || response.data == undefined) {
 //                     alert("Session expired, login Again")
 //                     navigate("/login")
 //                 }

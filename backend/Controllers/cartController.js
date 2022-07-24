@@ -4,6 +4,7 @@ const products = require("../Models/ProductModel");
 
 module.exports.addToBag = async (req, res) => {
   try {
+    const userID= req.body.userID
     const { id } = req.params;
     const {
       image_url,
@@ -32,9 +33,10 @@ module.exports.addToBag = async (req, res) => {
         rating,
         n_ratings,
         n_reviews,
+        userID
       });
     }
-    const AllCarts = await cartItem.find();
+    const AllCarts = await cartItem.find({userID: userID});
     res.status(200).json(AllCarts);
   } catch (error) {
     console.log(error.message);
@@ -43,7 +45,8 @@ module.exports.addToBag = async (req, res) => {
 
 module.exports.getAllCart = async (req, res) => {
   try {
-    const getallcart = await cartItem.find();
+    const userID= req.params.id
+    const getallcart = await cartItem.find({ userID: userID });
     res.status(200).json(getallcart);
   } catch (error) {
     res.send(error.message);

@@ -1,22 +1,37 @@
-import React, { useState } from 'react'
+import React, { useState,useEffect } from 'react'
 import style from './Navbar.module.css'
 import { IoIosSearch } from 'react-icons/io';
 import { FaRegUser } from 'react-icons/fa';
 import { RiGift2Line } from 'react-icons/ri';
 import { BsHandbag } from 'react-icons/bs';
 import NavbarPopUpComponents from '../NavComponent/NavbarPopUpComponents';
- 
-
+import {useNavigate} from 'react-router-dom'
 
 
 const Navbar = () => {
+  const navigate= useNavigate()
   const [howerState, setHowerState] = useState("");
-
+  const [login,setLogin] = useState(false)
   const hoverHandler =(type)=>{
     setHowerState(type)
-}
+  }
+  const handleLogin = () => {
+    if (login) {
+      setLogin(false)
+      localStorage.removeItem("user")
+      localStorage.removeItem("oAuth");
+    } else {
+      navigate("/login")
+    }
+  }
 
- 
+  useEffect(() => {
+    const data =
+      JSON.parse(localStorage.getItem("user")) ||
+      JSON.parse(localStorage.getItem("oAuth"));
+    
+    if(data) setLogin(true)
+  },[])
   return (
     <>
       <div  className={style.container}>
@@ -37,7 +52,7 @@ const Navbar = () => {
           </div>
           <div className={style.card2}>
             <p><FaRegUser fontSize="2.5vh" cursor="pointer"/></p>
-            <p>Account</p>
+            <p onClick={()=>handleLogin()}>{!login?"Login": "Logout" }</p>
 
           </div>
           <div className={style.card3}>

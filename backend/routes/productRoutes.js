@@ -13,7 +13,7 @@ router.get("/getAllProducts", getProducts);
 
 router.post("/addToBag/:id", addToBag);
 
-router.get("/getAllCart", getAllCart);
+router.get("/getAllCart/:id", getAllCart);
 
 router.patch("/setQuantity/:id", setQuantity);
 

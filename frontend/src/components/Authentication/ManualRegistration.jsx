@@ -2,6 +2,8 @@ import React,{useState} from 'react'
 import { container, crossButton, submit, inputReg,h2Reg } from "./login.css";
 import { useNavigate } from "react-router-dom"
 import axios from "axios"
+import { v4 } from "uuid";
+
 function ManualRegistration() {
     const navigate = useNavigate()
     const [login, setLogin] = useState(false)
@@ -26,24 +28,36 @@ function ManualRegistration() {
                     alert("Password doesn't match, Try once again")
                     setPassword("")
                 }
-                  localStorage.setItem("user", JSON.stringify(response.data));
+                else {
+                  const localData = {
+                    ID: response.data.ID,
+                    Email: email,
+                    Name: response.data.Name,
+                    Token: response.data.Token,
+                    Photo:
+                      "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460__340.png",
+                  };
+                  localStorage.setItem("user", JSON.stringify(localData));
+                } 
             }).catch((error) => {
                 console.log(error)
             })
         } else {
-            const data = {
-              Email: email,
-                Password: password,
-                Name: name,
-              Phone: phone,
-            };
+          const data = {
+            ID: v4(),
+            Email: email,
+            Password: password,
+            Name: name,
+            Phone: phone,
+          };
             axios
               .post("http://localhost:8080/auth/register", data)
               .then((response) => {
                 const localData = {
+                  ID: response.data.ID,
                   Email: email,
                   Name: name,
-                  Token: response.data,
+                  Token: response.data.Token,
                   Photo:
                     "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460__340.png",
                 };

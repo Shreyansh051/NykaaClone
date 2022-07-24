@@ -1,4 +1,5 @@
 import React from 'react'
+import "./App.css";
 import { Routes, Route } from 'react-router-dom'
 import Login from './components/Authentication/Login'
 import ManualRegistration from "./components/Authentication/ManualRegistration"
@@ -8,7 +9,7 @@ import { Address } from "./components/Address/Address"
 import {Payment} from "./components/Payment/Payment"
 function Main() {
   return (
-    <div>
+    <div className="App">
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/face" element={<Products />} />

@@ -10,6 +10,7 @@ import {
 } from "./login.css";
 import Timer from "./Timer"
 import axios from "axios"
+import { v4 } from "uuid";
 
 function AuthOTP({ setView, number,name, password, email}) {
   const navigate = useNavigate();
@@ -33,6 +34,7 @@ function AuthOTP({ setView, number,name, password, email}) {
         // User signed in successfully.
         const user = result.user;
         const userData = {
+          ID: v4(),
           Email: email,
           Password: password,
           Name: name,
@@ -40,6 +42,7 @@ function AuthOTP({ setView, number,name, password, email}) {
         }
         axios.post("http://localhost:8080/auth/register", userData).then((response) => {
           const localData = {
+            ID: response.data.ID,
             Email: email,
             Name: name,
             Token: user.accessToken,
